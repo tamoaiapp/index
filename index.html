@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>TamoWork — Funcionários digitais com IA rodando no seu computador</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+    :root{
+      --bg:#07080b;
+      --bg2:#0c1018;
+      --card:#111820;
+      --card2:#161e28;
+      --text:#eef2f9;
+      --muted:#8394b0;
+      --dim:#4e5c72;
+      --line:rgba(255,255,255,0.07);
+      --line2:rgba(255,255,255,0.12);
+      --green:#16c784;
+      /* TamoWork brand — neutral blue-purple */
+      --brand:linear-gradient(135deg,#6366f1 0%,#8b5cf6 50%,#a855f7 100%);
+      --brand-soft:rgba(99,102,241,0.08);
+      --brand-border:rgba(99,102,241,0.20);
+      /* Instagram */
+      --ig:linear-gradient(135deg,#f58529 0%,#dd2a7b 50%,#8134af 100%);
+      --ig-soft:rgba(221,42,123,0.08);
+      --ig-border:rgba(221,42,123,0.20);
+      /* WhatsApp */
+      --wa:#25d366;
+      --wa-soft:rgba(37,211,102,0.08);
+      --wa-border:rgba(37,211,102,0.22);
+      --max:1100px;
+    }
+
+    html{scroll-behavior:smooth}
+    body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    a{text-decoration:none;color:inherit}
+    .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 24px}
+
+    /* gradient utils */
+    .brand{background:var(--brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% 200%;animation:brand-shift 6s ease infinite}
+    .ig-text{background:var(--ig);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% 200%;animation:brand-shift 6s ease infinite}
+    .wa-text{color:var(--wa)}
+    @keyframes brand-shift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+    /* btn */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:14px;font-size:15px;font-weight:800;border:none;cursor:pointer;font-family:inherit;transition:.15s ease;white-space:nowrap;position:relative;overflow:hidden}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-brand{background:var(--brand);color:#fff;box-shadow:0 12px 36px rgba(99,102,241,0.28)}
+    .btn-brand:hover{opacity:.92;box-shadow:0 18px 50px rgba(99,102,241,0.40)}
+    .btn-ig{background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af);color:#fff;box-shadow:0 12px 36px rgba(221,42,123,0.24)}
+    .btn-ig:hover{opacity:.92}
+    .btn-wa{background:var(--wa);color:#fff;box-shadow:0 12px 36px rgba(37,211,102,0.22)}
+    .btn-wa:hover{opacity:.92}
+    .btn-ghost{background:rgba(255,255,255,0.05);color:var(--muted);border:1px solid var(--line)}
+    .btn-ghost:hover{background:rgba(255,255,255,0.09);color:var(--text)}
+    .btn-lg{padding:17px 28px;font-size:16px;border-radius:16px}
+    .btn-xl{padding:20px 36px;font-size:17px;border-radius:18px;letter-spacing:-.2px}
+    /* shimmer */
+    .btn-brand::after,.btn-ig::after,.btn-wa::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.15),transparent 55%);transform:translateX(-100%);transition:transform .4s ease}
+    .btn-brand:hover::after,.btn-ig:hover::after,.btn-wa:hover::after{transform:translateX(100%)}
+
+    /* nav */
+    .nav{position:sticky;top:0;z-index:200;background:rgba(7,8,11,0.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--line)}
+    .nav-inner{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .logo{font-size:19px;font-weight:900;letter-spacing:-.5px}
+    .logo-beta{display:inline-flex;align-items:center;font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;background:var(--brand-soft);border:1px solid var(--brand-border);border-radius:5px;padding:2px 7px;margin-left:6px;vertical-align:middle;color:#818cf8}
+    .nav-links{display:flex;gap:4px;list-style:none}
+    .nav-links a{padding:7px 14px;border-radius:10px;color:var(--muted);font-size:14px;font-weight:500;transition:.15s}
+    .nav-links a:hover{color:var(--text);background:rgba(255,255,255,0.05)}
+    .nav-live{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--green);background:rgba(22,199,132,0.08);border:1px solid rgba(22,199,132,0.18);border-radius:999px;padding:6px 12px}
+    .nav-live-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 1.5s ease-in-out infinite}
+    @keyframes blink{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(22,199,132,.5)}50%{opacity:.6;box-shadow:0 0 0 5px rgba(22,199,132,0)}}
+    .lang-switch{display:flex;align-items:center;gap:4px;background:rgba(255,255,255,0.04);border:1px solid var(--line);border-radius:999px;padding:3px}
+    .lang-btn{padding:5px 10px;border-radius:999px;font-size:12px;font-weight:800;background:none;border:none;color:var(--dim);cursor:pointer;font-family:inherit;transition:.15s;letter-spacing:.5px}
+    .lang-btn:hover{color:var(--muted)}
+    .lang-btn.active{background:rgba(255,255,255,0.08);color:var(--text)}
+    @media(max-width:640px){.lang-switch,.nav-live{display:none}}
+
+    /* ══ HERO ══ */
+    .hero{position:relative;overflow:hidden;padding:110px 0 0;background:var(--bg)}
+    #hero-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.45}
+    .hero-glow{position:absolute;pointer-events:none;border-radius:50%;filter:blur(100px)}
+    .hero-glow-1{width:600px;height:500px;top:-200px;left:-150px;background:radial-gradient(circle,rgba(99,102,241,.07),transparent 70%);animation:glow-drift 14s ease-in-out infinite}
+    .hero-glow-2{width:700px;height:600px;top:-150px;right:-200px;background:radial-gradient(circle,rgba(168,85,247,.06),transparent 70%);animation:glow-drift 18s ease-in-out infinite reverse}
+    @keyframes glow-drift{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-30px) scale(1.06)}66%{transform:translate(-30px,25px) scale(.96)}}
+
+    .hero-inner{position:relative;z-index:1;text-align:center;max-width:900px;margin:0 auto}
+
+    .category-label{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,0.04);border:1px solid var(--line2);font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:36px}
+    .cat-dot{width:7px;height:7px;border-radius:50%;background:var(--brand);animation:cat-p 2.2s ease-in-out infinite}
+    @keyframes cat-p{0%,100%{opacity:1}50%{opacity:.4}}
+
+    .hero h1{font-size:clamp(44px,7vw,92px);line-height:.94;font-weight:900;letter-spacing:-3.5px;margin-bottom:28px}
+
+    .hero-sub{font-size:20px;color:var(--muted);line-height:1.7;max-width:640px;margin:0 auto 20px}
+
+    /* employee pills in hero */
+    .hero-employees{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+    .emp-pill{display:inline-flex;align-items:center;gap:9px;padding:10px 18px;border-radius:999px;font-size:14px;font-weight:800;border:1px solid transparent}
+    .emp-pill-ig{background:rgba(221,42,123,0.09);border-color:var(--ig-border)}
+    .emp-pill-wa{background:rgba(37,211,102,0.09);border-color:var(--wa-border)}
+    .emp-pill-icon{width:22px;height:22px;border-radius:6px;display:grid;place-items:center;font-size:12px}
+    .emp-pill-icon.ig{background:linear-gradient(135deg,#f58529,#dd2a7b)}
+    .emp-pill-icon.wa{background:#25d366}
+    .emp-pill-label-ig{background:var(--ig);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .emp-pill-label-wa{color:var(--wa)}
+
+    /* belief breaker */
+    .belief-breaker{display:inline-flex;flex-direction:column;gap:4px;background:rgba(255,255,255,0.03);border:1px solid var(--line2);border-radius:14px;padding:16px 24px;margin-bottom:36px;text-align:left}
+    .bb-row{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:700;color:var(--muted)}
+    .bb-check{width:20px;height:20px;border-radius:50%;background:rgba(22,199,132,0.14);border:1px solid rgba(22,199,132,0.26);display:grid;place-items:center;font-size:9px;color:var(--green);flex-shrink:0}
+    .bb-row strong{color:var(--text)}
+    .bb-final{font-size:13px;font-weight:800;color:var(--green);margin-top:4px;padding-top:8px;border-top:1px solid var(--line)}
+
+    .hero-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:48px}
+
+    /* proof */
+    .proof-bar{display:flex;justify-content:center;background:rgba(255,255,255,0.03);border:1px solid var(--line);border-radius:16px;overflow:hidden;max-width:640px;margin:0 auto 60px}
+    .proof-item{flex:1;padding:16px 20px;text-align:center;border-right:1px solid var(--line)}
+    .proof-item:last-child{border-right:none}
+    .proof-val{font-size:24px;font-weight:900;letter-spacing:-1px;line-height:1;background:var(--brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .proof-lbl{font-size:11px;color:var(--muted);font-weight:600;margin-top:3px}
+
+    /* mockup */
+    .hero-mockup-label{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:var(--muted);background:var(--card);border:1px solid var(--line);padding:6px 14px;border-radius:999px;margin-bottom:14px}
+    .live-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 1.5s ease-in-out infinite}
+
+    .mockup{background:#0a0d12;border:1px solid rgba(255,255,255,0.09);border-radius:20px;overflow:hidden;max-width:780px;margin:0 auto;box-shadow:0 0 0 1px rgba(99,102,241,0.06),0 50px 140px rgba(0,0,0,.7),0 0 80px rgba(99,102,241,0.04);animation:mockup-float 6s ease-in-out infinite}
+    @keyframes mockup-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    .mkbar{background:#0d1117;border-bottom:1px solid rgba(255,255,255,0.06);padding:10px 18px;display:flex;align-items:center;gap:10px}
+    .mkdots{display:flex;gap:6px}
+    .mkd{width:10px;height:10px;border-radius:50%;opacity:.65}
+    .mkd.r{background:#f87171}.mkd.y{background:#facc15}.mkd.g{background:#4ade80}
+    .mkbody{padding:24px;background:#09090f;position:relative;overflow:hidden}
+    .mkbody::after{content:'';position:absolute;left:0;top:-100%;width:100%;height:60px;background:linear-gradient(to bottom,transparent,rgba(99,102,241,.03),transparent);animation:scanline 4s linear infinite;pointer-events:none;z-index:10}
+    @keyframes scanline{0%{top:-10%}100%{top:110%}}
+
+    /* dashboard top */
+    .mk-top{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:20px}
+    .mk-num .n{font-size:64px;font-weight:900;line-height:1;letter-spacing:-3px}
+    .mk-num .l{font-size:13px;color:var(--muted);font-weight:600;margin-top:3px}
+    .mk-num .s{font-size:11px;color:var(--dim);margin-top:2px}
+    .mk-badges{display:flex;flex-direction:column;gap:7px;align-items:flex-end}
+    .mk-badge{display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:999px;font-size:12px;font-weight:700}
+    .mk-badge.on{background:rgba(22,199,132,0.12);border:1px solid rgba(22,199,132,0.22);color:var(--green)}
+    .mk-badge.mg{background:rgba(99,102,241,0.12);border:1px solid rgba(99,102,241,0.22);color:#a5b4fc}
+    .mk-badge.an{background:rgba(168,85,247,0.10);border:1px solid rgba(168,85,247,0.20);color:#d8b4fe}
+    .mk-badge .b2{width:5px;height:5px;border-radius:50%;background:currentColor}
+    .mk-last{font-size:12px;font-weight:700;color:var(--green);display:flex;align-items:center;gap:6px;margin-bottom:16px}
+    .mk-last::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green);display:block;animation:blink 1.5s ease-in-out infinite}
+
+    /* channel cards in mockup */
+    .mk-channels{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .mk-channel{background:var(--card);border:1px solid var(--line2);border-radius:14px;overflow:hidden}
+    .mk-ch-top{height:3px}
+    .mk-ch-top.ig{background:linear-gradient(90deg,#f58529,#dd2a7b,#8134af)}
+    .mk-ch-top.wa{background:#25d366}
+    .mk-ch-body{padding:14px}
+    .mk-ch-head{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+    .mk-ch-icon{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;font-size:16px;flex-shrink:0}
+    .mk-ch-icon.ig{background:linear-gradient(135deg,#f58529,#dd2a7b)}
+    .mk-ch-icon.wa{background:#25d366}
+    .mk-ch-name{font-size:14px;font-weight:900;letter-spacing:-.2px}
+    .mk-ch-sub{font-size:10px;color:var(--dim)}
+    .mk-ch-rows{display:grid;gap:1px}
+    .mk-ch-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:12px}
+    .mk-ch-row:last-child{border-bottom:none}
+    .mk-ch-row-l{color:#b0bdd6;font-weight:600}
+    .s-on{display:inline-flex;align-items:center;gap:4px;background:rgba(22,199,132,0.14);border:1px solid rgba(22,199,132,0.24);color:var(--green);border-radius:999px;padding:3px 8px;font-size:10px;font-weight:700}
+    .s-on::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--green);animation:blink 1.5s ease-in-out infinite}
+    .s-idle{display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,0.05);border:1px solid var(--line);color:var(--dim);border-radius:999px;padding:3px 8px;font-size:10px;font-weight:700}
+    .mk-ch-btn{margin-top:11px;width:100%;border:none;border-radius:9px;padding:8px;font-size:11px;font-weight:800;cursor:pointer;font-family:inherit;transition:.15s}
+    .mk-ch-btn.ig{background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af);color:#fff}
+    .mk-ch-btn.wa{background:var(--wa);color:#fff}
+    .mk-ch-btn:hover{opacity:.9}
+
+    .mockup-fade{height:90px;background:linear-gradient(to bottom,transparent,var(--bg));margin-top:-90px;position:relative;z-index:2;pointer-events:none}
+
+    /* TICKER */
+    .ticker-wrap{overflow:hidden;background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .ticker-track{display:flex;animation:ticker 24s linear infinite}
+    .ticker-item{flex-shrink:0;min-width:220px;padding:15px 20px;border-right:1px solid var(--line);display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px;font-weight:700;color:var(--muted)}
+    @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+    /* ══ EMPLOYEES SECTION ══ */
+    .employees-section{padding:100px 0;background:var(--bg)}
+
+    .section-eyebrow{display:block;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+    .section-h2{font-size:clamp(28px,3.8vw,46px);line-height:1.08;letter-spacing:-1.4px;font-weight:900;margin-bottom:14px}
+    .section-lead{font-size:17px;color:var(--muted);max-width:680px;line-height:1.72;margin-bottom:56px}
+
+    /* individual employee block */
+    .emp-block{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding:64px 0;border-bottom:1px solid var(--line)}
+    .emp-block:last-child{border-bottom:none;padding-bottom:0}
+    .emp-block.reverse{direction:rtl}
+    .emp-block.reverse > *{direction:ltr}
+
+    .emp-text{}
+    .emp-platform-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;margin-bottom:20px;border:1px solid transparent}
+    .emp-platform-badge.ig{background:var(--ig-soft);border-color:var(--ig-border)}
+    .emp-platform-badge.wa{background:var(--wa-soft);border-color:var(--wa-border)}
+    .emp-platform-badge .icon{width:20px;height:20px;border-radius:6px;display:grid;place-items:center;font-size:11px;flex-shrink:0}
+    .emp-platform-badge .icon.ig{background:linear-gradient(135deg,#f58529,#dd2a7b)}
+    .emp-platform-badge .icon.wa{background:var(--wa)}
+    .emp-platform-badge .txt-ig{background:var(--ig);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .emp-platform-badge .txt-wa{color:var(--wa)}
+
+    .emp-h2{font-size:clamp(26px,3.4vw,42px);line-height:1.04;font-weight:900;letter-spacing:-1.5px;margin-bottom:14px}
+    .emp-lead{font-size:15px;color:var(--muted);line-height:1.76;margin-bottom:22px}
+    .emp-lead strong{color:var(--text)}
+
+    .emp-features{list-style:none;display:grid;gap:9px;margin-bottom:28px}
+    .emp-features li{display:flex;align-items:center;gap:10px;font-size:14px;color:#c8d4ec;font-weight:600}
+    .emp-features li::before{content:'';width:5px;height:5px;border-radius:50%;flex-shrink:0}
+    .emp-features.ig li::before{background:linear-gradient(135deg,#f58529,#dd2a7b)}
+    .emp-features.wa li::before{background:var(--wa)}
+
+    /* employee visual card */
+    .emp-card{border-radius:22px;overflow:hidden;border:1px solid var(--line2);background:var(--card);box-shadow:0 30px 80px rgba(0,0,0,0.4)}
+    .emp-card-header{padding:20px 22px;display:flex;align-items:center;gap:14px}
+    .emp-card-header.ig{background:linear-gradient(135deg,rgba(245,133,41,0.08),rgba(221,42,123,0.06))}
+    .emp-card-header.wa{background:rgba(37,211,102,0.06)}
+    .emp-card-logo{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;font-size:22px;flex-shrink:0}
+    .emp-card-logo.ig{background:linear-gradient(135deg,#f58529,#dd2a7b);box-shadow:0 6px 18px rgba(221,42,123,0.25)}
+    .emp-card-logo.wa{background:#25d366;box-shadow:0 6px 18px rgba(37,211,102,0.22)}
+    .emp-card-title{font-size:18px;font-weight:900;letter-spacing:-.3px}
+    .emp-card-sub{font-size:12px;color:var(--muted);margin-top:1px}
+
+    .emp-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+    .emp-stat{background:var(--card);padding:16px 18px}
+    .emp-stat .v{font-size:26px;font-weight:900;letter-spacing:-1px;line-height:1}
+    .emp-stat .v.ig{background:var(--ig);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .emp-stat .v.wa{color:var(--wa)}
+    .emp-stat .l{font-size:11px;color:var(--dim);font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-top:3px}
+
+    .emp-tasks{padding:16px 22px;display:grid;gap:1px}
+    .emp-task{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:13px}
+    .emp-task:last-child{border-bottom:none}
+    .emp-task-l{color:#b0bdd6;font-weight:600;display:flex;align-items:center;gap:8px}
+    .emp-card-btn{margin:0 22px 20px;display:block;text-align:center;border:none;border-radius:12px;padding:12px;font-size:13px;font-weight:800;cursor:pointer;font-family:inherit;transition:.15s}
+    .emp-card-btn.ig{background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af);color:#fff}
+    .emp-card-btn.wa{background:var(--wa);color:#fff}
+    .emp-card-btn:hover{opacity:.9}
+
+    /* ══ IA SECTION ══ */
+    .ia-section{position:relative;overflow:hidden;padding:120px 0;background:#05060a}
+    .ia-section::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 70% 60% at 20% 40%,rgba(99,102,241,.06),transparent 60%),radial-gradient(ellipse 60% 70% at 80% 60%,rgba(168,85,247,.07),transparent 60%)}
+    #ia-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+
+    .ia-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+
+    .ia-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#818cf8;margin-bottom:20px;padding:6px 12px;border-radius:999px;background:var(--brand-soft);border:1px solid var(--brand-border)}
+    .ia-eyebrow .ring{width:8px;height:8px;border-radius:50%;background:var(--brand);position:relative}
+    .ia-eyebrow .ring::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:1px solid rgba(99,102,241,.45);animation:ring-expand 1.8s ease-out infinite}
+    @keyframes ring-expand{0%{transform:scale(1);opacity:1}100%{transform:scale(2.4);opacity:0}}
+
+    .ia-h2{font-size:clamp(30px,4.2vw,52px);line-height:1.0;font-weight:900;letter-spacing:-2px;margin-bottom:24px}
+
+    .ia-lines{display:grid;gap:4px;margin-bottom:28px}
+    .ia-line{font-size:17px;font-weight:900;letter-spacing:-.3px;padding:13px 0;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px}
+    .ia-line:last-child{border-bottom:none}
+    .ia-line .cross{font-size:13px;color:#f87171;font-weight:800;flex-shrink:0}
+    .ia-line .check{font-size:13px;color:var(--green);font-weight:800;flex-shrink:0}
+    .ia-line .lx{text-decoration:line-through;color:var(--dim);font-size:14px}
+    .ia-line .ly{color:var(--text)}
+
+    .ia-statement{font-size:19px;font-weight:900;line-height:1.35;letter-spacing:-.4px;padding:22px 26px;background:rgba(255,255,255,0.03);border:1px solid var(--line2);border-radius:14px;margin-bottom:24px}
+    .ia-statement .l1{color:var(--muted);font-size:14px;font-weight:600;margin-bottom:8px}
+
+    .ia-spec-list{display:grid;gap:10px}
+    .ia-spec{display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:11px;font-size:13px;font-weight:700;transition:.2s}
+    .ia-spec:hover{border-color:var(--brand-border)}
+    .ia-spec-icon{font-size:18px;flex-shrink:0}
+    .ia-spec-body{}
+    .ia-spec-body div:first-child{margin-bottom:2px}
+    .ia-spec-body div:last-child{font-size:11px;color:var(--dim);font-weight:500}
+    .ia-compat{display:flex;align-items:center;gap:8px;margin-top:14px;background:rgba(22,199,132,.06);border:1px solid rgba(22,199,132,.18);border-radius:11px;padding:12px 16px;font-size:13px;font-weight:700;color:var(--green)}
+
+    /* orb */
+    .ia-visual{display:flex;align-items:center;justify-content:center}
+    .orb-wrap{position:relative;width:420px;height:420px;display:flex;align-items:center;justify-content:center}
+    .ring-orb{position:absolute;border-radius:50%;border:1px solid transparent}
+    .ro1{width:400px;height:400px;border-color:rgba(99,102,241,.14);animation:spin 22s linear infinite}
+    .ro2{width:310px;height:310px;border-color:rgba(168,85,247,.18);border-style:dashed;animation:spin 15s linear infinite reverse}
+    .ro3{width:220px;height:220px;border-color:rgba(99,102,241,.16);animation:spin 10s linear infinite}
+    .ro4{width:160px;height:160px;border-color:rgba(168,85,247,.22);animation:spin 7s linear infinite reverse}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .ring-dot{position:absolute;width:8px;height:8px;border-radius:50%;background:var(--brand);box-shadow:0 0 12px rgba(99,102,241,.7)}
+
+    .orb-core{position:relative;z-index:2;width:120px;height:120px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;background:linear-gradient(135deg,rgba(99,102,241,.16),rgba(168,85,247,.12));border:1px solid rgba(99,102,241,.30);box-shadow:0 0 50px rgba(99,102,241,.18),0 0 100px rgba(168,85,247,.10),inset 0 0 30px rgba(99,102,241,.06);animation:core-pulse 3s ease-in-out infinite}
+    @keyframes core-pulse{0%,100%{box-shadow:0 0 50px rgba(99,102,241,.18),0 0 100px rgba(168,85,247,.10)}50%{box-shadow:0 0 80px rgba(99,102,241,.30),0 0 160px rgba(168,85,247,.18)}}
+    .orb-icon{font-size:34px;line-height:1}
+    .orb-label{font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:rgba(99,102,241,.8)}
+
+    .fpill{position:absolute;background:rgba(12,16,22,.94);border:1px solid var(--line2);border-radius:10px;padding:8px 14px;font-size:11px;font-weight:700;white-space:nowrap;backdrop-filter:blur(12px)}
+    .fpill .pv{font-size:16px;font-weight:900;display:block;line-height:1.2}
+    .fpill .pl{font-size:10px;color:var(--muted)}
+    .fp1{top:10px;left:-30px;border-color:rgba(22,199,132,.22);animation:pfloat 4s ease-in-out infinite}.fp1 .pv{color:var(--green)}
+    .fp2{top:10px;right:-30px;border-color:rgba(99,102,241,.22);animation:pfloat 4s ease-in-out infinite 1s}.fp2 .pv{color:#818cf8}
+    .fp3{bottom:70px;left:-40px;border-color:rgba(168,85,247,.28);animation:pfloat 4s ease-in-out infinite 2s}.fp3 .pv{color:#d8b4fe}
+    .fp4{bottom:70px;right:-40px;border-color:rgba(37,211,102,.22);animation:pfloat 4s ease-in-out infinite 3s}.fp4 .pv{color:var(--wa)}
+    @keyframes pfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+    .proc-wrap{position:absolute;bottom:-44px;left:50%;transform:translateX(-50%);background:rgba(12,16,22,.94);border:1px solid var(--line);border-radius:10px;padding:10px 18px;width:260px;backdrop-filter:blur(12px)}
+    .proc-top{display:flex;justify-content:space-between;font-size:11px;font-weight:700;color:var(--muted);margin-bottom:7px}
+    .proc-top .active{color:var(--green)}
+    .proc-track{height:4px;background:rgba(255,255,255,.06);border-radius:999px;overflow:hidden}
+    .proc-fill{height:100%;border-radius:999px;background:var(--brand);animation:proc 2.2s ease-in-out infinite}
+    @keyframes proc{0%{width:15%}50%{width:88%}100%{width:15%}}
+
+    .ia-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:90px;position:relative;z-index:1}
+    .ia-stat{background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:16px;padding:22px 20px;text-align:center;transition:.2s}
+    .ia-stat:hover{border-color:var(--brand-border);transform:translateY(-3px)}
+    .ia-stat .sv{font-size:38px;font-weight:900;letter-spacing:-1px;line-height:1;margin-bottom:6px;background:var(--brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .ia-stat .sl{font-size:13px;color:var(--muted);font-weight:600}
+    .ia-stat .ss{font-size:11px;color:var(--dim);margin-top:3px}
+
+    /* ══ HOW ══ */
+    .how-section{padding:100px 0}
+    .steps{display:grid}
+    .step{display:grid;grid-template-columns:52px 1fr;gap:22px;padding:36px 0;border-bottom:1px solid var(--line);align-items:start}
+    .step:last-child{border-bottom:none}
+    .step-side{display:flex;flex-direction:column;align-items:center;gap:8px}
+    .step-n{width:44px;height:44px;border-radius:50%;background:var(--brand-soft);border:1px solid var(--brand-border);display:grid;place-items:center;font-size:16px;font-weight:900;flex-shrink:0}
+    .step-n span{background:var(--brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .step-line{width:1px;flex:1;min-height:30px;background:linear-gradient(to bottom,rgba(99,102,241,.2),transparent)}
+    .step-body h3{font-size:21px;font-weight:900;letter-spacing:-.3px;margin-bottom:8px}
+    .step-body p{font-size:15px;color:var(--muted);line-height:1.72;margin-bottom:12px}
+    .step-tag{display:inline-flex;align-items:center;gap:6px;background:var(--brand-soft);border:1px solid var(--brand-border);border-radius:999px;padding:5px 13px;font-size:12px;font-weight:700;color:#818cf8}
+
+    /* ══ VISION ══ */
+    .vision-section{padding:100px 0;background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .vision-inner{text-align:center;max-width:720px;margin:0 auto}
+    .vision-h2{font-size:clamp(32px,5vw,60px);line-height:.96;font-weight:900;letter-spacing:-2.2px;margin-bottom:20px}
+    .vision-lead{font-size:17px;color:var(--muted);line-height:1.74;margin-bottom:14px}
+    .vision-lead strong{color:var(--text)}
+    .channels{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin:32px 0 40px}
+    .ch-pill{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;font-size:14px;font-weight:700;transition:.18s}
+    .ch-pill:not(.active):hover{transform:translateY(-2px)}
+    .ch-pill.active-ig{background:var(--ig-soft);border:1px solid var(--ig-border)}
+    .ch-pill.active-wa{background:var(--wa-soft);border:1px solid var(--wa-border)}
+    .ch-pill.inactive{background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--muted)}
+    .ch-pill .ch-live-ig{font-size:10px;background:var(--ig-soft);border:1px solid var(--ig-border);border-radius:4px;padding:2px 6px;color:#dd2a7b;font-weight:700}
+    .ch-pill .ch-live-wa{font-size:10px;background:var(--wa-soft);border:1px solid var(--wa-border);border-radius:4px;padding:2px 6px;color:var(--wa);font-weight:700}
+    .ch-soon{font-size:10px;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:4px;padding:2px 6px;color:var(--dim);font-weight:700}
+    .vision-finale .l1{font-size:18px;color:var(--muted);margin-bottom:8px}
+    .vision-finale .l2{font-size:clamp(22px,3.5vw,38px);font-weight:900;letter-spacing:-.7px;line-height:1.15}
+
+    /* ══ DIFF / COMPARE ══ */
+    .diff-section{padding:100px 0}
+    .compare{border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-top:36px}
+    .cr{display:grid;grid-template-columns:1.4fr 1fr 1fr;border-bottom:1px solid var(--line)}
+    .cr:last-child{border-bottom:none}
+    .cr.head{background:rgba(255,255,255,.03)}
+    .cell{padding:14px 20px;display:flex;align-items:center;gap:8px;font-size:14px}
+    .cr.head .cell{font-size:11px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:var(--dim)}
+    .cr.head .cell:last-child{background:var(--brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .cell.lbl{color:#b8c6de;font-weight:600}
+    .cell.bad{color:#f87171;font-size:13px}
+    .cell.good{color:var(--green);font-weight:700;font-size:13px}
+    .bx{width:14px;height:14px;border-radius:50%;display:grid;place-items:center;font-size:8px;flex-shrink:0}
+    .bx.n{background:rgba(248,113,113,.14)}.bx.y{background:rgba(22,199,132,.14)}
+
+    /* ══ FAQ ══ */
+    .faq-section{padding:100px 0;background:var(--bg2);border-top:1px solid var(--line)}
+    .faq-wrap{max-width:720px;display:grid;gap:8px}
+    .faq-item{border:1px solid var(--line);border-radius:13px;overflow:hidden}
+    .faq-q{padding:18px 22px;background:var(--card);display:flex;align-items:center;justify-content:space-between;gap:14px;cursor:pointer;user-select:none;font-size:15px;font-weight:700}
+    .faq-q:hover{background:var(--card2)}
+    .faq-ch{width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.05);color:var(--muted);display:grid;place-items:center;font-size:10px;flex-shrink:0;transition:.22s}
+    .faq-item.open .faq-ch{transform:rotate(180deg);background:var(--brand-soft);color:#818cf8}
+    .faq-a{display:none;padding:0 22px 18px;background:var(--card);color:var(--muted);font-size:14px;line-height:1.68}
+    .faq-item.open .faq-a{display:block}
+
+    /* ══ CTA ══ */
+    .cta-section{padding:100px 0}
+    .cta-box{position:relative;overflow:hidden;background:var(--card);border:1px solid var(--brand-border);border-radius:28px;padding:90px 40px;text-align:center}
+    .cta-box::before{content:'';position:absolute;top:-180px;left:50%;transform:translateX(-50%);width:900px;height:600px;background:radial-gradient(ellipse,rgba(99,102,241,.10) 0%,rgba(168,85,247,.06) 40%,transparent 70%);pointer-events:none}
+    .cta-box h2{position:relative;z-index:1;font-size:clamp(32px,5vw,62px);line-height:.96;letter-spacing:-2.4px;font-weight:900;margin-bottom:16px}
+    .cta-box p{position:relative;z-index:1;font-size:17px;color:var(--muted);max-width:560px;margin:0 auto 36px;line-height:1.7}
+    .cta-btns{position:relative;z-index:1;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .cta-note{position:relative;z-index:1;font-size:13px;color:var(--dim);font-weight:600;margin-top:18px}
+
+    /* footer */
+    .footer{margin-top:56px;padding:26px 0;border-top:1px solid var(--line)}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+    .footer-logo{font-size:15px;font-weight:900}
+    .footer-links{display:flex;gap:18px}
+    .footer-links a{font-size:13px;color:var(--dim);transition:.15s}
+    .footer-links a:hover{color:var(--muted)}
+    .footer-copy{font-size:12px;color:var(--dim)}
+
+    /* ══ REVEAL ══ */
+    .reveal,.reveal-l,.reveal-r{opacity:0;transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+    .reveal{transform:translateY(30px)}.reveal-l{transform:translateX(-30px)}.reveal-r{transform:translateX(30px)}
+    .reveal.in,.reveal-l.in,.reveal-r.in{opacity:1;transform:none}
+    .d1{transition-delay:.06s}.d2{transition-delay:.12s}.d3{transition-delay:.18s}.d4{transition-delay:.24s}.d5{transition-delay:.30s}.d6{transition-delay:.36s}
+    .hero-inner > *{opacity:0}
+    .hero-in{animation:fadeUp .72s cubic-bezier(.22,1,.36,1) forwards}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+
+    /* ══ RESPONSIVE ══ */
+    @media(max-width:960px){
+      .nav-links,.nav-live{display:none}
+      .emp-block,.emp-block.reverse{grid-template-columns:1fr;gap:36px;direction:ltr}
+      .ia-inner{grid-template-columns:1fr;gap:48px}
+      .ia-stats{grid-template-columns:1fr 1fr}
+      .orb-wrap{width:320px;height:320px}
+      .ro1{width:310px;height:310px}.ro2{width:240px;height:240px}.ro3{width:170px;height:170px}.ro4{width:125px;height:125px}
+      .mk-channels{grid-template-columns:1fr}
+    }
+    @media(max-width:640px){
+      .hero{padding-top:64px}
+      .hero-btns{flex-direction:column}
+      .btn-xl,.btn-lg{width:100%}
+      .proof-bar{flex-direction:column}
+      .proof-item{border-right:none;border-bottom:1px solid var(--line)}
+      .proof-item:last-child{border-bottom:none}
+      .step{grid-template-columns:46px 1fr;gap:14px}
+      .cr{grid-template-columns:1fr}
+      .cr.head .cell:first-child,.cr .cell.lbl{display:none}
+      .cta-box{padding:56px 22px}
+      .footer-inner{flex-direction:column;text-align:center}
+      .footer-links{justify-content:center}
+      .orb-wrap{width:260px;height:260px}
+      .ro1{width:250px;height:250px}.ro2{width:195px;height:195px}.ro3{width:140px;height:140px}.ro4{width:100px;height:100px}
+      .fpill{display:none}
+      .mk-top{flex-direction:column;gap:14px;align-items:flex-start}
+      .mk-badges{flex-direction:row;flex-wrap:wrap}
+      .ia-stats{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="wrap">
+    <div class="nav-inner">
+      <div class="logo">Tamo<span class="brand">Work</span><span class="logo-beta">Beta</span></div>
+      <ul class="nav-links">
+        <li><a href="#funcionarios" data-i18n="nav_employees">Funcionários</a></li>
+        <li><a href="#ia-engine" data-i18n="nav_ia">IA local</a></li>
+        <li><a href="#como-funciona" data-i18n="nav_how">Como funciona</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:10px">
+        <div class="lang-switch">
+          <button class="lang-btn active" onclick="setLang('pt')" id="lb-pt">PT</button>
+          <button class="lang-btn" onclick="setLang('en')" id="lb-en">EN</button>
+          <button class="lang-btn" onclick="setLang('es')" id="lb-es">ES</button>
+        </div>
+        <div class="nav-live">
+          <div class="nav-live-dot"></div>
+          <span id="nav-counter" data-i18n="nav_counter">2.847 respostas hoje</span>
+        </div>
+        <button class="btn btn-brand" type="button" onclick="triggerDownload()" data-i18n="nav_cta">Ver funcionários →</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="hero-glow hero-glow-2"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+
+      <div class="category-label">
+        <span class="cat-dot"></span>
+        <span data-i18n="cat_label">Sistema de funcionários digitais com IA local</span>
+      </div>
+
+      <h1 data-i18n-html="hero_h1">
+        Instagram e WhatsApp<br>
+        respondendo por você.<br>
+        <span class="brand">Automaticamente.</span>
+      </h1>
+
+      <p class="hero-sub" data-i18n="hero_sub">
+        Funcionários de IA que trabalham no seu computador, respondem clientes no Instagram e WhatsApp automaticamente. Sem mensalidade, sem API, sem configuração complicada.
+      </p>
+
+      <div class="hero-employees">
+        <div class="emp-pill emp-pill-ig reveal d1">
+          <div class="emp-pill-icon ig">📸</div>
+          <span class="emp-pill-label-ig" data-i18n="pill_ig">Funcionário do Instagram</span>
+        </div>
+        <div class="emp-pill emp-pill-wa reveal d2">
+          <div class="emp-pill-icon wa">💬</div>
+          <span class="emp-pill-label-wa" data-i18n="pill_wa">Funcionário do WhatsApp</span>
+        </div>
+      </div>
+
+      <div class="belief-breaker">
+        <div class="bb-row"><span class="bb-check">✓</span><span data-i18n="bb1">Sem API</span></div>
+        <div class="bb-row"><span class="bb-check">✓</span><span data-i18n="bb2">Sem mensalidade</span></div>
+        <div class="bb-row"><span class="bb-check">✓</span><span data-i18n="bb3">Sem configuração complicada</span></div>
+        <div class="bb-row"><span class="bb-check">✓</span><span data-i18n="bb4">Não é teste. Não é limitado.</span></div>
+        <div class="bb-row"><span class="bb-check">✓</span><span data-i18n-html="bb5"><strong>É realmente gratuito.</strong></span></div>
+        <div class="bb-final" data-i18n="bb_final">Instalou. Funcionou.</div>
+      </div>
+
+      <div class="hero-btns">
+        <button class="btn btn-brand btn-xl" type="button" onclick="triggerDownload()">
+          <span data-i18n="hero_btn1">Ativar meus funcionários grátis</span>
+        </button>
+        <button class="btn btn-ghost btn-lg" type="button" onclick="document.getElementById('funcionarios').scrollIntoView({behavior:'smooth'})">
+          <span data-i18n="hero_btn2">Ver os funcionários</span>
+        </button>
+      </div>
+
+      <div class="proof-bar">
+        <div class="proof-item">
+          <div class="proof-val" id="pr1">2.847</div>
+          <div class="proof-lbl" data-i18n="proof_msgs">respostas hoje</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-val" id="pr2">1.430</div>
+          <div class="proof-lbl" data-i18n="proof_ig">via Instagram</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-val" id="pr3">1.417</div>
+          <div class="proof-lbl" data-i18n="proof_wa">via WhatsApp</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-val">R$0</div>
+          <div class="proof-lbl" data-i18n="proof_cost">custo mensal</div>
+        </div>
+      </div>
+
+      <!-- MOCKUP -->
+      <div class="hero-mockup-label">
+        <span class="live-dot"></span>
+        <span data-i18n="mk_label">Funcionários trabalhando agora</span>
+      </div>
+
+      <div class="mockup">
+        <div class="mkbar">
+          <div class="mkdots"><div class="mkd r"></div><div class="mkd y"></div><div class="mkd g"></div></div>
+          <span style="font-size:13px;font-weight:900">Tamo</span><span class="brand" style="font-size:13px;font-weight:900">Work</span>
+          <span style="font-size:11px;color:var(--dim);margin-left:6px">v2.0.0</span>
+        </div>
+        <div class="mkbody">
+          <div class="mk-top">
+            <div class="mk-num">
+              <div class="n" id="mk-num">2.847</div>
+              <div class="l" data-i18n="mk_today">respostas hoje</div>
+              <div class="s" data-i18n="mk_auto">Instagram + WhatsApp respondidos automaticamente</div>
+            </div>
+            <div class="mk-badges">
+              <div class="mk-badge on"><span class="b2"></span> <span data-i18n="mk_working">2 trabalhando agora</span></div>
+              <div class="mk-badge mg">🏢 <span data-i18n="mk_manager">Gerente</span></div>
+              <div class="mk-badge an">🔍 <span data-i18n="mk_analyst">Analista</span></div>
+            </div>
+          </div>
+          <div class="mk-last" data-i18n="mk_last">Última atividade: 2 min atrás</div>
+
+          <div class="mk-channels">
+            <!-- Instagram -->
+            <div class="mk-channel">
+              <div class="mk-ch-top ig"></div>
+              <div class="mk-ch-body">
+                <div class="mk-ch-head">
+                  <div class="mk-ch-icon ig">📸</div>
+                  <div>
+                    <div class="mk-ch-name">Instagram</div>
+                    <div class="mk-ch-sub" data-i18n="mk_ig_sub">Comentários + Direct</div>
+                  </div>
+                </div>
+                <div class="mk-ch-rows">
+                  <div class="mk-ch-row">
+                    <span class="mk-ch-row-l">💬 <span data-i18n="mk_comments">Comentários</span></span>
+                    <span class="s-on" data-i18n="mk_status_on">Trabalhando</span>
+                  </div>
+                  <div class="mk-ch-row">
+                    <span class="mk-ch-row-l">📩 Direct DM</span>
+                    <span class="s-on" data-i18n="mk_status_on">Trabalhando</span>
+                  </div>
+                </div>
+                <button class="mk-ch-btn ig" data-i18n="mk_manage_ig">Gerenciar Instagram →</button>
+              </div>
+            </div>
+            <!-- WhatsApp -->
+            <div class="mk-channel">
+              <div class="mk-ch-top wa"></div>
+              <div class="mk-ch-body">
+                <div class="mk-ch-head">
+                  <div class="mk-ch-icon wa">💬</div>
+                  <div>
+                    <div class="mk-ch-name">WhatsApp</div>
+                    <div class="mk-ch-sub" data-i18n="mk_wa_sub">Mensagens automáticas</div>
+                  </div>
+                </div>
+                <div class="mk-ch-rows">
+                  <div class="mk-ch-row">
+                    <span class="mk-ch-row-l">📱 <span data-i18n="mk_messages">Mensagens</span></span>
+                    <span class="s-on" data-i18n="mk_status_on">Trabalhando</span>
+                  </div>
+                  <div class="mk-ch-row">
+                    <span class="mk-ch-row-l">🔄 <span data-i18n="mk_followup">Follow-up</span></span>
+                    <span class="s-idle" data-i18n="mk_status_off">Parado</span>
+                  </div>
+                </div>
+                <button class="mk-ch-btn wa" data-i18n="mk_manage_wa">Gerenciar WhatsApp →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-fade"></div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <div class="ticker-item">📸 Instagram</div>
+    <div class="ticker-item">💬 WhatsApp</div>
+    <div class="ticker-item">🧠 IA já integrada</div>
+    <div class="ticker-item">🆓 100% grátis</div>
+    <div class="ticker-item">💻 Roda no seu PC</div>
+    <div class="ticker-item">🚫 Sem mensalidade</div>
+    <div class="ticker-item">⚡ Instala → funciona</div>
+    <div class="ticker-item">🔒 Privacidade total</div>
+    <div class="ticker-item">📊 Painel em tempo real</div>
+    <div class="ticker-item">📸 Instagram</div>
+    <div class="ticker-item">💬 WhatsApp</div>
+    <div class="ticker-item">🧠 IA já integrada</div>
+    <div class="ticker-item">🆓 100% grátis</div>
+    <div class="ticker-item">💻 Roda no seu PC</div>
+    <div class="ticker-item">🚫 Sem mensalidade</div>
+    <div class="ticker-item">⚡ Instala → funciona</div>
+    <div class="ticker-item">🔒 Privacidade total</div>
+    <div class="ticker-item">📊 Painel em tempo real</div>
+  </div>
+</div>
+
+<!-- ══ EMPLOYEES ══ -->
+<section class="employees-section" id="funcionarios">
+  <div class="wrap">
+    <span class="section-eyebrow brand" data-i18n="emp_eyebrow">Os funcionários</span>
+    <h2 class="section-h2 reveal" data-i18n-html="emp_h2">Dois funcionários. Dois canais.<br>Uma equipe trabalhando por você.</h2>
+    <p class="section-lead reveal" data-i18n="emp_lead">Cada funcionário foi feito para um canal específico, com contexto do seu negócio e IA já integrada. Você ativa e eles trabalham.</p>
+
+    <!-- INSTAGRAM EMPLOYEE -->
+    <div class="emp-block">
+      <div class="emp-text reveal-l">
+        <div class="emp-platform-badge ig">
+          <div class="icon ig">📸</div>
+          <span class="txt-ig" data-i18n="ig_badge">Funcionário do Instagram</span>
+        </div>
+        <h2 class="emp-h2" data-i18n-html="ig_h2">Seu Instagram responde<br><span class="ig-text">sem você tocar no celular.</span></h2>
+        <p class="emp-lead" data-i18n-html="ig_lead">Ele lê cada comentário e cada direct, entende o contexto do seu negócio e responde <strong>como um atendente real</strong> — 24 horas por dia.</p>
+        <ul class="emp-features ig">
+          <li data-i18n="ig_f1">Responde comentários automaticamente</li>
+          <li data-i18n="ig_f2">Atende direct DM dos seguidores</li>
+          <li data-i18n="ig_f3">Mantém conversas ativas</li>
+          <li data-i18n="ig_f4">Usa o tom de voz do seu negócio</li>
+          <li data-i18n="ig_f5">Painel em tempo real</li>
+        </ul>
+        <button class="btn btn-ig btn-lg" type="button" onclick="triggerDownload()">
+          <span data-i18n="ig_btn">Ativar funcionário do Instagram</span>
+        </button>
+      </div>
+      <div class="emp-card reveal-r">
+        <div class="emp-card-header ig">
+          <div class="emp-card-logo ig">📸</div>
+          <div>
+            <div class="emp-card-title">Instagram</div>
+            <div class="emp-card-sub" data-i18n="ig_card_sub">Funcionário ativo</div>
+          </div>
+        </div>
+        <div class="emp-stats">
+          <div class="emp-stat">
+            <div class="v ig" id="ig-comments">823</div>
+            <div class="l" data-i18n="ig_stat1">comentários hoje</div>
+          </div>
+          <div class="emp-stat">
+            <div class="v ig" id="ig-dms">607</div>
+            <div class="l" data-i18n="ig_stat2">directs hoje</div>
+          </div>
+        </div>
+        <div class="emp-tasks">
+          <div class="emp-task">
+            <span class="emp-task-l">💬 <span data-i18n="ig_task1">Comentários</span></span>
+            <span class="s-on" data-i18n="mk_status_on">Trabalhando</span>
+          </div>
+          <div class="emp-task">
+            <span class="emp-task-l">📩 Direct DM</span>
+            <span class="s-on" data-i18n="mk_status_on">Trabalhando</span>
+          </div>
+          <div class="emp-task">
+            <span class="emp-task-l">🏢 <span data-i18n="mk_manager">Gerente</span></span>
+            <span class="s-on" data-i18n="status_active">Ativo</span>
+          </div>
+          <div class="emp-task">
+            <span class="emp-task-l">🔍 <span data-i18n="mk_analyst">Analista</span></span>
+            <span class="s-on" data-i18n="status_active">Ativo</span>
+          </div>
+        </div>
+        <button class="emp-card-btn ig" data-i18n="ig_btn_card">Ativar funcionário →</button>
+      </div>
+    </div>
+
+    <!-- WHATSAPP EMPLOYEE -->
+    <div class="emp-block reverse">
+      <div class="emp-text reveal-r">
+        <div class="emp-platform-badge wa">
+          <div class="icon wa">💬</div>
+          <span class="txt-wa" data-i18n="wa_badge">Funcionário do WhatsApp</span>
+        </div>
+        <h2 class="emp-h2" data-i18n-html="wa_h2">Seu WhatsApp responde<br><span class="wa-text">enquanto você trabalha.</span></h2>
+        <p class="emp-lead" data-i18n-html="wa_lead">Ele atende mensagens, responde dúvidas sobre produtos, envia informações e <strong>nunca deixa um cliente sem resposta</strong> — direto do seu computador.</p>
+        <ul class="emp-features wa">
+          <li data-i18n="wa_f1">Responde mensagens automaticamente</li>
+          <li data-i18n="wa_f2">Tira dúvidas sobre produtos e serviços</li>
+          <li data-i18n="wa_f3">Envia informações e links</li>
+          <li data-i18n="wa_f4">Usa o contexto do seu negócio</li>
+          <li data-i18n="wa_f5">Trabalha 24h sem parar</li>
+        </ul>
+        <button class="btn btn-wa btn-lg" type="button" onclick="triggerDownload()">
+          <span data-i18n="wa_btn">Ativar funcionário do WhatsApp</span>
+        </button>
+      </div>
+      <div class="emp-card reveal-l">
+        <div class="emp-card-header wa">
+          <div class="emp-card-logo wa">💬</div>
+          <div>
+            <div class="emp-card-title">WhatsApp</div>
+            <div class="emp-card-sub" data-i18n="wa_card_sub">Funcionário ativo</div>
+          </div>
+        </div>
+        <div class="emp-stats">
+          <div class="emp-stat">
+            <div class="v wa" id="wa-msgs">1.417</div>
+            <div class="l" data-i18n="wa_stat1">mensagens hoje</div>
+          </div>
+          <div class="emp-stat">
+            <div class="v wa">0ms</div>
+            <div class="l" data-i18n="wa_stat2">tempo de resposta</div>
+          </div>
+        </div>
+        <div class="emp-tasks">
+          <div class="emp-task">
+            <span class="emp-task-l">📱 <span data-i18n="mk_messages">Mensagens</span></span>
+            <span class="s-on" data-i18n="mk_status_on">Trabalhando</span>
+          </div>
+          <div class="emp-task">
+            <span class="emp-task-l">🛍️ <span data-i18n="wa_task2">Informações</span></span>
+            <span class="s-on" data-i18n="mk_status_on">Trabalhando</span>
+          </div>
+          <div class="emp-task">
+            <span class="emp-task-l">🔄 <span data-i18n="mk_followup">Follow-up</span></span>
+            <span class="s-idle" data-i18n="mk_status_off">Parado</span>
+          </div>
+        </div>
+        <button class="emp-card-btn wa" data-i18n="wa_btn_card">Ativar funcionário →</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ IA ENGINE ══ -->
+<section class="ia-section" id="ia-engine">
+  <canvas id="ia-canvas"></canvas>
+  <div class="wrap">
+    <div class="ia-inner">
+      <div class="reveal-l">
+        <div class="ia-eyebrow">
+          <div class="ring"></div>
+          <span class="brand" data-i18n="ia_eyebrow">Motor de IA local</span>
+        </div>
+        <h2 class="ia-h2" data-i18n-html="ia_h2">Sua IA é sua.<br><span class="brand">Rodando no seu PC.</span></h2>
+        <div class="ia-lines">
+          <div class="ia-line reveal d1"><span class="cross">✕</span><span class="lx" data-i18n="ia_l1">Não depende da OpenAI</span></div>
+          <div class="ia-line reveal d2"><span class="cross">✕</span><span class="lx" data-i18n="ia_l2">Não depende de API</span></div>
+          <div class="ia-line reveal d3"><span class="cross">✕</span><span class="lx" data-i18n="ia_l3">Não depende de servidor</span></div>
+          <div class="ia-line reveal d4"><span class="check">✓</span><span class="ly" style="font-size:18px;font-weight:900" data-i18n-html="ia_l4">Sua IA roda no seu PC.<br><span class="brand">Independente de tudo.</span></span></div>
+        </div>
+        <div class="ia-statement reveal d5">
+          <div class="l1" data-i18n="ia_stmt_l1">Funciona em qualquer computador comum</div>
+          <span data-i18n-html="ia_stmt_body">Notebook simples, 4GB de RAM, sem precisar de GPU.<br><span class="brand">Sem pagar por nada.</span></span>
+        </div>
+        <div class="ia-spec-list reveal d6">
+          <div class="ia-spec"><span class="ia-spec-icon">🖥️</span><div class="ia-spec-body"><div data-i18n="ia_spec1">Projetado para notebooks comuns</div><div data-i18n="ia_spec1_sub">Sem GPU, sem hardware caro</div></div></div>
+          <div class="ia-spec"><span class="ia-spec-icon">📦</span><div class="ia-spec-body"><div data-i18n="ia_spec2">IA vem empacotada no TamoWork</div><div data-i18n="ia_spec2_sub">Você não instala nada separado</div></div></div>
+          <div class="ia-spec"><span class="ia-spec-icon">🔒</span><div class="ia-spec-body"><div data-i18n="ia_spec3">Privacidade total</div><div data-i18n="ia_spec3_sub">Seus dados não saem do seu PC</div></div></div>
+          <div class="ia-compat">✓ <span data-i18n="ia_compat">Windows, Mac, Linux — funciona com 4GB RAM+</span></div>
+        </div>
+      </div>
+      <div class="ia-visual reveal-r">
+        <div class="orb-wrap">
+          <div class="ring-orb ro1">
+            <div class="ring-dot" style="top:-4px;left:50%;transform:translateX(-50%)"></div>
+            <div class="ring-dot" style="bottom:-4px;left:50%;transform:translateX(-50%)"></div>
+            <div class="ring-dot" style="left:-4px;top:50%;transform:translateY(-50%)"></div>
+            <div class="ring-dot" style="right:-4px;top:50%;transform:translateY(-50%)"></div>
+          </div>
+          <div class="ring-orb ro2"></div>
+          <div class="ring-orb ro3"></div>
+          <div class="ring-orb ro4"></div>
+          <div class="orb-core"><div class="orb-icon">🧠</div><div class="orb-label">TamoWork AI</div></div>
+          <div class="fpill fp1"><span class="pv">100%</span><span class="pl" data-i18n="fp_local">Local</span></div>
+          <div class="fpill fp2"><span class="pv">0ms</span><span class="pl">API</span></div>
+          <div class="fpill fp3"><span class="pv">4GB+</span><span class="pl">RAM</span></div>
+          <div class="fpill fp4"><span class="pv">24h</span><span class="pl" data-i18n="fp_nonstop">Sem parar</span></div>
+          <div class="proc-wrap">
+            <div class="proc-top"><span data-i18n="proc_label">Motor de IA</span><span class="active" id="proc-lbl">● processando</span></div>
+            <div class="proc-track"><div class="proc-fill"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ia-stats">
+      <div class="ia-stat reveal d1"><div class="sv">100%</div><div class="sl" data-i18n="ia_s1">local</div><div class="ss" data-i18n="ia_s1_sub">zero dependência de servidor</div></div>
+      <div class="ia-stat reveal d2"><div class="sv">4GB+</div><div class="sl" data-i18n="ia_s2">RAM mínima</div><div class="ss" data-i18n="ia_s2_sub">qualquer notebook funciona</div></div>
+      <div class="ia-stat reveal d3"><div class="sv">R$0</div><div class="sl" data-i18n="ia_s3">custo de API</div><div class="ss" data-i18n="ia_s3_sub">sem pagar por chamada de IA</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HOW ══ -->
+<section class="how-section" id="como-funciona">
+  <div class="wrap">
+    <span class="section-eyebrow brand" data-i18n="how_eyebrow">Como funciona</span>
+    <h2 class="section-h2 reveal" data-i18n="how_h2">Ative em 3 passos simples.</h2>
+    <p class="section-lead reveal" data-i18n="how_sub">Sem configuração técnica. Sem API. Sem mensalidade. Instala e funciona.</p>
+    <div class="steps">
+      <div class="step reveal d1">
+        <div class="step-side"><div class="step-n"><span>1</span></div><div class="step-line"></div></div>
+        <div class="step-body">
+          <h3 data-i18n="step1_h">Instale o TamoWork no seu computador</h3>
+          <p data-i18n="step1_p">Roda direto no seu PC, já com a inteligência artificial integrada. Sem instalar nada separado, sem configurar servidor.</p>
+          <div class="step-tag" data-i18n="step1_tag">⚡ Instala → já está funcionando</div>
+        </div>
+      </div>
+      <div class="step reveal d2">
+        <div class="step-side"><div class="step-n"><span>2</span></div><div class="step-line"></div></div>
+        <div class="step-body">
+          <h3 data-i18n="step2_h">Configure seu negócio uma vez</h3>
+          <p data-i18n="step2_p">Produtos, atendimento, tom de resposta. Todos os funcionários usam esse contexto para responder como você responderia.</p>
+        </div>
+      </div>
+      <div class="step reveal d3">
+        <div class="step-side"><div class="step-n"><span>3</span></div></div>
+        <div class="step-body">
+          <h3 data-i18n="step3_h">Ative os funcionários e pare de responder manualmente</h3>
+          <p data-i18n="step3_p">Instagram e WhatsApp respondendo automaticamente. Você acompanha pelo painel e foca no que importa no seu negócio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ VISION ══ -->
+<section class="vision-section">
+  <div class="wrap">
+    <div class="vision-inner">
+      <span class="section-eyebrow brand reveal" data-i18n="vision_eyebrow">🚀 O futuro</span>
+      <h2 class="vision-h2 reveal" data-i18n-html="vision_h2">Hoje: dois funcionários.<br><span class="brand">Depois: uma equipe inteira.</span></h2>
+      <p class="vision-lead reveal" data-i18n-html="vision_lead">Hoje o foco é simples: <strong>Instagram e WhatsApp funcionando melhor do que qualquer ferramenta.</strong></p>
+      <p class="vision-lead reveal" data-i18n-html="vision_lead2" style="margin-bottom:0">Mas isso é só o começo. <strong>Você vai ter uma equipe digital completa.</strong></p>
+      <div class="channels">
+        <div class="ch-pill active-ig reveal d1"><span class="ig-text">📸 Instagram</span> <span class="ch-live-ig" data-i18n="ch_live">Ativo</span></div>
+        <div class="ch-pill active-wa reveal d2"><span class="wa-text">💬 WhatsApp</span> <span class="ch-live-wa" data-i18n="ch_live">Ativo</span></div>
+        <div class="ch-pill inactive reveal d3">🎵 TikTok <span class="ch-soon" data-i18n="ch_soon">Em breve</span></div>
+        <div class="ch-pill inactive reveal d4">📧 Email <span class="ch-soon" data-i18n="ch_soon">Em breve</span></div>
+        <div class="ch-pill inactive reveal d5">➕ <span data-i18n="ch_more">E mais</span> <span class="ch-soon" data-i18n="ch_soon">Em breve</span></div>
+      </div>
+      <div class="vision-finale reveal">
+        <div class="l1" data-i18n="vision_f1">Você começa com dois funcionários</div>
+        <div class="l2" data-i18n-html="vision_f2">e constrói uma <span class="brand">equipe inteira no seu computador.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ DIFF ══ -->
+<section class="diff-section">
+  <div class="wrap">
+    <span class="section-eyebrow brand" data-i18n="diff_eyebrow">Diferencial</span>
+    <h2 class="section-h2 reveal" data-i18n-html="diff_h2">Não é bot. Não é SaaS.<br><span class="brand">É um funcionário.</span></h2>
+    <p class="section-lead reveal" data-i18n="diff_lead">A maioria das ferramentas te vende automação. O TamoWork te dá funcionários digitais que trabalham por você — no seu PC, sem mensalidade.</p>
+    <div class="compare reveal">
+      <div class="cr head">
+        <div class="cell" data-i18n="compare_criteria">Critério</div>
+        <div class="cell" data-i18n="compare_other">SaaS comum</div>
+        <div class="cell">TamoWork</div>
+      </div>
+      <div class="cr"><div class="cell lbl" data-i18n="c_price">Preço</div><div class="cell bad"><span class="bx n">✕</span> <span data-i18n="c_price_bad">Mensalidade</span></div><div class="cell good"><span class="bx y">✓</span> <span data-i18n="c_price_good">100% grátis</span></div></div>
+      <div class="cr"><div class="cell lbl" data-i18n="c_setup">Configuração</div><div class="cell bad"><span class="bx n">✕</span> <span data-i18n="c_setup_bad">Complexa</span></div><div class="cell good"><span class="bx y">✓</span> <span data-i18n="c_setup_good">Já vem pronto</span></div></div>
+      <div class="cr"><div class="cell lbl" data-i18n="c_ia">IA</div><div class="cell bad"><span class="bx n">✕</span> <span data-i18n="c_ia_bad">API externa paga</span></div><div class="cell good"><span class="bx y">✓</span> <span data-i18n="c_ia_good">Local, no seu PC</span></div></div>
+      <div class="cr"><div class="cell lbl" data-i18n="c_channels">Canais</div><div class="cell bad"><span class="bx n">✕</span> <span data-i18n="c_channels_bad">Um por vez</span></div><div class="cell good"><span class="bx y">✓</span> <span data-i18n="c_channels_good">Instagram + WhatsApp</span></div></div>
+      <div class="cr"><div class="cell lbl" data-i18n="c_privacy">Privacidade</div><div class="cell bad"><span class="bx n">✕</span> <span data-i18n="c_privacy_bad">Dados na nuvem</span></div><div class="cell good"><span class="bx y">✓</span> <span data-i18n="c_privacy_good">Só no seu PC</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="faq-section" id="faq">
+  <div class="wrap">
+    <span class="section-eyebrow brand" data-i18n="faq_eyebrow">FAQ</span>
+    <h2 class="section-h2 reveal" data-i18n="faq_h2">Tire suas dúvidas.</h2>
+    <div class="faq-wrap">
+      <div class="faq-item open reveal d1">
+        <div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="fq1">É mesmo gratuito?</span><div class="faq-ch">▾</div></div>
+        <div class="faq-a" data-i18n="fa1">Sim. Sem mensalidade, sem período de teste, sem bloqueio. É gratuito de verdade.</div>
+      </div>
+      <div class="faq-item reveal d2">
+        <div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="fq2">Como funciona o funcionário do WhatsApp?</span><div class="faq-ch">▾</div></div>
+        <div class="faq-a" data-i18n="fa2">Ele atende mensagens do WhatsApp direto do seu computador, usando as informações do seu negócio para responder com consistência. Não é um bot genérico — ele trabalha com o contexto da sua empresa.</div>
+      </div>
+      <div class="faq-item reveal d3">
+        <div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="fq3">E o funcionário do Instagram?</span><div class="faq-ch">▾</div></div>
+        <div class="faq-a" data-i18n="fa3">Ele responde comentários nos seus posts e mensagens diretas (DM), mantém conversas ativas e nunca deixa um seguidor sem resposta.</div>
+      </div>
+      <div class="faq-item reveal d4">
+        <div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="fq4">Preciso de computador potente?</span><div class="faq-ch">▾</div></div>
+        <div class="faq-a" data-i18n="fa4">Foi pensado para rodar em notebooks e computadores comuns, sem exigir hardware caro. A partir de 4GB de RAM já funciona bem na maioria das máquinas.</div>
+      </div>
+      <div class="faq-item reveal d5">
+        <div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="fq5">Preciso instalar IA separado?</span><div class="faq-ch">▾</div></div>
+        <div class="faq-a" data-i18n="fa5">Não. A inteligência artificial já vem integrada dentro do TamoWork. Você instala e os funcionários já começam a trabalhar.</div>
+      </div>
+      <div class="faq-item reveal d6">
+        <div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="fq6">Vai ter outros funcionários?</span><div class="faq-ch">▾</div></div>
+        <div class="faq-a" data-i18n="fa6">Sim. Em breve: TikTok, Email e outros canais — todos gratuitos, todos rodando no seu computador.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section class="cta-section">
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <h2 data-i18n-html="cta_h2">Pare de responder<br><span class="brand">manualmente.</span></h2>
+      <p data-i18n="cta_p">Ative seus funcionários de IA agora. Instagram e WhatsApp trabalhando por você, no seu computador, de graça.</p>
+      <div class="cta-btns">
+        <button class="btn btn-brand btn-xl" type="button" onclick="triggerDownload()"><span data-i18n="cta_btn1">Ativar meus funcionários grátis</span></button>
+        <button class="btn btn-ghost btn-lg" type="button" onclick="triggerDownload()"><span data-i18n="cta_btn2">Baixar grátis agora</span></button>
+      </div>
+      <div class="cta-note" data-i18n="cta_note">Sem cartão. Sem mensalidade. Sem pegadinha.</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-logo">Tamo<span class="brand">Work</span> <span style="font-size:11px;color:var(--dim);font-weight:500;margin-left:6px" data-i18n="footer_tagline">— Funcionários digitais no seu computador</span></div>
+      <div class="footer-links">
+        <a href="#funcionarios" data-i18n="nav_employees">Funcionários</a>
+        <a href="#ia-engine" data-i18n="nav_ia">IA local</a>
+        <a href="#como-funciona" data-i18n="nav_how">Como funciona</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer-copy">© 2025 TamoWork</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ══ TRANSLATIONS ══ */
+const T = {
+  pt:{
+    nav_employees:'Funcionários',nav_ia:'IA local',nav_how:'Como funciona',
+    nav_counter:'2.847 respostas hoje',nav_cta:'Ver funcionários →',
+    cat_label:'Sistema de funcionários digitais com IA local',
+    hero_h1:'Instagram e WhatsApp<br>respondendo por você.<br><span class="brand">Automaticamente.</span>',
+    hero_sub:'Funcionários de IA que trabalham no seu computador, respondem clientes no Instagram e WhatsApp automaticamente. Sem mensalidade, sem API, sem configuração complicada.',
+    pill_ig:'Funcionário do Instagram',pill_wa:'Funcionário do WhatsApp',
+    bb1:'Sem API',bb2:'Sem mensalidade',bb3:'Sem configuração complicada',
+    bb4:'Não é teste. Não é limitado.',bb5:'<strong>É realmente gratuito.</strong>',
+    bb_final:'Instalou. Funcionou.',
+    hero_btn1:'Ativar meus funcionários grátis',hero_btn2:'Ver os funcionários',
+    proof_msgs:'respostas hoje',proof_ig:'via Instagram',proof_wa:'via WhatsApp',proof_cost:'custo mensal',
+    mk_label:'Funcionários trabalhando agora',mk_today:'respostas hoje',
+    mk_auto:'Instagram + WhatsApp respondidos automaticamente',
+    mk_working:'2 trabalhando agora',mk_manager:'Gerente',mk_analyst:'Analista',
+    mk_last:'Última atividade: 2 min atrás',mk_ig_sub:'Comentários + Direct',
+    mk_wa_sub:'Mensagens automáticas',mk_comments:'Comentários',
+    mk_messages:'Mensagens',mk_followup:'Follow-up',
+    mk_status_on:'Trabalhando',mk_status_off:'Parado',
+    mk_manage_ig:'Gerenciar Instagram →',mk_manage_wa:'Gerenciar WhatsApp →',
+    emp_eyebrow:'Os funcionários',
+    emp_h2:'Dois funcionários. Dois canais.<br>Uma equipe trabalhando por você.',
+    emp_lead:'Cada funcionário foi feito para um canal específico, com contexto do seu negócio e IA já integrada. Você ativa e eles trabalham.',
+    ig_badge:'Funcionário do Instagram',
+    ig_h2:'Seu Instagram responde<br><span class="ig-text">sem você tocar no celular.</span>',
+    ig_lead:'Ele lê cada comentário e cada direct, entende o contexto do seu negócio e responde <strong>como um atendente real</strong> — 24 horas por dia.',
+    ig_f1:'Responde comentários automaticamente',ig_f2:'Atende direct DM dos seguidores',
+    ig_f3:'Mantém conversas ativas',ig_f4:'Usa o tom de voz do seu negócio',ig_f5:'Painel em tempo real',
+    ig_btn:'Ativar funcionário do Instagram',ig_card_sub:'Funcionário ativo',
+    ig_stat1:'comentários hoje',ig_stat2:'directs hoje',
+    ig_task1:'Comentários',ig_btn_card:'Ativar funcionário →',
+    wa_badge:'Funcionário do WhatsApp',
+    wa_h2:'Seu WhatsApp responde<br><span class="wa-text">enquanto você trabalha.</span>',
+    wa_lead:'Ele atende mensagens, responde dúvidas sobre produtos, envia informações e <strong>nunca deixa um cliente sem resposta</strong> — direto do seu computador.',
+    wa_f1:'Responde mensagens automaticamente',wa_f2:'Tira dúvidas sobre produtos e serviços',
+    wa_f3:'Envia informações e links',wa_f4:'Usa o contexto do seu negócio',wa_f5:'Trabalha 24h sem parar',
+    wa_btn:'Ativar funcionário do WhatsApp',wa_card_sub:'Funcionário ativo',
+    wa_stat1:'mensagens hoje',wa_stat2:'tempo de resposta',wa_task2:'Informações',
+    wa_btn_card:'Ativar funcionário →',status_active:'Ativo',
+    ia_eyebrow:'Motor de IA local',
+    ia_h2:'Sua IA é sua.<br><span class="brand">Rodando no seu PC.</span>',
+    ia_l1:'Não depende da OpenAI',ia_l2:'Não depende de API',ia_l3:'Não depende de servidor',
+    ia_l4:'Sua IA roda no seu PC.<br><span class="brand">Independente de tudo.</span>',
+    ia_stmt_l1:'Funciona em qualquer computador comum',
+    ia_stmt_body:'Notebook simples, 4GB de RAM, sem precisar de GPU.<br><span class="brand">Sem pagar por nada.</span>',
+    ia_spec1:'Projetado para notebooks comuns',ia_spec1_sub:'Sem GPU, sem hardware caro',
+    ia_spec2:'IA vem empacotada no TamoWork',ia_spec2_sub:'Você não instala nada separado',
+    ia_spec3:'Privacidade total',ia_spec3_sub:'Seus dados não saem do seu PC',
+    ia_compat:'Windows, Mac, Linux — funciona com 4GB RAM+',
+    fp_local:'Local',fp_nonstop:'Sem parar',proc_label:'Motor de IA',
+    ia_s1:'local',ia_s1_sub:'zero dependência de servidor',
+    ia_s2:'RAM mínima',ia_s2_sub:'qualquer notebook funciona',
+    ia_s3:'custo de API',ia_s3_sub:'sem pagar por chamada de IA',
+    how_eyebrow:'Como funciona',how_h2:'Ative em 3 passos simples.',
+    how_sub:'Sem configuração técnica. Sem API. Sem mensalidade. Instala e funciona.',
+    step1_h:'Instale o TamoWork no seu computador',
+    step1_p:'Roda direto no seu PC, já com a inteligência artificial integrada. Sem instalar nada separado, sem configurar servidor.',
+    step1_tag:'⚡ Instala → já está funcionando',
+    step2_h:'Configure seu negócio uma vez',
+    step2_p:'Produtos, atendimento, tom de resposta. Todos os funcionários usam esse contexto para responder como você responderia.',
+    step3_h:'Ative os funcionários e pare de responder manualmente',
+    step3_p:'Instagram e WhatsApp respondendo automaticamente. Você acompanha pelo painel e foca no que importa no seu negócio.',
+    vision_eyebrow:'🚀 O futuro',
+    vision_h2:'Hoje: dois funcionários.<br><span class="brand">Depois: uma equipe inteira.</span>',
+    vision_lead:'Hoje o foco é simples: <strong>Instagram e WhatsApp funcionando melhor do que qualquer ferramenta.</strong>',
+    vision_lead2:'Mas isso é só o começo. <strong>Você vai ter uma equipe digital completa.</strong>',
+    ch_live:'Ativo',ch_soon:'Em breve',ch_more:'E mais',
+    vision_f1:'Você começa com dois funcionários',
+    vision_f2:'e constrói uma <span class="brand">equipe inteira no seu computador.</span>',
+    diff_eyebrow:'Diferencial',
+    diff_h2:'Não é bot. Não é SaaS.<br><span class="brand">É um funcionário.</span>',
+    diff_lead:'A maioria das ferramentas te vende automação. O TamoWork te dá funcionários digitais que trabalham por você — no seu PC, sem mensalidade.',
+    compare_criteria:'Critério',compare_other:'SaaS comum',
+    c_price:'Preço',c_price_bad:'Mensalidade',c_price_good:'100% grátis',
+    c_setup:'Configuração',c_setup_bad:'Complexa',c_setup_good:'Já vem pronto',
+    c_ia:'IA',c_ia_bad:'API externa paga',c_ia_good:'Local, no seu PC',
+    c_channels:'Canais',c_channels_bad:'Um por vez',c_channels_good:'Instagram + WhatsApp',
+    c_privacy:'Privacidade',c_privacy_bad:'Dados na nuvem',c_privacy_good:'Só no seu PC',
+    faq_eyebrow:'FAQ',faq_h2:'Tire suas dúvidas.',
+    fq1:'É mesmo gratuito?',fa1:'Sim. Sem mensalidade, sem período de teste, sem bloqueio. É gratuito de verdade.',
+    fq2:'Como funciona o funcionário do WhatsApp?',fa2:'Ele atende mensagens do WhatsApp direto do seu computador, usando as informações do seu negócio para responder com consistência. Não é um bot genérico — ele trabalha com o contexto da sua empresa.',
+    fq3:'E o funcionário do Instagram?',fa3:'Ele responde comentários nos seus posts e mensagens diretas (DM), mantém conversas ativas e nunca deixa um seguidor sem resposta.',
+    fq4:'Preciso de computador potente?',fa4:'Foi pensado para rodar em notebooks e computadores comuns, sem exigir hardware caro. A partir de 4GB de RAM já funciona bem na maioria das máquinas.',
+    fq5:'Preciso instalar IA separado?',fa5:'Não. A inteligência artificial já vem integrada dentro do TamoWork. Você instala e os funcionários já começam a trabalhar.',
+    fq6:'Vai ter outros funcionários?',fa6:'Sim. Em breve: TikTok, Email e outros canais — todos gratuitos, todos rodando no seu computador.',
+    cta_h2:'Pare de responder<br><span class="brand">manualmente.</span>',
+    cta_p:'Ative seus funcionários de IA agora. Instagram e WhatsApp trabalhando por você, no seu computador, de graça.',
+    cta_btn1:'Ativar meus funcionários grátis',cta_btn2:'Baixar grátis agora',
+    cta_note:'Sem cartão. Sem mensalidade. Sem pegadinha.',
+    footer_tagline:'— Funcionários digitais no seu computador',
+  },
+  en:{
+    nav_employees:'Employees',nav_ia:'Local AI',nav_how:'How it works',
+    nav_counter:'2,847 responses today',nav_cta:'See employees →',
+    cat_label:'Digital employee system with local AI',
+    hero_h1:'Instagram and WhatsApp<br>answering for you.<br><span class="brand">Automatically.</span>',
+    hero_sub:'AI employees that work on your computer, automatically respond to customers on Instagram and WhatsApp. No subscription, no API, no complicated setup.',
+    pill_ig:'Instagram Employee',pill_wa:'WhatsApp Employee',
+    bb1:'No API',bb2:'No subscription',bb3:'No complicated setup',
+    bb4:'Not a trial. Not limited.',bb5:'<strong>It\'s genuinely free.</strong>',
+    bb_final:'Installed. Working.',
+    hero_btn1:'Activate my employees free',hero_btn2:'See the employees',
+    proof_msgs:'responses today',proof_ig:'via Instagram',proof_wa:'via WhatsApp',proof_cost:'monthly cost',
+    mk_label:'Employees working right now',mk_today:'responses today',
+    mk_auto:'Instagram + WhatsApp answered automatically',
+    mk_working:'2 working now',mk_manager:'Manager',mk_analyst:'Analyst',
+    mk_last:'Last activity: 2 min ago',mk_ig_sub:'Comments + Direct',
+    mk_wa_sub:'Automatic messages',mk_comments:'Comments',
+    mk_messages:'Messages',mk_followup:'Follow-up',
+    mk_status_on:'Working',mk_status_off:'Stopped',
+    mk_manage_ig:'Manage Instagram →',mk_manage_wa:'Manage WhatsApp →',
+    emp_eyebrow:'The employees',
+    emp_h2:'Two employees. Two channels.<br>A team working for you.',
+    emp_lead:'Each employee was built for a specific channel, with your business context and AI already integrated. You activate them and they work.',
+    ig_badge:'Instagram Employee',
+    ig_h2:'Your Instagram replies<br><span class="ig-text">without you touching your phone.</span>',
+    ig_lead:'It reads every comment and every DM, understands your business context and replies <strong>like a real attendant</strong> — 24 hours a day.',
+    ig_f1:'Automatically replies to comments',ig_f2:'Handles direct DMs from followers',
+    ig_f3:'Keeps conversations active',ig_f4:'Uses your business tone of voice',ig_f5:'Real-time dashboard',
+    ig_btn:'Activate Instagram employee',ig_card_sub:'Active employee',
+    ig_stat1:'comments today',ig_stat2:'DMs today',
+    ig_task1:'Comments',ig_btn_card:'Activate employee →',
+    wa_badge:'WhatsApp Employee',
+    wa_h2:'Your WhatsApp replies<br><span class="wa-text">while you work.</span>',
+    wa_lead:'It handles messages, answers questions about products, sends information and <strong>never leaves a customer without a reply</strong> — directly from your computer.',
+    wa_f1:'Automatically replies to messages',wa_f2:'Answers product and service questions',
+    wa_f3:'Sends information and links',wa_f4:'Uses your business context',wa_f5:'Works 24h non-stop',
+    wa_btn:'Activate WhatsApp employee',wa_card_sub:'Active employee',
+    wa_stat1:'messages today',wa_stat2:'response time',wa_task2:'Information',
+    wa_btn_card:'Activate employee →',status_active:'Active',
+    ia_eyebrow:'Local AI engine',
+    ia_h2:'Your AI is yours.<br><span class="brand">Running on your PC.</span>',
+    ia_l1:'Doesn\'t depend on OpenAI',ia_l2:'Doesn\'t depend on any API',ia_l3:'Doesn\'t depend on any server',
+    ia_l4:'Your AI runs on your PC.<br><span class="brand">Independent of everything.</span>',
+    ia_stmt_l1:'Works on any common computer',
+    ia_stmt_body:'Simple laptop, 4GB RAM, no GPU needed.<br><span class="brand">Pay for nothing.</span>',
+    ia_spec1:'Designed for common laptops',ia_spec1_sub:'No GPU, no expensive hardware',
+    ia_spec2:'AI is bundled inside TamoWork',ia_spec2_sub:'You install nothing separately',
+    ia_spec3:'Total privacy',ia_spec3_sub:'Your data never leaves your PC',
+    ia_compat:'Windows, Mac, Linux — works with 4GB RAM+',
+    fp_local:'Local',fp_nonstop:'Non-stop',proc_label:'AI Engine',
+    ia_s1:'local',ia_s1_sub:'zero server dependency',
+    ia_s2:'min RAM',ia_s2_sub:'any laptop works',
+    ia_s3:'API cost',ia_s3_sub:'no pay-per-call AI',
+    how_eyebrow:'How it works',how_h2:'Activate in 3 simple steps.',
+    how_sub:'No technical setup. No API. No subscription. Install and it works.',
+    step1_h:'Install TamoWork on your computer',
+    step1_p:'Runs directly on your PC, already with integrated AI. No separate installs, no server configuration.',
+    step1_tag:'⚡ Install → already working',
+    step2_h:'Configure your business once',
+    step2_p:'Products, service, response style. All employees use this context to reply exactly as you would.',
+    step3_h:'Activate employees and stop replying manually',
+    step3_p:'Instagram and WhatsApp responding automatically. You monitor the dashboard and focus on what matters in your business.',
+    vision_eyebrow:'🚀 The future',
+    vision_h2:'Today: two employees.<br><span class="brand">Later: a whole team.</span>',
+    vision_lead:'Today the focus is simple: <strong>Instagram and WhatsApp working better than any tool.</strong>',
+    vision_lead2:'But this is just the beginning. <strong>You will have a complete digital team.</strong>',
+    ch_live:'Active',ch_soon:'Coming soon',ch_more:'And more',
+    vision_f1:'You start with two employees',
+    vision_f2:'and build a <span class="brand">whole team on your computer.</span>',
+    diff_eyebrow:'Why it\'s different',
+    diff_h2:'Not a bot. Not SaaS.<br><span class="brand">It\'s an employee.</span>',
+    diff_lead:'Most tools sell you automation. TamoWork gives you digital employees that work for you — on your PC, with no subscription.',
+    compare_criteria:'Criteria',compare_other:'Typical SaaS',
+    c_price:'Price',c_price_bad:'Monthly fee',c_price_good:'100% free',
+    c_setup:'Setup',c_setup_bad:'Complex',c_setup_good:'Ready out of box',
+    c_ia:'AI',c_ia_bad:'Paid external API',c_ia_good:'Local, on your PC',
+    c_channels:'Channels',c_channels_bad:'One at a time',c_channels_good:'Instagram + WhatsApp',
+    c_privacy:'Privacy',c_privacy_bad:'Data in the cloud',c_privacy_good:'Only on your PC',
+    faq_eyebrow:'FAQ',faq_h2:'Got questions?',
+    fq1:'Is it really free?',fa1:'Yes. No subscription, no trial period, no lock-in. It\'s genuinely free.',
+    fq2:'How does the WhatsApp employee work?',fa2:'It handles WhatsApp messages directly from your computer, using your business information to reply consistently. It\'s not a generic bot — it works with your company\'s context.',
+    fq3:'And the Instagram employee?',fa3:'It replies to comments on your posts and direct messages (DMs), keeps conversations active and never leaves a follower without a response.',
+    fq4:'Do I need a powerful computer?',fa4:'It was designed to run on common notebooks and computers, without requiring expensive hardware. 4GB of RAM or more works well for most machines.',
+    fq5:'Do I need to install AI separately?',fa5:'No. The artificial intelligence already comes integrated inside TamoWork. You install it and the employees start working right away.',
+    fq6:'Will there be more employees?',fa6:'Yes. Coming soon: TikTok, Email and other channels — all free, all running on your computer.',
+    cta_h2:'Stop replying<br><span class="brand">manually.</span>',
+    cta_p:'Activate your AI employees now. Instagram and WhatsApp working for you, on your computer, for free.',
+    cta_btn1:'Activate my employees free',cta_btn2:'Download free now',
+    cta_note:'No card. No subscription. No catch.',
+    footer_tagline:'— Digital employees on your computer',
+  },
+  es:{
+    nav_employees:'Empleados',nav_ia:'IA local',nav_how:'Cómo funciona',
+    nav_counter:'2.847 respuestas hoy',nav_cta:'Ver empleados →',
+    cat_label:'Sistema de empleados digitales con IA local',
+    hero_h1:'Instagram y WhatsApp<br>respondiendo por ti.<br><span class=\"brand\">Automáticamente.</span>',
+    hero_sub:'Empleados de IA que trabajan en tu computadora, responden clientes en Instagram y WhatsApp automáticamente. Sin mensualidad, sin API, sin configuración complicada.',
+    pill_ig:'Empleado de Instagram',pill_wa:'Empleado de WhatsApp',
+    bb1:'Sin API',bb2:'Sin mensualidad',bb3:'Sin configuración complicada',
+    bb4:'No es prueba. No es limitado.',bb5:'<strong>Es realmente gratis.</strong>',
+    bb_final:'Instalado. Funcionando.',
+    hero_btn1:'Activar mis empleados gratis',hero_btn2:'Ver los empleados',
+    proof_msgs:'respuestas hoy',proof_ig:'vía Instagram',proof_wa:'vía WhatsApp',proof_cost:'costo mensual',
+    mk_label:'Empleados trabajando ahora',mk_today:'respuestas hoy',
+    mk_auto:'Instagram + WhatsApp respondidos automáticamente',
+    mk_working:'2 trabajando ahora',mk_manager:'Gerente',mk_analyst:'Analista',
+    mk_last:'Última actividad: hace 2 min',mk_ig_sub:'Comentarios + Direct',
+    mk_wa_sub:'Mensajes automáticos',mk_comments:'Comentarios',
+    mk_messages:'Mensajes',mk_followup:'Follow-up',
+    mk_status_on:'Trabajando',mk_status_off:'Detenido',
+    mk_manage_ig:'Gestionar Instagram →',mk_manage_wa:'Gestionar WhatsApp →',
+    emp_eyebrow:'Los empleados',
+    emp_h2:'Dos empleados. Dos canales.<br>Un equipo trabajando por ti.',
+    emp_lead:'Cada empleado fue hecho para un canal específico, con contexto de tu negocio e IA ya integrada. Los activas y ellos trabajan.',
+    ig_badge:'Empleado de Instagram',
+    ig_h2:'Tu Instagram responde<br><span class="ig-text">sin que toques el celular.</span>',
+    ig_lead:'Lee cada comentario y cada DM, entiende el contexto de tu negocio y responde <strong>como un asesor real</strong> — 24 horas al día.',
+    ig_f1:'Responde comentarios automáticamente',ig_f2:'Atiende DMs de seguidores',
+    ig_f3:'Mantiene conversaciones activas',ig_f4:'Usa el tono de voz de tu negocio',ig_f5:'Panel en tiempo real',
+    ig_btn:'Activar empleado de Instagram',ig_card_sub:'Empleado activo',
+    ig_stat1:'comentarios hoy',ig_stat2:'DMs hoy',
+    ig_task1:'Comentarios',ig_btn_card:'Activar empleado →',
+    wa_badge:'Empleado de WhatsApp',
+    wa_h2:'Tu WhatsApp responde<br><span class="wa-text">mientras tú trabajas.</span>',
+    wa_lead:'Atiende mensajes, responde preguntas sobre productos, envía información y <strong>nunca deja un cliente sin respuesta</strong> — directo desde tu computadora.',
+    wa_f1:'Responde mensajes automáticamente',wa_f2:'Responde dudas sobre productos y servicios',
+    wa_f3:'Envía información y enlaces',wa_f4:'Usa el contexto de tu negocio',wa_f5:'Trabaja 24h sin parar',
+    wa_btn:'Activar empleado de WhatsApp',wa_card_sub:'Empleado activo',
+    wa_stat1:'mensajes hoy',wa_stat2:'tiempo de respuesta',wa_task2:'Información',
+    wa_btn_card:'Activar empleado →',status_active:'Activo',
+    ia_eyebrow:'Motor de IA local',
+    ia_h2:'Tu IA es tuya.<br><span class="brand">Corriendo en tu PC.</span>',
+    ia_l1:'No depende de OpenAI',ia_l2:'No depende de ninguna API',ia_l3:'No depende de ningún servidor',
+    ia_l4:'Tu IA corre en tu PC.<br><span class="brand">Independiente de todo.</span>',
+    ia_stmt_l1:'Funciona en cualquier computadora común',
+    ia_stmt_body:'Laptop simple, 4GB de RAM, sin necesitar GPU.<br><span class="brand">Sin pagar nada.</span>',
+    ia_spec1:'Diseñado para laptops comunes',ia_spec1_sub:'Sin GPU, sin hardware caro',
+    ia_spec2:'IA incluida en TamoWork',ia_spec2_sub:'No instalas nada por separado',
+    ia_spec3:'Privacidad total',ia_spec3_sub:'Tus datos no salen de tu PC',
+    ia_compat:'Windows, Mac, Linux — funciona con 4GB RAM+',
+    fp_local:'Local',fp_nonstop:'Sin parar',proc_label:'Motor de IA',
+    ia_s1:'local',ia_s1_sub:'cero dependencia de servidores',
+    ia_s2:'RAM mínima',ia_s2_sub:'cualquier laptop funciona',
+    ia_s3:'costo de API',ia_s3_sub:'sin pagar por llamada de IA',
+    how_eyebrow:'Cómo funciona',how_h2:'Actívalo en 3 pasos simples.',
+    how_sub:'Sin configuración técnica. Sin API. Sin mensualidad. Instala y funciona.',
+    step1_h:'Instala TamoWork en tu computadora',
+    step1_p:'Corre directamente en tu PC, ya con la inteligencia artificial integrada. Sin instalar nada por separado, sin configurar servidores.',
+    step1_tag:'⚡ Instala → ya está funcionando',
+    step2_h:'Configura tu negocio una sola vez',
+    step2_p:'Productos, atención, tono de respuesta. Todos los empleados usan ese contexto para responder como tú lo harías.',
+    step3_h:'Actívalos y deja de responder manualmente',
+    step3_p:'Instagram y WhatsApp respondiendo automáticamente. Tú monitoreas el panel y te enfocas en lo que importa en tu negocio.',
+    vision_eyebrow:'🚀 El futuro',
+    vision_h2:'Hoy: dos empleados.<br><span class="brand">Después: un equipo entero.</span>',
+    vision_lead:'Hoy el foco es simple: <strong>Instagram y WhatsApp funcionando mejor que cualquier herramienta.</strong>',
+    vision_lead2:'Pero esto es solo el comienzo. <strong>Tendrás un equipo digital completo.</strong>',
+    ch_live:'Activo',ch_soon:'Próximamente',ch_more:'Y más',
+    vision_f1:'Empiezas con dos empleados',
+    vision_f2:'y construyes un <span class="brand">equipo entero en tu computadora.</span>',
+    diff_eyebrow:'Diferencial',
+    diff_h2:'No es bot. No es SaaS.<br><span class="brand">Es un empleado.</span>',
+    diff_lead:'La mayoría de herramientas te vende automatización. TamoWork te da empleados digitales que trabajan por ti — en tu PC, sin mensualidad.',
+    compare_criteria:'Criterio',compare_other:'SaaS típico',
+    c_price:'Precio',c_price_bad:'Mensualidad',c_price_good:'100% gratis',
+    c_setup:'Configuración',c_setup_bad:'Compleja',c_setup_good:'Listo de entrada',
+    c_ia:'IA',c_ia_bad:'API externa pagada',c_ia_good:'Local, en tu PC',
+    c_channels:'Canales',c_channels_bad:'Uno a la vez',c_channels_good:'Instagram + WhatsApp',
+    c_privacy:'Privacidad',c_privacy_bad:'Datos en la nube',c_privacy_good:'Solo en tu PC',
+    faq_eyebrow:'FAQ',faq_h2:'Tus preguntas.',
+    fq1:'¿Es realmente gratis?',fa1:'Sí. Sin mensualidad, sin período de prueba, sin bloqueo. Es gratis de verdad.',
+    fq2:'¿Cómo funciona el empleado de WhatsApp?',fa2:'Atiende mensajes de WhatsApp directamente desde tu computadora, usando la información de tu negocio para responder con consistencia. No es un bot genérico — trabaja con el contexto de tu empresa.',
+    fq3:'¿Y el empleado de Instagram?',fa3:'Responde comentarios en tus publicaciones y mensajes directos (DMs), mantiene conversaciones activas y nunca deja un seguidor sin respuesta.',
+    fq4:'¿Necesito una computadora potente?',fa4:'Fue diseñado para correr en laptops y computadoras comunes, sin requerir hardware caro. Con 4GB de RAM ya funciona bien en la mayoría de los equipos.',
+    fq5:'¿Necesito instalar IA por separado?',fa5:'No. La inteligencia artificial ya viene integrada dentro de TamoWork. Lo instalas y los empleados empiezan a trabajar de inmediato.',
+    fq6:'¿Habrá más empleados?',fa6:'Sí. Próximamente: TikTok, Email y otros canales — todos gratis, todos corriendo en tu computadora.',
+    cta_h2:'Deja de responder<br><span class="brand">manualmente.</span>',
+    cta_p:'Activa tus empleados de IA ahora. Instagram y WhatsApp trabajando por ti, en tu computadora, gratis.',
+    cta_btn1:'Activar mis empleados gratis',cta_btn2:'Descargar gratis ahora',
+    cta_note:'Sin tarjeta. Sin mensualidad. Sin trampa.',
+    footer_tagline:'— Empleados digitales en tu computadora',
+  }
+};
+
+let currentLang = 'pt';
+
+function detectLang(){
+  const saved = localStorage.getItem('tw_lang');
+  if(saved && T[saved]) return saved;
+  const nav = (navigator.language||'pt').toLowerCase();
+  if(nav.startsWith('pt')) return 'pt';
+  if(nav.startsWith('es')) return 'es';
+  return 'en';
+}
+
+function applyLang(lang){
+  if(!T[lang]) return;
+  currentLang = lang;
+  localStorage.setItem('tw_lang', lang);
+  const t = T[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k = el.getAttribute('data-i18n');
+    if(t[k]!==undefined) el.textContent = t[k];
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el=>{
+    const k = el.getAttribute('data-i18n-html');
+    if(t[k]!==undefined) el.innerHTML = t[k];
+  });
+  ['pt','en','es'].forEach(l=>{
+    const b = document.getElementById('lb-'+l);
+    if(b) b.classList.toggle('active', l===lang);
+  });
+  document.documentElement.lang = lang==='pt'?'pt-BR':lang==='es'?'es':'en';
+}
+
+function setLang(lang){ applyLang(lang); }
+
+/* ── FAQ ── */
+function toggleFaq(el){
+  const item=el.parentElement;
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!isOpen) item.classList.add('open');
+}
+
+/* ── Download trigger ── */
+function triggerDownload(){
+  // Replace with your actual download link:
+  // window.location.href = 'https://YOUR_LINK/TamoWork-Setup.exe';
+  document.getElementById('funcionarios').scrollIntoView({behavior:'smooth'});
+}
+
+/* ── Hero entrance ── */
+try{document.querySelectorAll('.hero-inner > *').forEach((el,i)=>{
+  el.classList.add('hero-in');
+  el.style.animationDelay = `${0.07+i*0.09}s`;
+});}catch(e){}
+
+/* ── Canvas particles ── */
+(function(){
+  try{
+  const canvas=document.getElementById('hero-canvas');if(!canvas)return;
+  const ctx=canvas.getContext('2d');if(!ctx)return;
+  let W,H,mouse={x:-9999,y:-9999};
+  const dots=[];
+  for(let i=0;i<90;i++) dots.push({x:Math.random()*2000,y:Math.random()*1200,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*1.5+.4,a:Math.random()*.35+.1});
+  function resize(){const h=canvas.parentElement;W=canvas.width=h.offsetWidth;H=canvas.height=h.offsetHeight}
+  resize();window.addEventListener('resize',resize);
+  canvas.parentElement.addEventListener('mousemove',e=>{const r=canvas.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top});
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    dots.forEach(d=>{d.x+=d.vx;d.y+=d.vy;if(d.x<0||d.x>W)d.vx*=-1;if(d.y<0||d.y>H)d.vy*=-1});
+    for(let i=0;i<dots.length;i++){
+      for(let j=i+1;j<dots.length;j++){
+        const dx=dots[i].x-dots[j].x,dy=dots[i].y-dots[j].y,dist=Math.hypot(dx,dy);
+        if(dist<130){ctx.beginPath();ctx.moveTo(dots[i].x,dots[i].y);ctx.lineTo(dots[j].x,dots[j].y);ctx.strokeStyle=`rgba(99,102,241,${(1-dist/130)*.13})`;ctx.lineWidth=.6;ctx.stroke()}
+      }
+      const dm=Math.hypot(dots[i].x-mouse.x,dots[i].y-mouse.y);
+      if(dm<200){ctx.beginPath();ctx.moveTo(dots[i].x,dots[i].y);ctx.lineTo(mouse.x,mouse.y);ctx.strokeStyle=`rgba(168,85,247,${(1-dm/200)*.3})`;ctx.lineWidth=.8;ctx.stroke()}
+      ctx.beginPath();ctx.arc(dots[i].x,dots[i].y,dots[i].r,0,Math.PI*2);ctx.fillStyle=`rgba(99,102,241,${dots[i].a})`;ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+  }catch(e){console.log('canvas error:',e)}
+})();
+
+/* ── Neural canvas (IA) ── */
+(function(){
+  try{
+  const canvas=document.getElementById('ia-canvas');if(!canvas)return;
+  const ctx=canvas.getContext('2d');if(!ctx)return;
+  let W,H;
+  const N=55;const nodes=[];let signals=[];
+  function resize(){W=canvas.width=canvas.parentElement.offsetWidth;H=canvas.height=canvas.parentElement.offsetHeight}
+  resize();window.addEventListener('resize',()=>{resize();buildNodes()});
+  function buildNodes(){nodes.length=0;for(let i=0;i<N;i++)nodes.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28})}
+  buildNodes();
+  function getConn(){const c=[];for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){const d=Math.hypot(nodes[i].x-nodes[j].x,nodes[i].y-nodes[j].y);if(d<160)c.push([i,j,d])}return c}
+  setInterval(()=>{
+    const c=getConn();if(!c.length)return;
+    const e=c[Math.floor(Math.random()*c.length)];
+    signals.push({from:e[0],to:e[1],t:0,spd:.02+Math.random()*.015,col:Math.random()>.5?'rgba(99,102,241,':'rgba(168,85,247,'});
+  },200);
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    nodes.forEach(n=>{n.x+=n.vx;n.y+=n.vy;if(n.x<0||n.x>W)n.vx*=-1;if(n.y<0||n.y>H)n.vy*=-1});
+    getConn().forEach(([i,j,d])=>{const a=(1-d/160)*.09;ctx.beginPath();ctx.moveTo(nodes[i].x,nodes[i].y);ctx.lineTo(nodes[j].x,nodes[j].y);ctx.strokeStyle=`rgba(99,102,241,${a})`;ctx.lineWidth=.7;ctx.stroke()});
+    signals=signals.filter(s=>{
+      s.t+=s.spd;if(s.t>1)return false;
+      const f=nodes[s.from],t=nodes[s.to],x=f.x+(t.x-f.x)*s.t,y=f.y+(t.y-f.y)*s.t;
+      const a=Math.sin(s.t*Math.PI);
+      ctx.beginPath();ctx.arc(x,y,3.5,0,Math.PI*2);ctx.fillStyle=s.col+(a*.15)+')';ctx.fill();
+      ctx.beginPath();ctx.arc(x,y,1.8,0,Math.PI*2);ctx.fillStyle=s.col+a+')';ctx.fill();
+      return true;
+    });
+    nodes.forEach(n=>{ctx.beginPath();ctx.arc(n.x,n.y,1.5,0,Math.PI*2);ctx.fillStyle='rgba(99,102,241,0.18)';ctx.fill()});
+    requestAnimationFrame(draw);
+  }
+  draw();
+  }catch(e){console.log('ia-canvas error:',e)}
+})();
+
+/* ── Scroll reveal ── */
+(function(){
+  const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});
+  document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>obs.observe(el));
+})();
+
+/* ── Live counters ── */
+(function(){
+  try{
+  let total=2847,ig=1430,wa=1417;
+  let igC=823,igD=607,waMsgs=1417;
+  setInterval(()=>{
+    if(Math.random()>.45){
+      const inc=Math.ceil(Math.random()*3);
+      total+=inc;
+      if(Math.random()>.5){ig+=inc;if(Math.random()>.5)igC++;else igD++;}
+      else{wa+=inc;waMsgs+=inc;}
+      const flash=el=>{if(!el)return;el.style.color='#a78bfa';setTimeout(()=>el.style.color='',150)};
+      const upd=(id,val)=>{const el=document.getElementById(id);if(el){el.textContent=val.toLocaleString('pt-BR');flash(el)}};
+      upd('mk-num',total);upd('pr1',total);upd('pr2',ig);upd('pr3',wa);
+      upd('ig-comments',igC);upd('ig-dms',igD);upd('wa-msgs',waMsgs);
+      const nc=document.getElementById('nav-counter');
+      if(nc){nc.textContent=T[currentLang].nav_counter.replace(/[\d\.]+/,total.toLocaleString('pt-BR'));flash(nc)}
+    }
+  },2600);
+
+  // mockup counter already wired above
+})();
+
+/* ── Typing hero sub ── */
+(function(){
+  try{
+  const el=document.querySelector('.hero-sub');if(!el)return;
+  const txt=el.textContent.trim();el.textContent='';
+  const cur=document.createElement('span');
+  cur.style.cssText='display:inline-block;width:3px;height:.85em;background:#6366f1;margin-left:2px;vertical-align:middle;border-radius:2px;animation:blink 1s step-end infinite';
+  el.appendChild(cur);let i=0;
+  setTimeout(()=>{
+    const iv=setInterval(()=>{
+      if(i<txt.length){el.insertBefore(document.createTextNode(txt[i]),cur);i++}
+      else{clearInterval(iv);setTimeout(()=>cur.remove(),2500)}
+    },16);
+  },600);
+  }catch(e){console.log('typing error:',e)}
+})();
+
+/* ── Proc label cycle ── */
+(function(){
+  try{
+  const el=document.getElementById('proc-lbl');if(!el)return;
+  const states={pt:['● processando','● lendo mensagem','● entendendo contexto','● gerando resposta','● respondendo'],en:['● processing','● reading message','● understanding context','● generating reply','● responding'],es:['● procesando','● leyendo mensaje','● entendiendo contexto','● generando respuesta','● respondiendo']};
+  let i=0;
+  setInterval(()=>{
+    i=(i+1)%5;
+    const s=states[currentLang]||states.pt;
+    el.textContent=s[i];
+  },1700);
+  }catch(e){}
+})();
+
+/* ── IA line sequential highlight ── */
+(function(){
+  try{
+  const lines=document.querySelectorAll('.ia-line');if(!lines.length)return;
+  let running=false;
+  new IntersectionObserver(entries=>{
+    if(entries[0].isIntersecting&&!running){
+      running=true;
+      lines.forEach(s=>s.style.opacity='.3');
+      let i=0;const run=()=>{if(i>=lines.length){lines.forEach(s=>s.style.opacity='1');return}lines[i].style.opacity='1';lines[i].style.transition='opacity .35s';setTimeout(()=>{i++;run()},450)};
+      setTimeout(run,400);
+    }
+  },{threshold:.3}).observe(document.querySelector('.ia-lines'));
+  }catch(e){console.log('ia-line error:',e)}
+})();
+
+/* ── Init lang ── */
+document.addEventListener('DOMContentLoaded',()=>applyLang(detectLang()));
+</script>
+
+</body>
+</html>

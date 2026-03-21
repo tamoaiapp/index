@@ -82,7 +82,7 @@
     @media(max-width:640px){.lang-switch,.nav-live{display:none}}
 
     /* ══ HERO ══ */
-    .hero{position:relative;overflow:hidden;padding:110px 0 0;background:var(--bg)}
+    .hero{position:relative;overflow:hidden;padding:52px 0 0;background:var(--bg)}
     #hero-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.45}
     .hero-glow{position:absolute;pointer-events:none;border-radius:50%;filter:blur(100px)}
     .hero-glow-1{width:600px;height:500px;top:-200px;left:-150px;background:radial-gradient(circle,rgba(99,102,241,.07),transparent 70%);animation:glow-drift 14s ease-in-out infinite}
@@ -415,7 +415,7 @@
       .mk-channels{grid-template-columns:1fr}
     }
     @media(max-width:640px){
-      .hero{padding-top:64px}
+      .hero{padding-top:36px}
       .hero-btns{flex-direction:column}
       .btn-xl,.btn-lg{width:100%}
       .proof-bar{flex-direction:column}
@@ -1390,37 +1390,7 @@ try{ document.querySelectorAll('.hero-inner > *').forEach((el,i)=>{
   }catch(e){console.log('counter error:',e)}
 })();
 
-/* ── Typing hero sub ── */
-(function(){
-  try{
-    const el=document.querySelector('.hero-sub');
-    if(!el)return;
-    const txt=el.textContent.trim();
-    el.textContent='';
-    const cur=document.createElement('span');
-    cur.style.cssText='display:inline-block;width:3px;height:.85em;background:#6366f1;margin-left:2px;vertical-align:middle;border-radius:2px;animation:blink 1s step-end infinite';
-    el.appendChild(cur);
-    let i=0;
-    let done=false;
-    setTimeout(()=>{
-      const iv=setInterval(()=>{
-        if(done)return;
-        if(i<txt.length){
-          if(cur.parentNode===el){
-            el.insertBefore(document.createTextNode(txt[i]),cur);
-          } else {
-            el.appendChild(document.createTextNode(txt[i]));
-          }
-          i++;
-        } else {
-          done=true;
-          clearInterval(iv);
-          setTimeout(()=>{if(cur.parentNode)cur.parentNode.removeChild(cur)},2500);
-        }
-      },16);
-    },600);
-  }catch(e){}
-})();
+/* ── Typing effect removed — conflicts with i18n ── */
 
 /* ── Proc label cycle ── */
 (function(){

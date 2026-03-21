@@ -1297,10 +1297,10 @@ function triggerDownload(){
 }
 
 /* ── Hero entrance ── */
-try{document.querySelectorAll('.hero-inner > *').forEach((el,i)=>{
+try{ document.querySelectorAll('.hero-inner > *').forEach((el,i)=>{
   el.classList.add('hero-in');
   el.style.animationDelay = `${0.07+i*0.09}s`;
-});}catch(e){}
+}); }catch(e){}
 
 /* ── Canvas particles ── */
 (function(){
@@ -1392,25 +1392,39 @@ try{document.querySelectorAll('.hero-inner > *').forEach((el,i)=>{
       if(nc){nc.textContent=T[currentLang].nav_counter.replace(/[\d\.]+/,total.toLocaleString('pt-BR'));flash(nc)}
     }
   },2600);
-
-  // mockup counter already wired above
+  }catch(e){console.log('counter error:',e)}
 })();
 
 /* ── Typing hero sub ── */
 (function(){
   try{
-  const el=document.querySelector('.hero-sub');if(!el)return;
-  const txt=el.textContent.trim();el.textContent='';
-  const cur=document.createElement('span');
-  cur.style.cssText='display:inline-block;width:3px;height:.85em;background:#6366f1;margin-left:2px;vertical-align:middle;border-radius:2px;animation:blink 1s step-end infinite';
-  el.appendChild(cur);let i=0;
-  setTimeout(()=>{
-    const iv=setInterval(()=>{
-      if(i<txt.length){el.insertBefore(document.createTextNode(txt[i]),cur);i++}
-      else{clearInterval(iv);setTimeout(()=>cur.remove(),2500)}
-    },16);
-  },600);
-  }catch(e){console.log('typing error:',e)}
+    const el=document.querySelector('.hero-sub');
+    if(!el)return;
+    const txt=el.textContent.trim();
+    el.textContent='';
+    const cur=document.createElement('span');
+    cur.style.cssText='display:inline-block;width:3px;height:.85em;background:#6366f1;margin-left:2px;vertical-align:middle;border-radius:2px;animation:blink 1s step-end infinite';
+    el.appendChild(cur);
+    let i=0;
+    let done=false;
+    setTimeout(()=>{
+      const iv=setInterval(()=>{
+        if(done)return;
+        if(i<txt.length){
+          if(cur.parentNode===el){
+            el.insertBefore(document.createTextNode(txt[i]),cur);
+          } else {
+            el.appendChild(document.createTextNode(txt[i]));
+          }
+          i++;
+        } else {
+          done=true;
+          clearInterval(iv);
+          setTimeout(()=>{if(cur.parentNode)cur.parentNode.removeChild(cur)},2500);
+        }
+      },16);
+    },600);
+  }catch(e){}
 })();
 
 /* ── Proc label cycle ── */

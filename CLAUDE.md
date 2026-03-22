@@ -1,4 +1,18 @@
-# TamoWork — Project Context for Claude Code
+# TamoWork — Claude Code Project Instructions
+
+## Auto Publish Rule
+
+After creating or updating ANY file in this project, always run these commands automatically without asking for confirmation:
+
+```bash
+git add .
+git commit -m "brief description of what changed"
+git push
+```
+
+Vercel auto-deploys on every push. Never ask permission to push. Just do it.
+
+---
 
 ## What is TamoWork
 
@@ -13,7 +27,7 @@ TamoWork is a **digital employee system powered by local AI** that runs directly
 
 ---
 
-## Current Employees (Features)
+## Active Employees
 
 | Employee | Channel | Status |
 |---|---|---|
@@ -62,20 +76,31 @@ Key phrases to use:
 ## Design System
 
 ```css
---bg: #07080b          /* main background */
---bg2: #0c1018         /* section alt background */
---card: #111820        /* card background */
---text: #eef2f9        /* primary text */
---muted: #8394b0       /* secondary text */
---dim: #4e5c72         /* tertiary text */
---line: rgba(255,255,255,0.07)   /* borders */
---green: #16c784       /* success / active */
---brand: linear-gradient(135deg, #6366f1, #8b5cf6, #a855f7)  /* TamoWork brand */
---ig: linear-gradient(135deg, #f58529, #dd2a7b, #8134af)     /* Instagram */
---wa: #25d366           /* WhatsApp */
+--bg: #07080b;           /* main background */
+--bg2: #0c1018;          /* section alt background */
+--card: #111820;         /* card background */
+--card2: #161e28;        /* card hover background */
+--text: #eef2f9;         /* primary text */
+--muted: #8394b0;        /* secondary text */
+--dim: #4e5c72;          /* tertiary text */
+--line: rgba(255,255,255,0.07);    /* borders */
+--line2: rgba(255,255,255,0.12);   /* stronger borders */
+--green: #16c784;        /* success / active status */
 
-Font: 'Outfit', sans-serif
-Border radius: 14px (buttons), 18px (cards), 22px (large cards)
+/* Brand gradients */
+--brand: linear-gradient(135deg, #6366f1, #8b5cf6, #a855f7);  /* TamoWork */
+--ig: linear-gradient(135deg, #f58529, #dd2a7b, #8134af);      /* Instagram */
+--wa: #25d366;           /* WhatsApp */
+
+/* Typography */
+Font: 'Outfit', sans-serif (Google Fonts)
+Weights used: 400, 600, 700, 800, 900
+
+/* Border radius */
+Buttons: 14px
+Cards: 18px
+Large cards: 22px
+CTA box: 28px
 ```
 
 ---
@@ -84,121 +109,190 @@ Border radius: 14px (buttons), 18px (cards), 22px (large cards)
 
 ```
 /
-├── index.html          ← main landing page (PT/EN/ES)
+├── index.html              ← main landing page (PT/EN/ES i18n)
+├── CLAUDE.md               ← this file
 ├── blog/
-│   ├── index.html      ← blog listing page
-│   ├── posts.json      ← post manifest
-│   └── [slug].html     ← individual posts
-└── CLAUDE.md           ← this file
+│   ├── index.html          ← blog listing page
+│   ├── posts.json          ← post manifest [{slug, title, description, date}]
+│   └── [slug].html         ← individual blog posts
 ```
 
 ---
 
-## Blog Posts — Rules
+## Single CTA Rule
 
-When generating blog posts, always follow these rules:
+There is only ONE call-to-action across the entire site:
 
-### SEO
-- Title: max 60 characters, include main keyword
-- Meta description: max 155 characters
-- Use H2 and H3 headings to structure content
-- Include Schema.org JSON-LD (Article type)
-- Add canonical URL
-- Target long-tail keywords related to: Instagram automation, WhatsApp automation, small business AI, reply automation
+```html
+<a href="https://tamowork.com" class="nav-btn">⬇ Baixar grátis</a>
+```
 
-### Content
-- Language: Portuguese (pt-BR) — natural, simple, direct
-- Length: 800–1200 words
-- Structure: intro → problem → solution → practical steps → CTA
-- Mention TamoWork naturally 2–3 times as the solution (never force it)
-- Include practical examples relevant to Brazilian small business owners
-- Use HTML tags directly — no markdown in the post body
-
-### HTML Template for Posts
-Every post must include:
-- Full `<head>` with SEO meta tags
-- Nav with TamoWork logo + "⬇ Baixar grátis" button linking to tamowork.com
-- Post hero section (dark bg2 background)
-- Content section with max-width 760px
-- CTA box at the end: "Automatize seu Instagram e WhatsApp agora"
-- Footer
-- Dark theme matching TamoWork design system above
-
-### Blog Index
-After creating a post, always update:
-- `blog/index.html` — add the new post card
-- `blog/posts.json` — add post metadata
+**Never add a second CTA. Never change this button text.**
+All buttons lead to the same action: download.
 
 ---
 
-## Good Blog Post Topics
+## Blog Post Rules
 
-High SEO potential topics to generate:
+### SEO Requirements
+- Title: max 60 characters, include main keyword naturally
+- Meta description: max 155 characters, compelling and keyword-rich
+- H2 and H3 headings to structure content (great for SEO)
+- Schema.org JSON-LD (Article type)
+- Canonical URL pointing to tamowork.com/blog/[slug]
+- Open Graph meta tags
 
-**Instagram:**
+### Content Rules
+- Language: Portuguese (pt-BR) — natural, simple, direct
+- Length: 800–1200 words
+- Structure: hook intro → problem → solution → practical steps → CTA
+- Mention TamoWork naturally 2–3 times as the solution (never force it)
+- Include practical examples for Brazilian small business owners
+- Write in HTML tags directly — no markdown in post body content
+- Tone: helpful, no fluff, like a knowledgeable friend explaining things
+
+### Slug Format
+Convert title to slug:
+- Lowercase
+- Remove accents
+- Replace spaces with hyphens
+- Max 60 characters
+- Example: "Como Automatizar Instagram" → `como-automatizar-instagram`
+
+### Full Post HTML Template
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>[POST TITLE] — TamoWork Blog</title>
+  <meta name="description" content="[META DESCRIPTION]"/>
+  <meta name="keywords" content="[KEYWORDS]"/>
+  <meta property="og:title" content="[POST TITLE]"/>
+  <meta property="og:description" content="[META DESCRIPTION]"/>
+  <meta property="og:url" content="https://tamowork.com/blog/[SLUG]"/>
+  <meta property="og:type" content="article"/>
+  <link rel="canonical" href="https://tamowork.com/blog/[SLUG]"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* use TamoWork design system */
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "[POST TITLE]",
+    "description": "[META DESCRIPTION]",
+    "datePublished": "[YYYY-MM-DD]",
+    "publisher": { "@type": "Organization", "name": "TamoWork", "url": "https://tamowork.com" },
+    "url": "https://tamowork.com/blog/[SLUG]"
+  }
+  </script>
+</head>
+<body>
+  <!-- nav with logo + download button -->
+  <!-- post hero: category pill + h1 title + date + read time -->
+  <!-- post content: max-width 760px -->
+  <!-- CTA box at end: "Automatize seu Instagram e WhatsApp agora" -->
+  <!-- footer -->
+</body>
+</html>
+```
+
+### After Creating Each Post
+
+1. Save post to `blog/[slug].html`
+2. Update `blog/posts.json` — prepend new post to the array:
+```json
+[
+  {
+    "slug": "post-slug",
+    "title": "Post Title",
+    "description": "Meta description text",
+    "date": "22 de março de 2026"
+  }
+]
+```
+3. Regenerate `blog/index.html` with updated post list
+4. Run git add, commit, push
+
+---
+
+## Blog Index Page Rules
+
+`blog/index.html` must:
+- Match TamoWork dark design
+- Show all posts as cards in a grid
+- Each card: date + title + description + "Ler post →" link
+- Nav with logo + download button
+- Be regenerated every time a new post is added
+
+---
+
+## High-Value SEO Topics
+
+Generate posts on these topics for maximum organic traffic:
+
+**Instagram automation:**
 - como responder comentários do instagram automaticamente
 - como automatizar direct message do instagram
 - como nunca perder cliente no instagram
-- ferramentas para gerenciar instagram de pequenos negócios
-- como aumentar engajamento no instagram respondendo rápido
+- como aumentar engajamento respondendo rápido no instagram
+- melhor ferramenta para gerenciar instagram pequenos negócios
 
-**WhatsApp:**
+**WhatsApp automation:**
 - como automatizar whatsapp para negócios
-- como responder whatsapp sem ficar o dia todo no celular
+- como responder whatsapp sem ficar no celular o dia todo
 - atendimento automatico whatsapp pequenas empresas
-- como usar whatsapp business com inteligência artificial
+- como usar whatsapp com inteligência artificial gratis
 
-**General AI:**
-- inteligência artificial para pequenos negócios gratuita
+**AI for business:**
+- inteligência artificial gratis para pequenos negócios
 - como usar ia no atendimento ao cliente
 - funcionário digital para pequenos negócios
 - automação de atendimento sem mensalidade
 
 ---
 
-## What NOT to Do
+## What NOT To Do
 
-- Never call TamoWork a "bot" or "chatbot"
+- Never call TamoWork a "bot" or "chatbot" — always "funcionário de IA"
 - Never say it requires an API key or OpenAI account
-- Never mention it has a monthly subscription
-- Never use purple gradient on white backgrounds
-- Never use Inter or Roboto fonts
-- Never add unnecessary complexity to HTML files
-- Never break the single-CTA rule — only one button: "⬇ Baixar grátis"
+- Never mention monthly subscription costs
+- Never use Inter, Roboto, or Arial fonts — always Outfit
+- Never add a second CTA button
+- Never use light backgrounds — always dark theme
+- Never break the file structure
+- Never commit without pushing
+- Never ask for confirmation before pushing to GitHub
 
 ---
 
-## CTA — Always Use This
+## Quick Command Examples
 
-```html
-<a href="https://tamowork.com" class="nav-btn">⬇ Baixar grátis</a>
+**Generate a blog post:**
+```
+Generate a SEO blog post about "como responder comentários do instagram automaticamente" 
+following all rules in CLAUDE.md. Save to blog/[slug].html, 
+update blog/posts.json and blog/index.html, then push to GitHub.
 ```
 
-One CTA. One action. Download.
-
----
-
-## Git Workflow
-
-After making any change:
-```bash
-git add .
-git commit -m "description of change"
-git push
+**Update landing page:**
+```
+Update the hero headline in index.html to "[NEW TEXT]" 
+keeping the existing design, then push to GitHub.
 ```
 
-Vercel auto-deploys on every push to main branch.
-Deploy takes ~10 seconds.
+**Fix a bug:**
+```
+Fix [ISSUE] in index.html without changing design or other functionality, then push.
+```
 
----
-
-## Quick Commands for Claude Code
-
-Generate a blog post:
-> "Generate a SEO blog post about [TOPIC] following the rules in CLAUDE.md and save it to blog/[slug].html, then update blog/index.html and blog/posts.json"
-
-Update landing page copy:
-> "Update the hero headline in index.html to [NEW TEXT], keeping the existing design"
-
-Fix a bug:
-> "Fix [ISSUE] in index.html without changing the design or other functionality"
+**Generate multiple posts:**
+```
+Generate 3 SEO blog posts about [TOPIC 1], [TOPIC 2] and [TOPIC 3] 
+following CLAUDE.md rules. Save each one, update the blog index, then push everything.
+```

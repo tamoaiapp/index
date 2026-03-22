@@ -12,55 +12,43 @@
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
-      --bg:#07080b;
-      --bg2:#0c1018;
-      --card:#111820;
-      --text:#eef2f9;
-      --muted:#8394b0;
-      --dim:#4e5c72;
-      --line:rgba(255,255,255,0.07);
-      --green:#16c784;
+      --bg:#07080b;--bg2:#0c1018;--card:#111820;--text:#eef2f9;--muted:#8394b0;--dim:#4e5c72;
+      --line:rgba(255,255,255,0.07);--green:#16c784;
       --brand:linear-gradient(135deg,#6366f1 0%,#8b5cf6 50%,#a855f7 100%);
-      --brand-soft:rgba(99,102,241,0.08);
-      --brand-border:rgba(99,102,241,0.20);
+      --brand-soft:rgba(99,102,241,0.08);--brand-border:rgba(99,102,241,0.20);
     }
     html{scroll-behavior:smooth}
     body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
     a{text-decoration:none;color:inherit}
     .wrap{width:100%;max-width:1100px;margin:0 auto;padding:0 24px}
-
     .nav{position:sticky;top:0;z-index:200;background:rgba(7,8,11,0.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--line)}
-    .nav-inner{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-    .logo{font-size:19px;font-weight:900;letter-spacing:-.5px}
-    .logo span{background:var(--brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .nav-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:14px;font-size:14px;font-weight:800;background:var(--brand);color:#fff;border:none;cursor:pointer;font-family:inherit;transition:.15s ease}
+    .nav-inner{min-height:64px;display:flex;align-items:center;justify-content:space-between}
+    .logo span{font-size:19px;font-weight:900;letter-spacing:-.5px;background:var(--brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .nav-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:14px;font-size:14px;font-weight:800;background:var(--brand);color:#fff;border:none;cursor:pointer;font-family:inherit;transition:.15s}
     .nav-btn:hover{opacity:.88;transform:translateY(-1px)}
-
     .hero{background:var(--bg2);border-bottom:1px solid var(--line);padding:64px 0 52px}
     .hero h1{font-size:clamp(28px,4vw,42px);font-weight:900;letter-spacing:-.5px;margin-bottom:14px}
-    .hero h1 span{background:var(--brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% 200%;animation:brand-shift 6s ease infinite}
-    @keyframes brand-shift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    .hero h1 span{background:var(--brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% 200%;animation:shift 6s ease infinite}
+    @keyframes shift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
     .hero p{font-size:17px;color:var(--muted);max-width:520px}
-
     .posts{padding:64px 0 96px}
-    .posts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px;margin-top:40px}
-    .post-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:32px;transition:.2s ease;display:flex;flex-direction:column;gap:16px}
+    .posts-count{font-size:13px;color:var(--dim);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:32px}
+    .posts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
+    .post-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:32px;transition:.2s ease;display:flex;flex-direction:column;gap:14px}
     .post-card:hover{border-color:rgba(99,102,241,0.30);transform:translateY(-3px);box-shadow:0 16px 48px rgba(0,0,0,0.3)}
     .post-tags{display:flex;gap:8px;flex-wrap:wrap}
     .post-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:4px 10px;border-radius:999px;background:var(--brand-soft);border:1px solid var(--brand-border);color:#818cf8}
-    .post-card h2{font-size:20px;font-weight:800;letter-spacing:-.2px;line-height:1.3}
-    .post-card p{font-size:15px;color:var(--muted);line-height:1.65;flex:1}
+    .post-card h2{font-size:19px;font-weight:800;letter-spacing:-.2px;line-height:1.3}
+    .post-card p{font-size:14px;color:var(--muted);line-height:1.65;flex:1}
     .post-meta{font-size:12px;color:var(--dim);display:flex;align-items:center;gap:12px}
-    .post-link{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:#818cf8;margin-top:4px;transition:.15s}
+    .post-link{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:#818cf8;transition:.15s}
     .post-link:hover{color:var(--text)}
-
     .footer{border-top:1px solid var(--line);padding:40px 0;text-align:center}
     .footer p{font-size:13px;color:var(--dim)}
-    .footer a{color:var(--muted);transition:.15s}.footer a:hover{color:var(--text)}
+    .footer a{color:var(--muted)}.footer a:hover{color:var(--text)}
   </style>
 </head>
 <body>
-
   <nav class="nav">
     <div class="wrap">
       <div class="nav-inner">
@@ -73,41 +61,68 @@
   <section class="hero">
     <div class="wrap">
       <h1>TamoWork <span>Blog</span></h1>
-      <p>Tips, guides and insights on AI automation for small businesses — Instagram, WhatsApp, and beyond.</p>
+      <p>Guides, tips and insights on AI automation for small businesses — Instagram, WhatsApp, and beyond.</p>
     </div>
   </section>
 
   <section class="posts">
     <div class="wrap">
+      <div class="posts-count">7 articles</div>
       <div class="posts-grid">
 
-        <!-- POST: local-ai-chatbot-whatsapp -->
-        <a href="/blog/local-ai-chatbot-whatsapp.html" class="post-card">
-          <div class="post-tags">
-            <span class="post-tag">WhatsApp Automation</span>
-            <span class="post-tag">Small Business</span>
-          </div>
-          <h2>Local AI Chatbot for WhatsApp: Complete Business Guide</h2>
-          <p>Everything you need to know about running a local AI chatbot for WhatsApp. No subscription, no cloud, no API key. Automate your business messages from your own computer.</p>
-          <div class="post-meta">
-            <span>🗓 March 22, 2026</span>
-            <span>⏱ 22 min read</span>
-          </div>
+        <a href="/blog/how-to-auto-reply-instagram-comments-free.html" class="post-card">
+          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Free</span></div>
+          <h2>How to Auto Reply to Instagram Comments for Free (No Monthly Fee)</h2>
+          <p>Every paid tool charges $15–$100/month to automate Instagram comments. Here's how to do it for free, forever, with AI that runs on your own computer.</p>
+          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 18 min read</span></div>
           <span class="post-link">Read post →</span>
         </a>
 
-        <!-- POST: what-is-tamowork -->
+        <a href="/blog/free-manychat-alternative-whatsapp-instagram.html" class="post-card">
+          <div class="post-tags"><span class="post-tag">ManyChat Alternative</span><span class="post-tag">Free</span></div>
+          <h2>Best Free ManyChat Alternative for WhatsApp and Instagram (Runs Offline)</h2>
+          <p>ManyChat is great — if you can afford it. Here's an honest comparison of alternatives, and why local AI is the best option for small businesses.</p>
+          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 16 min read</span></div>
+          <span class="post-link">Read post →</span>
+        </a>
+
+        <a href="/blog/whatsapp-auto-reply-without-business-api.html" class="post-card">
+          <div class="post-tags"><span class="post-tag">WhatsApp</span><span class="post-tag">No API</span></div>
+          <h2>WhatsApp Auto Reply for Small Business: No API, No Monthly Fee, No Cloud</h2>
+          <p>How to automate WhatsApp replies without the Business API, without monthly fees, and without sending your customer data to anyone's servers.</p>
+          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 17 min read</span></div>
+          <span class="post-link">Read post →</span>
+        </a>
+
+        <a href="/blog/never-miss-customer-message-instagram-whatsapp.html" class="post-card">
+          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">WhatsApp</span></div>
+          <h2>How to Never Miss a Customer Message on Instagram or WhatsApp</h2>
+          <p>391% higher conversion for businesses that reply in under 1 minute. Here's how to make sure every message gets answered — at any hour, for free.</p>
+          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 15 min read</span></div>
+          <span class="post-link">Read post →</span>
+        </a>
+
+        <a href="/blog/local-ai-chatbot-vs-cloud-chatbot-small-business.html" class="post-card">
+          <div class="post-tags"><span class="post-tag">Local AI</span><span class="post-tag">Cloud AI</span></div>
+          <h2>Local AI vs Cloud AI: Why Small Businesses Are Switching to Offline Chatbots</h2>
+          <p>Cloud AI charges monthly and stores your data externally. Local AI runs on your computer — free, private, and always available. Full comparison inside.</p>
+          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 19 min read</span></div>
+          <span class="post-link">Read post →</span>
+        </a>
+
+        <a href="/blog/local-ai-chatbot-whatsapp.html" class="post-card">
+          <div class="post-tags"><span class="post-tag">WhatsApp</span><span class="post-tag">AI Chatbot</span></div>
+          <h2>Local AI Chatbot for WhatsApp: The Complete Business Guide</h2>
+          <p>Everything you need to know about running a local AI chatbot for WhatsApp. No subscription, no cloud, no API key. Automate from your own computer.</p>
+          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 22 min read</span></div>
+          <span class="post-link">Read post →</span>
+        </a>
+
         <a href="/blog/what-is-tamowork.html" class="post-card">
-          <div class="post-tags">
-            <span class="post-tag">AI Automation</span>
-            <span class="post-tag">Small Business</span>
-          </div>
+          <div class="post-tags"><span class="post-tag">About TamoWork</span><span class="post-tag">AI</span></div>
           <h2>What Is TamoWork? The Free AI Employee for Your Business</h2>
           <p>TamoWork is a free AI employee that runs on your computer and automatically replies to Instagram and WhatsApp messages for your small business.</p>
-          <div class="post-meta">
-            <span>🗓 March 22, 2026</span>
-            <span>⏱ 5 min read</span>
-          </div>
+          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 5 min read</span></div>
           <span class="post-link">Read post →</span>
         </a>
 
@@ -120,6 +135,5 @@
       <p><a href="https://tamowork.com">TamoWork</a> · Free AI employee for small businesses</p>
     </div>
   </footer>
-
 </body>
 </html>

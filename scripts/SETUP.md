@@ -1,77 +1,94 @@
 # Como configurar a geração automática de 30 posts/dia
 
-## 1. Instalar dependências
+## Custo: ZERO — usa o Ollama que o TamoWork já usa
 
-Abra o CMD dentro da pasta `scripts/` e rode:
+Não precisa de API key, não gasta nada. O mesmo modelo LLaMA 3.2 que responde
+clientes no Instagram/WhatsApp vai gerar os posts do blog.
 
+---
+
+## 1. Confirmar que o Ollama está instalado
+
+Abra o CMD e rode:
 ```
-npm install
-```
-
-## 2. Configurar sua chave da API Anthropic
-
-Edite o arquivo `run-generator.bat` e substitua `COLOQUE_SUA_CHAVE_AQUI` pela sua chave real:
-
-```
-set ANTHROPIC_API_KEY=sk-ant-api03-...
+ollama list
 ```
 
-Você pega a chave em: https://console.anthropic.com/settings/keys
+Se aparecer `llama3.2` na lista, está pronto.
 
-## 3. Testar manualmente
-
-Execute uma vez para confirmar que funciona:
-
+Se não tiver o modelo, instale:
 ```
-cd scripts
-run-generator.bat
+ollama pull llama3.2
 ```
 
-Se tudo der certo, você verá o post publicado em https://tamowork.com/blog/
+---
 
-## 4. Agendar com Windows Task Scheduler (30 posts/dia = a cada 48 min)
+## 2. Testar manualmente
+
+```
+cd c:\Users\Notebook\tamowork-site\scripts
+node generate-post.js
+```
+
+O script vai:
+1. Pegar o próximo tópico da fila
+2. Chamar o Ollama localmente para gerar o HTML
+3. Salvar em blog/[slug].html
+4. Atualizar blog/posts.json e blog/index.html
+5. Fazer git push → Vercel publica automaticamente
+
+---
+
+## 3. Agendar 30 posts/dia com Windows Task Scheduler
 
 ### Passo a passo:
 
 1. Pressione `Win + R` → digite `taskschd.msc` → Enter
-2. No painel direito, clique em **"Create Task"**
+2. No painel direito: **"Create Task"**
 3. Aba **General**:
    - Name: `TamoWork Blog Generator`
-   - Marque: "Run whether user is logged on or not"
-   - Marque: "Run with highest privileges"
+   - ✅ "Run whether user is logged on or not"
+   - ✅ "Run with highest privileges"
 
 4. Aba **Triggers** → New:
-   - Begin the task: "On a schedule"
-   - Settings: "Daily"
-   - Start: hoje, horário que quiser (ex: 08:00)
+   - Begin: "On a schedule" → Daily
+   - Start: hoje, qualquer horário (ex: 08:00)
    - Advanced Settings:
      - ✅ Repeat task every: **48 minutes**
      - for a duration of: **Indefinitely**
 
 5. Aba **Actions** → New:
    - Action: "Start a program"
-   - Program/script: `C:\Users\Notebook\tamowork-site\scripts\run-generator.bat`
+   - Program: `C:\Users\Notebook\tamowork-site\scripts\run-generator.bat`
 
 6. Aba **Settings**:
    - ✅ "If the task is already running, do not start a new instance"
 
-7. Clique **OK** e insira a senha do Windows se solicitado.
+7. Clique **OK**.
 
-## 5. Verificar que está funcionando
+---
 
-Após configurar, veja a fila restante:
+## 4. Verificar fila restante
+
 ```
 node -e "const q=JSON.parse(require('fs').readFileSync('topics-queue.json','utf8')); console.log('Pending:', q.pending.length, '| Generated:', q.generated.length);"
 ```
 
-A cada 48 minutos, um novo post será publicado automaticamente em tamowork.com/blog/
+---
 
-## Fila atual
+## Resumo
 
-120 tópicos na fila. Com 30 posts/dia, todos serão publicados em ~4 dias.
-Depois disso, basta adicionar mais tópicos ao `pending` em `topics-queue.json`.
+| Item | Detalhe |
+|---|---|
+| Custo | $0 — usa Ollama local |
+| Modelo | llama3.2 (já instalado com TamoWork) |
+| Velocidade | ~2-5 minutos por post |
+| Posts por dia | 30 (a cada 48 minutos) |
+| Tópicos na fila | 120 → 4 dias para gerar tudo |
+| Deploy | Automático via Vercel (push no GitHub) |
 
-## Custo estimado
-
-- Modelo: claude-haiku-4-5 (~$0.001 por post)
-- 30 posts/dia = ~$0.03/dia = ~$1/mês
+Para usar outro modelo (mais rápido):
+```
+set OLLAMA_MODEL=llama3.2:1b
+node generate-post.js
+```

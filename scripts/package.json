@@ -1,0 +1,14 @@
+{
+  "name": "tamowork-blog-generator",
+  "version": "1.0.0",
+  "description": "Automated blog post generator for TamoWork",
+  "main": "generate-post.js",
+  "type": "module",
+  "scripts": {
+    "generate": "node generate-post.js",
+    "generate-batch": "node generate-batch.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.52.0"
+  }
+}

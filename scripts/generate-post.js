@@ -1,10 +1,11 @@
 /**
  * TamoWork Blog Post Generator
- * Generates one SEO-optimized blog post from the pending queue using Ollama (local, free).
+ * Generates one SEO-optimized blog post from the pending queue using Claude API.
  * Usage: node generate-post.js
- * Requires: Ollama running at localhost:11434 with llama3.2 or similar model installed.
+ * Requires: ANTHROPIC_API_KEY environment variable set.
  */
 
+import Anthropic from "@anthropic-ai/sdk";
 import { readFileSync, writeFileSync } from "fs";
 import { execSync } from "child_process";
 import { dirname, join } from "path";
@@ -16,9 +17,7 @@ const QUEUE_FILE = join(__dirname, "topics-queue.json");
 const POSTS_JSON = join(ROOT, "blog", "posts.json");
 const BLOG_INDEX = join(ROOT, "blog", "index.html");
 
-// Ollama config — uses same local AI as TamoWork itself (free, no API key)
-const OLLAMA_URL = "http://localhost:11434/api/generate";
-const OLLAMA_MODEL = process.env.OLLAMA_MODEL || "llama3.2";
+const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -214,43 +213,25 @@ Now write the full HTML file for the topic: "${title}"
 Remember: output ONLY the raw HTML, starting with <!DOCTYPE html>.`;
 }
 
-// ─── Generate post via Ollama (local, free) ───────────────────────────────────
+// ─── Generate post via Claude API ─────────────────────────────────────────────
 
 async function generatePost(slug, title) {
-  console.log(`  Calling Ollama (${OLLAMA_MODEL}) for: ${title}`);
+  console.log(`  Calling Claude API for: ${title}`);
 
-  const body = JSON.stringify({
-    model: OLLAMA_MODEL,
-    prompt: buildPrompt(slug, title),
-    stream: false,
-    options: {
-      temperature: 0.7,
-      num_predict: 8000,
-    },
+  const response = await client.messages.create({
+    model: "claude-haiku-4-5",
+    max_tokens: 8000,
+    messages: [{ role: "user", content: buildPrompt(slug, title) }],
   });
 
-  const res = await fetch(OLLAMA_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body,
-    // Long timeout — local models can take a few minutes
-    signal: AbortSignal.timeout(300_000),
-  });
-
-  if (!res.ok) {
-    const err = await res.text();
-    throw new Error(`Ollama error ${res.status}: ${err.slice(0, 300)}`);
-  }
-
-  const data = await res.json();
-  let html = (data.response || "").trim();
+  let html = response.content[0].text.trim();
 
   // Strip markdown fences if model adds them
   html = html.replace(/^```html?\s*/i, "").replace(/\s*```$/, "").trim();
 
   // Validate it looks like HTML
   if (!html.startsWith("<!DOCTYPE") && !html.startsWith("<html")) {
-    throw new Error("Ollama returned non-HTML content:\n" + html.slice(0, 400));
+    throw new Error("Claude returned non-HTML content: " + html.slice(0, 200));
   }
 
   return html;

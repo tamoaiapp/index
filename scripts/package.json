@@ -1,10 +1,13 @@
 {
   "name": "tamowork-blog-generator",
   "version": "1.0.0",
-  "description": "Automated blog post generator for TamoWork using local Ollama AI",
+  "description": "Automated blog post generator for TamoWork using Claude API",
   "main": "generate-post.js",
   "type": "module",
   "scripts": {
     "generate": "node generate-post.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.52.0"
   }
 }

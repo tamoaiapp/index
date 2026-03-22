@@ -1,6 +1,8 @@
 @echo off
-REM TamoWork Blog Post Generator — usa Ollama local (GRATIS, sem API key)
-REM Run this via Windows Task Scheduler every 48 minutes for 30 posts/day
+REM TamoWork Blog Post Generator
+REM Run via Windows Task Scheduler every 48 minutes for 30 posts/day
+
+set ANTHROPIC_API_KEY=COLOQUE_SUA_CHAVE_AQUI
 
 cd /d "%~dp0"
 

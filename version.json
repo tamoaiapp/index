@@ -1,5 +1,5 @@
 {
-  "version": "2.0.0",
-  "downloadUrl": "https://github.com/tamoaiapp/index/releases/download/v2.0.0/TamoWork-Setup-2.0.0.exe",
-  "notes": ""
+  "version": "2.0.1",
+  "downloadUrl": "https://github.com/tamoaiapp/index/releases/download/v2.0.1/TamoWork-Setup-2.0.1.exe",
+  "notes": "Respostas agora no idioma do cliente (PT, EN, ES e outros)."
 }

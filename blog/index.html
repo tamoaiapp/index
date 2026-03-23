@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Blog — TamoWork</title>
-  <meta name="description" content="Tips, guides and insights on AI automation for small businesses — Instagram, WhatsApp, and beyond."/>
+  <title>Blog — TamoWork | AI Automation for Small Business</title>
+  <meta name="description" content="685+ guides on AI automation for small businesses — Instagram, WhatsApp, and beyond. Free, local AI employee for every business type."/>
   <link rel="canonical" href="https://tamowork.com/blog/"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,24 +28,31 @@
     .nav-btn:hover{opacity:.88;transform:translateY(-1px)}
     .hero{background:var(--bg2);border-bottom:1px solid var(--line);padding:64px 0 52px}
     .hero h1{font-size:clamp(28px,4vw,42px);font-weight:900;letter-spacing:-.5px;margin-bottom:14px}
-    .hero h1 span{background:var(--brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% 200%;animation:shift 6s ease infinite}
-    @keyframes shift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-    .hero p{font-size:17px;color:var(--muted);max-width:520px}
-    .posts{padding:64px 0 96px}
+    .hero h1 span{background:var(--brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero p{font-size:17px;color:var(--muted);max-width:520px;margin-bottom:24px}
+    .filters{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+    .filter-btn{padding:8px 18px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;transition:.15s}
+    .filter-btn:hover,.filter-btn.active{background:var(--brand-soft);border-color:var(--brand-border);color:#818cf8}
+    .search-wrap{margin-top:16px}
+    .search-input{width:100%;max-width:400px;padding:10px 16px;background:var(--card);border:1px solid var(--line);border-radius:14px;color:var(--text);font-family:inherit;font-size:14px;outline:none;transition:.15s}
+    .search-input:focus{border-color:var(--brand-border)}
+    .search-input::placeholder{color:var(--dim)}
+    .posts{padding:48px 0 96px}
     .posts-count{font-size:13px;color:var(--dim);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:32px}
-    .posts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
-    .post-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:32px;transition:.2s ease;display:flex;flex-direction:column;gap:14px}
-    .post-card:hover{border-color:rgba(99,102,241,0.30);transform:translateY(-3px);box-shadow:0 16px 48px rgba(0,0,0,0.3)}
-    .post-tags{display:flex;gap:8px;flex-wrap:wrap}
-    .post-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:4px 10px;border-radius:999px;background:var(--brand-soft);border:1px solid var(--brand-border);color:#818cf8}
-    .post-card h2{font-size:19px;font-weight:800;letter-spacing:-.2px;line-height:1.3}
-    .post-card p{font-size:14px;color:var(--muted);line-height:1.65;flex:1}
-    .post-meta{font-size:12px;color:var(--dim);display:flex;align-items:center;gap:12px}
-    .post-link{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:#818cf8;transition:.15s}
-    .post-link:hover{color:var(--text)}
+    .posts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+    .post-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;transition:.2s ease;display:flex;flex-direction:column;gap:10px}
+    .post-card:hover{border-color:rgba(99,102,241,0.30);transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,0.3)}
+    .post-lang{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:3px 8px;border-radius:999px;background:var(--brand-soft);border:1px solid var(--brand-border);color:#818cf8;display:inline-block;width:fit-content}
+    .post-card h2{font-size:16px;font-weight:800;letter-spacing:-.2px;line-height:1.35;flex:1}
+    .post-card p{font-size:13px;color:var(--muted);line-height:1.6}
+    .post-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:#818cf8;margin-top:4px}
+    .load-more{display:block;margin:40px auto 0;padding:14px 40px;border-radius:14px;background:var(--card);border:1px solid var(--brand-border);color:#818cf8;font-family:inherit;font-size:15px;font-weight:700;cursor:pointer;transition:.15s}
+    .load-more:hover{background:var(--brand-soft)}
+    .load-more:disabled{opacity:.4;cursor:default}
     .footer{border-top:1px solid var(--line);padding:40px 0;text-align:center}
     .footer p{font-size:13px;color:var(--dim)}
     .footer a{color:var(--muted)}.footer a:hover{color:var(--text)}
+    #no-results{display:none;text-align:center;padding:60px 0;color:var(--muted)}
   </style>
 </head>
 <body>
@@ -61,807 +68,115 @@
   <section class="hero">
     <div class="wrap">
       <h1>TamoWork <span>Blog</span></h1>
-      <p>Guides, tips and insights on AI automation for small businesses — Instagram, WhatsApp, and beyond.</p>
+      <p>685+ guides on AI automation for small businesses — Instagram, WhatsApp, and beyond.</p>
+      <div class="filters">
+        <button class="filter-btn active" data-lang="all">All languages</button>
+        <button class="filter-btn" data-lang="pt-BR">Português</button>
+        <button class="filter-btn" data-lang="en">English</button>
+        <button class="filter-btn" data-lang="es">Español</button>
+      </div>
+      <div class="search-wrap">
+        <input class="search-input" type="text" placeholder="Search articles..." id="searchInput"/>
+      </div>
     </div>
   </section>
 
   <section class="posts">
     <div class="wrap">
-      <div class="posts-count">98 articles</div>
-      <div class="posts-grid">
-
-        <a href="/blog/how-to-automate-instagram-dm-replies.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Automation</span><span class="post-tag">Free</span></div>
-          <h2>How to Automate Instagram DM Replies for Free</h2>
-          <p>Step-by-step guide to automating Instagram DM replies with no subscription, no API key, no cloud. Reply to every customer instantly, 24/7.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 14 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/how-to-auto-reply-instagram-comments-free.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Free</span></div>
-          <h2>How to Auto Reply to Instagram Comments for Free (No Monthly Fee)</h2>
-          <p>Every paid tool charges $15–$100/month to automate Instagram comments. Here's how to do it for free, forever, with AI that runs on your own computer.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 18 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/free-manychat-alternative-whatsapp-instagram.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">ManyChat Alternative</span><span class="post-tag">Free</span></div>
-          <h2>Best Free ManyChat Alternative for WhatsApp and Instagram (Runs Offline)</h2>
-          <p>ManyChat is great — if you can afford it. Here's an honest comparison of alternatives, and why local AI is the best option for small businesses.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 16 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/whatsapp-auto-reply-without-business-api.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp</span><span class="post-tag">No API</span></div>
-          <h2>WhatsApp Auto Reply for Small Business: No API, No Monthly Fee, No Cloud</h2>
-          <p>How to automate WhatsApp replies without the Business API, without monthly fees, and without sending your customer data to anyone's servers.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 17 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/never-miss-customer-message-instagram-whatsapp.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">WhatsApp</span></div>
-          <h2>How to Never Miss a Customer Message on Instagram or WhatsApp</h2>
-          <p>391% higher conversion for businesses that reply in under 1 minute. Here's how to make sure every message gets answered — at any hour, for free.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 15 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/local-ai-chatbot-vs-cloud-chatbot-small-business.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Local AI</span><span class="post-tag">Cloud AI</span></div>
-          <h2>Local AI vs Cloud AI: Why Small Businesses Are Switching to Offline Chatbots</h2>
-          <p>Cloud AI charges monthly and stores your data externally. Local AI runs on your computer — free, private, and always available. Full comparison inside.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 19 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/local-ai-chatbot-whatsapp.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp</span><span class="post-tag">AI Chatbot</span></div>
-          <h2>Local AI Chatbot for WhatsApp: The Complete Business Guide</h2>
-          <p>Everything you need to know about running a local AI chatbot for WhatsApp. No subscription, no cloud, no API key. Automate from your own computer.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 22 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/what-is-tamowork.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">About TamoWork</span><span class="post-tag">AI</span></div>
-          <h2>What Is TamoWork? The Free AI Employee for Your Business</h2>
-          <p>TamoWork is a free AI employee that runs on your computer and automatically replies to Instagram and WhatsApp messages for your small business.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 5 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/best-instagram-automation-tools-small-business.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Automation</span></div>
-          <h2>Best Instagram Automation Tools for Small Business (Free vs Paid)</h2>
-          <p>Honest comparison of Instagram automation tools. Real costs, real limitations, and why local AI beats cloud subscriptions for small businesses.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/whatsapp-business-vs-whatsapp-personal-automation.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp</span><span class="post-tag">Automation</span></div>
-          <h2>WhatsApp Business vs Personal: Which Can You Automate?</h2>
-          <p>The real differences between WhatsApp Personal and Business for automation purposes. No expensive API required.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 10 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/how-to-respond-faster-instagram-dms.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">DMs</span></div>
-          <h2>How to Respond Faster to Instagram DMs (and Never Miss One)</h2>
-          <p>Speed matters on Instagram. Learn to reply to every DM within minutes — even at 2am — without hiring anyone or paying a subscription.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/ai-customer-service-small-business-free.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">AI</span><span class="post-tag">Customer Service</span></div>
-          <h2>AI Customer Service for Small Business: Free and Local</h2>
-          <p>What AI customer service actually means, why cloud tools are expensive, and how local AI lets small businesses automate replies for free.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 13 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/instagram-auto-reply-dm-free-tool.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Free Tool</span></div>
-          <h2>Instagram Auto Reply DM: Best Free Tool in 2026</h2>
-          <p>Looking for a free Instagram auto reply tool? Compare ManyChat, Chatfuel, and local AI options. Which works best without a monthly fee?</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 10 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/whatsapp-chatbot-without-coding.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp</span><span class="post-tag">No Code</span></div>
-          <h2>How to Set Up a WhatsApp Chatbot Without Any Coding</h2>
-          <p>Step-by-step guide to setting up a WhatsApp AI chatbot with zero coding. No API, no subscriptions, no technical knowledge required.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/increase-instagram-sales-faster-replies.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Sales</span></div>
-          <h2>How Faster Instagram Replies Increase Your Sales</h2>
-          <p>Data shows businesses that reply within 1 minute convert 391% more customers. Here's how to get there without hiring anyone.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/best-free-whatsapp-automation-2026.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp</span><span class="post-tag">Free</span></div>
-          <h2>Best Free WhatsApp Automation Tools in 2026</h2>
-          <p>The honest guide to free WhatsApp automation in 2026. Exposes free tier traps and explains why local AI is the only truly free option.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 14 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/how-ai-employee-works-small-business.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">AI Employee</span><span class="post-tag">Small Business</span></div>
-          <h2>How an AI Employee Works for Your Small Business</h2>
-          <p>Plain-language explainer of how an AI employee reads messages, understands intent, uses your business context, and knows when to hand off.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 10 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/instagram-comment-automation-strategy.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Strategy</span></div>
-          <h2>Instagram Comment Automation Strategy That Actually Works</h2>
-          <p>How to automate Instagram comment replies without looking spammy. The comment-to-DM funnel, engagement rate impact, and setup guide.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 13 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/respond-customer-messages-24-hours.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Customer Service</span><span class="post-tag">24/7</span></div>
-          <h2>How to Respond to Customer Messages 24/7 (Without Hiring Anyone)</h2>
-          <p>The 24/7 customer expectation problem — solved. How small businesses cover nights, weekends, and holidays without staff costs.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/whatsapp-auto-response-examples-small-business.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp</span><span class="post-tag">Templates</span></div>
-          <h2>10 WhatsApp Auto-Response Examples for Small Businesses</h2>
-          <p>Real WhatsApp auto-response examples for price, shipping, orders, hours, and more. Copy-paste templates and see how AI handles them better.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/instagram-engagement-automation-tips.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Engagement</span></div>
-          <h2>5 Instagram Engagement Automation Tips That Drive Real Results</h2>
-          <p>Actionable tactics to automate Instagram engagement: comment replies, DM triggers, follow-ups, and keyword routing. Boost reach without buying ads.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 10 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/save-time-social-media-ai-automation.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Productivity</span><span class="post-tag">AI</span></div>
-          <h2>Save Hours Every Day: AI Automation for Social Media</h2>
-          <p>A time audit of social media tasks, what's safe to automate vs needs a human, and a daily routine using AI for the repetitive work.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/ai-for-ecommerce-instagram-whatsapp.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">E-commerce</span><span class="post-tag">Instagram</span></div>
-          <h2>AI for E-commerce: Automate Instagram and WhatsApp Sales</h2>
-          <p>How AI handles the Instagram post → DM inquiry → WhatsApp negotiation → sale flow. Automate every step of the product question funnel.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/local-ai-privacy-business-data.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Privacy</span><span class="post-tag">Local AI</span></div>
-          <h2>Local AI and Privacy: Your Business Data Stays on Your Computer</h2>
-          <p>What cloud AI collects, GDPR implications, and why local AI is the only option that keeps your customer data fully private.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 13 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/automate-customer-service-without-subscription.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Customer Service</span><span class="post-tag">Free</span></div>
-          <h2>How to Automate Customer Service Without a Monthly Subscription</h2>
-          <p>The subscription trap exposed. Real cost comparison of popular automation tools vs free local AI. How to break free from monthly fees forever.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/instagram-direct-message-sales-strategy.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Sales</span></div>
-          <h2>Instagram DM Sales Strategy: Close More in the Chat</h2>
-          <p>The DM sales funnel, 3-message close sequences, price objection frameworks, and follow-up strategies that turn conversations into sales.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 14 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/whatsapp-business-tips-increase-sales.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp Business</span><span class="post-tag">Sales</span></div>
-          <h2>7 WhatsApp Business Tips to Increase Sales in 2026</h2>
-          <p>Seven proven tactics to turn WhatsApp into a sales machine. Three of them can be automated with AI starting today.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/how-to-never-lose-customer-slow-reply.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Customer Retention</span><span class="post-tag">Automation</span></div>
-          <h2>How to Never Lose a Customer to a Slow Reply Again</h2>
-          <p>Response time data, the 5-minute rule, what customers do when ignored, and a 4-layer system to make sure every message gets answered.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/ollama-local-ai-business-beginners.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Ollama</span><span class="post-tag">Local AI</span></div>
-          <h2>Ollama for Business Beginners: Local AI Without the Complexity</h2>
-          <p>What Ollama is in plain language, system requirements, how TamoWork wraps it invisibly, and what running local AI actually feels like day-to-day.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 13 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/instagram-automation-safe-not-banned.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Safety</span></div>
-          <h2>Is Instagram Automation Safe? How to Automate Without Getting Banned</h2>
-          <p>What Instagram's ToS actually says about automation. Safe vs risky categories, why reply automation has never caused bans, and red flags to avoid.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/whatsapp-reply-automation-examples.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp</span><span class="post-tag">Examples</span></div>
-          <h2>WhatsApp Reply Automation: 10 Real Business Examples</h2>
-          <p>10 real automated WhatsApp reply examples across clothing, food, salon, real estate, bakery, and freelance businesses. Copy the scripts.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 14 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/ai-vs-human-customer-service-small-business.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">AI</span><span class="post-tag">Comparison</span></div>
-          <h2>AI vs Human Customer Service: What's Best for Small Businesses?</h2>
-          <p>Honest side-by-side comparison. The hybrid model framework, what to automate vs keep personal, and why it's AI + human — not AI vs human.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 13 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/instagram-comment-reply-best-practices.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Comments</span></div>
-          <h2>Instagram Comment Reply Best Practices for Small Businesses</h2>
-          <p>Algorithm impact of comment replies, timing windows, what to automate vs keep manual, and how to funnel comments into DM conversations.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/how-to-set-up-ai-employee-30-minutes.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Setup Guide</span><span class="post-tag">AI Employee</span></div>
-          <h2>How to Set Up Your AI Employee in 30 Minutes</h2>
-          <p>Minute-by-minute setup guide with a copyable business context template, common first-setup mistakes, and what to expect in week one.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 15 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/free-chatbot-whatsapp-instagram-comparison.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Comparison</span><span class="post-tag">Free Chatbot</span></div>
-          <h2>Free Chatbot for WhatsApp and Instagram: Honest Comparison 2026</h2>
-          <p>ManyChat, Tidio, Respond.io, WhatsApp Business App, and TamoWork compared honestly. Why most "free" tools are traps.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 14 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/digital-employee-small-business-benefits.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Digital Employee</span><span class="post-tag">Benefits</span></div>
-          <h2>5 Benefits of a Digital Employee for Your Small Business</h2>
-          <p>24/7 availability, product memory, 30-second replies, simultaneous conversations, zero cost. How a digital AI employee changes small business.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 10 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/automate-product-questions-instagram.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Products</span></div>
-          <h2>How to Automate Product Questions on Instagram</h2>
-          <p>The 6 main product question categories, static FAQ vs AI-powered answers, handling multi-variant products, and keeping context updated.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/whatsapp-offline-ai-chatbot-guide.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp</span><span class="post-tag">Offline AI</span></div>
-          <h2>WhatsApp Offline AI Chatbot: The Complete Setup Guide</h2>
-          <p>What offline AI means technically, why it matters for WhatsApp, system requirements, 6-step setup, and troubleshooting the 4 most common issues.</p>
-          <div class="post-meta"><span>🗓 March 22, 2026</span><span>⏱ 13 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/chatbot-ia-whatsapp-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp</span><span class="post-tag">Portugal</span></div>
-          <h2>Chatbot de IA para WhatsApp em Portugal: Guia Completo</h2>
-          <p>Guia completo sobre chatbot de IA para WhatsApp em Portugal. RGPD, custos reais, exemplos práticos para PME. Grátis e sem mensalidade.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 14 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/automatizar-respostas-instagram-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Portugal</span></div>
-          <h2>Como Automatizar Respostas no Instagram em Portugal (Grátis)</h2>
-          <p>Como automatizar respostas no Instagram gratuitamente em Portugal. Sem mensalidade, sem API cara. Funciona no seu computador.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/melhor-ferramenta-automatizacao-whatsapp-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp</span><span class="post-tag">Portugal</span></div>
-          <h2>Melhor Ferramenta de Automação WhatsApp em Portugal 2026</h2>
-          <p>Comparativo das melhores ferramentas de automação WhatsApp para Portugal em 2026. Preços em euros, limitações honestas.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 13 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/atendimento-automatico-instagram-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Portugal</span></div>
-          <h2>Atendimento Automático no Instagram em Portugal Sem Mensalidade</h2>
-          <p>Como ter atendimento automático no Instagram em Portugal sem pagar mensalidade. Para PME portuguesas que querem responder mais rápido.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/ia-local-negocio-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">IA Local</span><span class="post-tag">Portugal</span></div>
-          <h2>IA Local para Negócios em Portugal: Vantagens e Como Começar</h2>
-          <p>Porque é que a IA local é melhor que a nuvem para negócios portugueses. RGPD, custos zero, privacidade total.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 13 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/responder-mensagens-whatsapp-automaticamente-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp</span><span class="post-tag">Portugal</span></div>
-          <h2>Como Responder Mensagens do WhatsApp Automaticamente em Portugal</h2>
-          <p>Guia prático com exemplos reais de respostas automáticas no WhatsApp para empresas portuguesas. Templates prontos.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/funcionario-digital-pequena-empresa-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Portugal</span><span class="post-tag">PME</span></div>
-          <h2>Funcionário Digital para Pequena Empresa Portuguesa</h2>
-          <p>Como um funcionário digital pode substituir horas de atendimento manual para PME portuguesas. Comparação de custos.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/automatizar-instagram-portugal-gratis.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Portugal</span></div>
-          <h2>Como Automatizar o Instagram em Portugal de Graça</h2>
-          <p>Automatize o Instagram gratuitamente em Portugal. Comparação entre ManyChat, Meta Business Suite e TamoWork.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/ia-atendimento-cliente-portugal-gratis.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">IA Gratuita</span><span class="post-tag">Portugal</span></div>
-          <h2>IA Gratuita para Atendimento ao Cliente em Portugal</h2>
-          <p>As melhores ferramentas de IA gratuitas para atendimento ao cliente em Portugal. O que cada ferramenta cobre.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/whatsapp-business-portugal-automatizacao.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp Business</span><span class="post-tag">Portugal</span></div>
-          <h2>WhatsApp Business em Portugal: Como Automatizar Sem API Cara</h2>
-          <p>As três versões do WhatsApp explicadas. Porque a API oficial custa €50-€300/mês e como automatizar sem custo.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 13 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/responder-comentarios-instagram-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Portugal</span></div>
-          <h2>Como Responder Comentários do Instagram Automaticamente em Portugal</h2>
-          <p>Automatize respostas a comentários no Instagram para empresas portuguesas. Sem mensalidade, sem API.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/ferramentas-ia-gratis-pequenas-empresas-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Ferramentas IA</span><span class="post-tag">Portugal</span></div>
-          <h2>Melhores Ferramentas de IA Grátis para Empresas em Portugal 2026</h2>
-          <p>As melhores ferramentas de IA gratuitas para pequenas empresas portuguesas em 2026. Sem mensalidade.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/chatbot-ia-sem-programacao-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">IA Sem Código</span><span class="post-tag">Portugal</span></div>
-          <h2>Empregado de IA Sem Programação para Negócios em Portugal</h2>
-          <p>Como usar IA no atendimento sem saber programar em Portugal. Guia prático para configurar automação em minutos.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/nunca-perder-cliente-whatsapp-instagram-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Atendimento</span><span class="post-tag">Portugal</span></div>
-          <h2>Como Nunca Perder um Cliente no WhatsApp ou Instagram em Portugal</h2>
-          <p>Como garantir que nunca perde um cliente por demora na resposta em Portugal. Automação gratuita com IA local.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/ia-local-privacidade-rgpd-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">RGPD</span><span class="post-tag">Portugal</span></div>
-          <h2>IA Local e RGPD: Como Proteger os Dados dos Clientes em Portugal</h2>
-          <p>Como a IA local protege os dados dos clientes e garante conformidade com o RGPD em Portugal.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 13 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/vendas-instagram-respostas-rapidas-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Vendas</span><span class="post-tag">Portugal</span></div>
-          <h2>Como Aumentar as Vendas no Instagram em Portugal com Respostas Rápidas</h2>
-          <p>Respostas rápidas no Instagram aumentam as vendas em Portugal. Estratégias práticas e automação gratuita.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/whatsapp-ia-negocio-local-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp IA</span><span class="post-tag">Portugal</span></div>
-          <h2>WhatsApp com IA para Negócios Locais em Portugal</h2>
-          <p>Guia completo sobre como usar WhatsApp com IA para negócios locais em Portugal. Automação gratuita, sem API paga.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/atendimento-24h-sem-contratar-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Atendimento 24h</span><span class="post-tag">Portugal</span></div>
-          <h2>Atendimento 24 Horas Sem Contratar Ninguém em Portugal</h2>
-          <p>Como ter atendimento 24h no Instagram e WhatsApp sem contratar funcionários em Portugal. Solução gratuita.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/exemplos-resposta-automatica-whatsapp-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp</span><span class="post-tag">Portugal</span></div>
-          <h2>Exemplos de Resposta Automática WhatsApp para Empresas em Portugal</h2>
-          <p>10 exemplos reais de respostas automáticas para WhatsApp de empresas portuguesas. Templates prontos para usar.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/comparacao-chatbots-gratuitos-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Comparação</span><span class="post-tag">Portugal</span></div>
-          <h2>Comparação: Melhores Chatbots Gratuitos em Portugal 2026</h2>
-          <p>Compare as melhores soluções gratuitas de automação para WhatsApp e Instagram em Portugal em 2026.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 13 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/ia-para-ecommerce-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">E-commerce</span><span class="post-tag">Portugal</span></div>
-          <h2>IA para E-commerce em Portugal: Automatize as Vendas</h2>
-          <p>Como usar inteligência artificial no e-commerce português para automatizar atendimento e vender mais.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/automacao-instagram-segura-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Portugal</span></div>
-          <h2>Automação no Instagram em Portugal: É Seguro? Como Fazer Sem Ser Banido</h2>
-          <p>Como fazer automação no Instagram com segurança em Portugal sem risco de banimento. Guia para PME.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/configurar-empregado-ia-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Configuração</span><span class="post-tag">Portugal</span></div>
-          <h2>Como Configurar o Seu Empregado de IA em Portugal em 30 Minutos</h2>
-          <p>Guia passo a passo para configurar um empregado de IA em Portugal em 30 minutos. Sem conhecimento técnico.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 15 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/melhores-ferramentas-automacao-instagram-portugal-2026.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Portugal</span></div>
-          <h2>Melhores Ferramentas de Automação Instagram em Portugal 2026</h2>
-          <p>Comparativo das melhores ferramentas de automação para Instagram em Portugal em 2026.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 13 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/whatsapp-para-restaurantes-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp</span><span class="post-tag">Restaurantes</span></div>
-          <h2>WhatsApp para Restaurantes em Portugal: Automatize Reservas e Pedidos</h2>
-          <p>Como restaurantes portugueses podem usar WhatsApp com IA para automatizar pedidos e reservas.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/ia-vs-humano-atendimento-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">IA vs Humano</span><span class="post-tag">Portugal</span></div>
-          <h2>IA vs Humano no Atendimento ao Cliente em Portugal</h2>
-          <p>Comparação honesta entre IA e atendente humano para PME portuguesas. Quando cada um vale mais.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/instagram-para-lojas-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Portugal</span></div>
-          <h2>Instagram para Lojas em Portugal: Como Responder a Todos os Clientes</h2>
-          <p>Como lojistas portugueses podem responder todos os clientes no Instagram sem stress. Automação prática.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/automacao-whatsapp-servicos-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp</span><span class="post-tag">Portugal</span></div>
-          <h2>Automação WhatsApp para Prestadores de Serviços em Portugal</h2>
-          <p>Guia completo de automação de WhatsApp para prestadores de serviço portugueses.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/beneficios-empregado-digital-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Empregado Digital</span><span class="post-tag">Portugal</span></div>
-          <h2>5 Benefícios de Ter um Empregado Digital para o Seu Negócio em Portugal</h2>
-          <p>Os principais benefícios de ter um empregado digital na sua empresa portuguesa. IA local, gratuita, 24h.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 10 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/poupar-tempo-redes-sociais-portugal.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Produtividade</span><span class="post-tag">Portugal</span></div>
-          <h2>Como Poupar 3 Horas por Dia nas Redes Sociais com IA em Portugal</h2>
-          <p>Como poupar horas por dia nas redes sociais com IA gratuita em Portugal. Automatize sem gastar nada.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/chatbot-ia-whatsapp-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp</span><span class="post-tag">Brasil</span></div>
-          <h2>Chatbot de IA para WhatsApp: Guia Completo para Empresas no Brasil</h2>
-          <p>Guia completo sobre chatbot de IA para WhatsApp no Brasil. LGPD, custos reais, exemplos práticos. Grátis e sem mensalidade.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 14 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/automatizar-respostas-instagram-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Brasil</span></div>
-          <h2>Como Automatizar Respostas no Instagram para Negócios Brasileiros</h2>
-          <p>Como automatizar respostas no Instagram gratuitamente no Brasil. Sem mensalidade, sem API cara.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/melhor-ferramenta-automatizacao-whatsapp-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp</span><span class="post-tag">Brasil</span></div>
-          <h2>Melhor Ferramenta de Automação de WhatsApp para Negócios no Brasil</h2>
-          <p>Comparativo das melhores ferramentas de automação WhatsApp para o Brasil. Preços em R$, limitações honestas.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 13 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/atendimento-automatico-instagram-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Brasil</span></div>
-          <h2>Atendimento Automático no Instagram sem Pagar Mensalidade no Brasil</h2>
-          <p>Como ter atendimento automático no Instagram no Brasil sem pagar mensalidade. Para pequenas empresas.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/ia-local-negocio-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">IA Local</span><span class="post-tag">Brasil</span></div>
-          <h2>IA Local para Negócios no Brasil: Por Que Funciona Melhor que a Nuvem</h2>
-          <p>Por que a IA local é melhor que a nuvem para negócios brasileiros. LGPD, custos zero, privacidade total.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 13 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/responder-mensagens-whatsapp-automaticamente-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp</span><span class="post-tag">Brasil</span></div>
-          <h2>Como Responder Mensagens do WhatsApp Automaticamente no Brasil</h2>
-          <p>Guia prático com exemplos reais de respostas automáticas no WhatsApp para empresas brasileiras.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/funcionario-digital-pequena-empresa-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Brasil</span><span class="post-tag">IA</span></div>
-          <h2>Funcionário Digital para Pequena Empresa Brasileira: Vale a Pena?</h2>
-          <p>Como um funcionário digital pode substituir horas de atendimento para pequenas empresas brasileiras.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/automatizar-instagram-brasil-gratis.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Brasil</span></div>
-          <h2>Como Automatizar seu Instagram no Brasil de Graça</h2>
-          <p>Automatize o Instagram gratuitamente no Brasil. Comparação entre ManyChat, Meta Business Suite e TamoWork.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/ia-atendimento-cliente-brasil-gratis.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">IA Gratuita</span><span class="post-tag">Brasil</span></div>
-          <h2>IA Gratuita para Atendimento ao Cliente no Brasil</h2>
-          <p>As melhores ferramentas de IA gratuitas para atendimento ao cliente no Brasil em 2026. Sem mensalidade.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/whatsapp-business-brasil-automatizacao.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp Business</span><span class="post-tag">Brasil</span></div>
-          <h2>WhatsApp Business no Brasil: Como Turbinar com Automação de IA</h2>
-          <p>As três versões do WhatsApp para o contexto brasileiro. Como automatizar via WhatsApp Web sem custo.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 13 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/responder-comentarios-instagram-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Brasil</span></div>
-          <h2>Como Responder Comentários do Instagram Automaticamente no Brasil</h2>
-          <p>Aprenda como responder comentários do Instagram automaticamente no Brasil sem pagar mensalidade.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/ferramentas-ia-gratis-pequenas-empresas-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Ferramentas IA</span><span class="post-tag">Brasil</span></div>
-          <h2>Ferramentas de IA Gratuitas para Pequenas Empresas Brasileiras 2026</h2>
-          <p>As melhores ferramentas de IA gratuitas para pequenas empresas brasileiras em 2026. Sem mensalidade.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/chatbot-ia-sem-programacao-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">IA Sem Código</span><span class="post-tag">Brasil</span></div>
-          <h2>Empregado de IA Sem Programação para Empreendedores Brasileiros</h2>
-          <p>Como usar IA no atendimento sem saber programar no Brasil. Guia prático para empreendedores.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/nunca-perder-cliente-whatsapp-instagram-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Atendimento</span><span class="post-tag">Brasil</span></div>
-          <h2>Como Nunca Perder um Cliente no WhatsApp ou Instagram no Brasil</h2>
-          <p>Como nunca mais perder um cliente por demora na resposta no Brasil. Automação gratuita com IA local.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/ia-local-privacidade-lgpd-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">LGPD</span><span class="post-tag">Brasil</span></div>
-          <h2>IA Local e LGPD: Como Proteger Dados dos Clientes no Brasil</h2>
-          <p>Como a IA local protege os dados dos clientes e garante conformidade com a LGPD para empresas brasileiras.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 13 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/vendas-instagram-respostas-rapidas-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Vendas</span><span class="post-tag">Brasil</span></div>
-          <h2>Como Aumentar Vendas no Instagram Respondendo Mais Rápido no Brasil</h2>
-          <p>Respostas rápidas no Instagram aumentam vendas no Brasil. Estratégias práticas e automação gratuita.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/whatsapp-ia-negocio-local-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp IA</span><span class="post-tag">Brasil</span></div>
-          <h2>WhatsApp com IA para Negócio Local Brasileiro: Guia Prático</h2>
-          <p>Guia completo sobre como usar WhatsApp com IA para seu negócio local no Brasil. Sem API paga.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/atendimento-24h-sem-contratar-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Atendimento 24h</span><span class="post-tag">Brasil</span></div>
-          <h2>Atendimento 24 Horas Sem Contratar Ninguém: Como Fazer no Brasil</h2>
-          <p>Como ter atendimento 24h no Instagram e WhatsApp sem contratar funcionários no Brasil.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/exemplos-resposta-automatica-whatsapp-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp</span><span class="post-tag">Brasil</span></div>
-          <h2>Exemplos de Resposta Automática para WhatsApp de Pequenas Empresas</h2>
-          <p>20 exemplos práticos de respostas automáticas para WhatsApp de pequenas empresas brasileiras.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/comparacao-chatbots-gratuitos-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Comparação</span><span class="post-tag">Brasil</span></div>
-          <h2>Comparação dos Melhores Chatbots Gratuitos para WhatsApp e Instagram no Brasil</h2>
-          <p>Compare as melhores soluções gratuitas de automação para WhatsApp e Instagram no Brasil em 2026.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 13 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/ia-para-ecommerce-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">E-commerce</span><span class="post-tag">Brasil</span></div>
-          <h2>IA para E-commerce no Brasil: Automatize e Venda Mais</h2>
-          <p>Como usar inteligência artificial no e-commerce brasileiro para automatizar atendimento e vender mais.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/automacao-instagram-segura-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Brasil</span></div>
-          <h2>Automação no Instagram Sem Ser Banido no Brasil</h2>
-          <p>Como fazer automação no Instagram com segurança no Brasil sem risco de banimento. Guia prático.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/configurar-empregado-ia-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Configuração</span><span class="post-tag">Brasil</span></div>
-          <h2>Como Configurar Seu Empregado de IA em 30 Minutos no Brasil</h2>
-          <p>Guia passo a passo para brasileiros configurarem um empregado de IA em 30 minutos. Sem conhecimento técnico.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 15 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/melhores-ferramentas-automacao-instagram-brasil-2026.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Brasil</span></div>
-          <h2>Melhores Ferramentas de Automação para Instagram no Brasil 2026</h2>
-          <p>Comparativo das melhores ferramentas de automação para Instagram no Brasil em 2026.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 13 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/whatsapp-para-restaurantes-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp</span><span class="post-tag">Restaurantes</span></div>
-          <h2>WhatsApp para Restaurantes no Brasil: Automatize Pedidos e Reservas</h2>
-          <p>Como restaurantes brasileiros podem usar WhatsApp com IA para automatizar pedidos e reservas.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/ia-vs-humano-atendimento-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">IA vs Humano</span><span class="post-tag">Brasil</span></div>
-          <h2>IA vs Atendente Humano: O Que É Melhor para Pequenas Empresas Brasileiras?</h2>
-          <p>IA ou atendente humano? Comparativo honesto para pequenas empresas brasileiras.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/instagram-para-lojas-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Instagram</span><span class="post-tag">Brasil</span></div>
-          <h2>Instagram para Lojas no Brasil: Responda Todos os Clientes Sem Stress</h2>
-          <p>Como lojistas brasileiros podem responder todos os clientes no Instagram sem se estressar.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/automacao-whatsapp-servicos-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">WhatsApp</span><span class="post-tag">Brasil</span></div>
-          <h2>Automação de WhatsApp para Prestadores de Serviço no Brasil</h2>
-          <p>Guia completo de automação de WhatsApp para prestadores de serviço brasileiros.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 12 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/beneficios-empregado-digital-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Empregado Digital</span><span class="post-tag">Brasil</span></div>
-          <h2>7 Benefícios de Ter um Empregado Digital para Sua Empresa no Brasil</h2>
-          <p>Os 7 principais benefícios de ter um empregado digital na sua empresa brasileira. IA local, gratuita, 24h.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 10 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-        <a href="/blog/poupar-tempo-redes-sociais-brasil.html" class="post-card">
-          <div class="post-tags"><span class="post-tag">Produtividade</span><span class="post-tag">Brasil</span></div>
-          <h2>Como Poupar Horas nas Redes Sociais com IA Gratuita no Brasil</h2>
-          <p>Como poupar horas por dia nas redes sociais usando IA gratuita no Brasil. Automatize sem gastar nada.</p>
-          <div class="post-meta"><span>🗓 22 de março de 2026</span><span>⏱ 11 min read</span></div>
-          <span class="post-link">Read post →</span>
-        </a>
-
-      </div>
+      <div class="posts-count" id="postsCount">Loading...</div>
+      <div class="posts-grid" id="postsGrid"></div>
+      <div id="no-results">No articles found. Try a different search.</div>
+      <button class="load-more" id="loadMore">Load more articles</button>
     </div>
   </section>
 
   <footer class="footer">
     <div class="wrap">
-      <p><a href="https://tamowork.com">TamoWork</a> · Free AI employee for small businesses</p>
+      <p><a href="https://tamowork.com">TamoWork</a> · Free AI employee for small businesses · <a href="https://tamowork.com">tamowork.com</a></p>
     </div>
   </footer>
+
+  <script>
+    let allPosts = [];
+    let filtered = [];
+    let shown = 0;
+    const PAGE = 48;
+    let currentLang = 'all';
+    let searchQuery = '';
+
+    const langLabel = {'pt-BR':'PT','en':'EN','es':'ES'};
+
+    function getLangTag(lang) {
+      return langLabel[lang] || lang;
+    }
+
+    function renderCards(posts, append) {
+      const grid = document.getElementById('postsGrid');
+      if (!append) grid.innerHTML = '';
+      const slice = posts.slice(shown, shown + PAGE);
+      slice.forEach(post => {
+        const a = document.createElement('a');
+        a.href = '/blog/' + post.slug + '.html';
+        a.className = 'post-card';
+        a.innerHTML = '<span class="post-lang">' + getLangTag(post.lang) + '</span>' +
+          '<h2>' + post.title + '</h2>' +
+          (post.description ? '<p>' + post.description.slice(0, 100) + (post.description.length > 100 ? '…' : '') + '</p>' : '') +
+          '<span class="post-link">Read →</span>';
+        grid.appendChild(a);
+      });
+      shown += slice.length;
+    }
+
+    function applyFilters() {
+      shown = 0;
+      filtered = allPosts.filter(p => {
+        const langOk = currentLang === 'all' || p.lang === currentLang;
+        const q = searchQuery.toLowerCase();
+        const searchOk = !q || p.title.toLowerCase().includes(q) || (p.description || '').toLowerCase().includes(q);
+        return langOk && searchOk;
+      });
+      renderCards(filtered, false);
+      document.getElementById('postsCount').textContent = filtered.length + ' articles';
+      document.getElementById('no-results').style.display = filtered.length === 0 ? 'block' : 'none';
+      const btn = document.getElementById('loadMore');
+      btn.style.display = shown >= filtered.length ? 'none' : 'block';
+    }
+
+    // Filter buttons
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentLang = btn.dataset.lang;
+        applyFilters();
+      });
+    });
+
+    // Search
+    let searchTimer;
+    document.getElementById('searchInput').addEventListener('input', e => {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(() => {
+        searchQuery = e.target.value;
+        applyFilters();
+      }, 250);
+    });
+
+    // Load more
+    document.getElementById('loadMore').addEventListener('click', () => {
+      renderCards(filtered, true);
+      if (shown >= filtered.length) {
+        document.getElementById('loadMore').style.display = 'none';
+      }
+    });
+
+    // Load posts.json
+    fetch('/blog/posts.json')
+      .then(r => r.json())
+      .then(data => {
+        allPosts = data;
+        applyFilters();
+      });
+  </script>
 </body>
 </html>

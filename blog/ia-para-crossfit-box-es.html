@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Box de CrossFit con IA: automatiza inscripciones y consultas</title>
+  <meta name="description" content="Cómo un box de CrossFit puede usar inteligencia artificial para gestionar inscripciones, responder preguntas y nunca perder un nuevo atleta. Sin mensualidad."/>
+  <link rel="canonical" href="https://tamowork.com/blog/ia-para-crossfit-box-es.html"/>
+  <meta property="og:title" content="Box de CrossFit con IA: automatiza inscripciones y consultas"/>
+  <meta property="og:description" content="Cómo un box de CrossFit puede usar inteligencia artificial para gestionar inscripciones, responder preguntas y nunca perder un nuevo atleta. Sin mensualidad."/>
+  <meta property="og:url" content="https://tamowork.com/blog/ia-para-crossfit-box-es.html"/>
+  <meta property="og:type" content="article"/>
+  <meta name="twitter:card" content="summary"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Box de CrossFit con IA: automatiza inscripciones y consultas",
+    "description": "Cómo un box de CrossFit puede usar inteligencia artificial para gestionar inscripciones, responder preguntas y nunca perder un nuevo atleta. Sin mensualidad.",
+    "url": "https://tamowork.com/blog/ia-para-crossfit-box-es.html",
+    "publisher": {"@type": "Organization", "name": "TamoWork", "url": "https://tamowork.com"},
+    "datePublished": "2026-03-22",
+    "dateModified": "2026-03-22",
+    "inLanguage": "es"
+  }
+  </script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#07080b;--bg2:#0c1018;--card:#111820;--text:#eef2f9;--muted:#8394b0;--dim:#4e5c72;
+      --line:rgba(255,255,255,0.07);--green:#16c784;
+      --brand:linear-gradient(135deg,#6366f1 0%,#8b5cf6 50%,#a855f7 100%);
+      --brand-soft:rgba(99,102,241,0.08);--brand-border:rgba(99,102,241,0.20);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    a{text-decoration:none;color:inherit}
+    .wrap{width:100%;max-width:1100px;margin:0 auto;padding:0 24px}
+    .nav{position:sticky;top:0;z-index:200;background:rgba(7,8,11,0.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--line)}
+    .nav-inner{min-height:64px;display:flex;align-items:center;justify-content:space-between}
+    .logo span{font-size:19px;font-weight:900;letter-spacing:-.5px;background:var(--brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .nav-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:14px;font-size:14px;font-weight:800;background:var(--brand);color:#fff;border:none;cursor:pointer;font-family:inherit;transition:.15s}
+    .nav-btn:hover{opacity:.88;transform:translateY(-1px)}
+    .hero{background:var(--bg2);border-bottom:1px solid var(--line);padding:64px 0 52px}
+    .hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+    .tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:4px 12px;border-radius:999px;background:var(--brand-soft);border:1px solid var(--brand-border);color:#818cf8}
+    .hero h1{font-size:clamp(24px,4vw,40px);font-weight:900;letter-spacing:-.5px;margin-bottom:14px;line-height:1.2}
+    .hero-meta{font-size:13px;color:var(--dim);display:flex;gap:16px;flex-wrap:wrap}
+    .content-wrap{max-width:760px;margin:0 auto;padding:56px 24px 96px}
+    .content-wrap h2{font-size:22px;font-weight:800;margin:40px 0 14px;letter-spacing:-.2px}
+    .content-wrap h3{font-size:18px;font-weight:700;margin:28px 0 10px}
+    .content-wrap p{font-size:16px;color:var(--muted);margin-bottom:18px;line-height:1.75}
+    .content-wrap ul,.content-wrap ol{color:var(--muted);font-size:16px;padding-left:22px;margin-bottom:18px}
+    .content-wrap li{margin-bottom:8px;line-height:1.65}
+    .content-wrap strong{color:var(--text);font-weight:700}
+    .cta-box{background:var(--card);border:1px solid var(--brand-border);border-radius:22px;padding:40px;text-align:center;margin-top:56px}
+    .cta-box h2{font-size:24px;font-weight:900;margin-bottom:12px}
+    .cta-box p{color:var(--muted);margin-bottom:24px}
+    .cta-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:14px;font-size:16px;font-weight:800;background:var(--brand);color:#fff;font-family:inherit;transition:.15s}
+    .cta-btn:hover{opacity:.88;transform:translateY(-2px)}
+    .footer{border-top:1px solid var(--line);padding:40px 0;text-align:center}
+    .footer p{font-size:13px;color:var(--dim)}
+    .footer a{color:var(--muted)}.footer a:hover{color:var(--text)}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap">
+      <div class="nav-inner">
+        <a href="https://tamowork.com" class="logo"><span>TamoWork</span></a>
+        <a href="https://tamowork.com" class="nav-btn">⬇ Descargar gratis</a>
+      </div>
+    </div>
+  </nav>
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-tags"><span class="tag">CrossFit</span><span class="tag">Inteligencia Artificial</span></div>
+      <h1>Box de CrossFit con IA: automatiza inscripciones y consultas</h1>
+      <div class="hero-meta"><span>🗓 22 de marzo de 2026</span><span>⏱ 7 min de lectura</span></div>
+    </div>
+  </section>
+  <div class="content-wrap">
+    <p>Ser coach en un box de CrossFit es una vocación intensa. Estás en el box desde las 5:30 de la mañana para la clase de las 6, pasas el día entrenando atletas, programando WODs, gestionando la comunidad y motivando a tus miembros. Lo último que quieres hacer entre clase y clase es revisar Instagram respondiendo preguntas sobre precios y horarios.</p>
+    <p>Pero esos mensajes son clientes potenciales. Personas que están a un paso de unirse a tu comunidad. Y si no reciben respuesta rápida, van al box de la calle de al lado.</p>
+    <p>La solución: un <strong>empleado de IA</strong> que trabaja en paralelo a ti, respondiendo consultas, explicando planes de membresía y agendando clases de prueba mientras tú estás en el box haciendo lo que mejor sabes hacer.</p>
+
+    <h2>Por qué los boxes de CrossFit pierden miembros potenciales</h2>
+    <p>El CrossFit atrae a personas que no conocen el deporte y quieren información antes de comprometerse. Esas personas buscan en Instagram, ven tus videos de entrenamientos y te escriben con preguntas muy específicas:</p>
+    <ul>
+      <li>¿Hace falta tener experiencia previa para empezar?</li>
+      <li>¿Cuánto cuesta la membresía mensual?</li>
+      <li>¿Tienen clases para principiantes o solo para atletas avanzados?</li>
+      <li>¿Puedo hacer una clase de prueba gratis?</li>
+      <li>¿A qué hora son las clases por la mañana y por la tarde?</li>
+      <li>¿Qué incluye el plan de OnRamp o fundamentals?</li>
+    </ul>
+    <p>Cada una de esas preguntas es una oportunidad de venta. Y cada pregunta sin respuesta es una oportunidad perdida.</p>
+
+    <h2>Qué automatiza el empleado de IA en tu box</h2>
+    <p>Con <strong>TamoWork</strong>, configuras tu empleado de IA con toda la información de tu box: planes de membresía, horarios de clases, política de pruebas gratuitas, información sobre el programa OnRamp para principiantes y cualquier otra información relevante.</p>
+    <p>El sistema se encarga automáticamente de:</p>
+    <ul>
+      <li>Responder preguntas sobre el CrossFit para principiantes (sin juzgar el nivel)</li>
+      <li>Explicar los planes de membresía y sus diferencias</li>
+      <li>Informar sobre horarios de clases por turno y día</li>
+      <li>Agendar clases de prueba o sesiones de evaluación inicial</li>
+      <li>Enviar información sobre el programa fundamentals o OnRamp</li>
+      <li>Responder preguntas sobre equipamiento necesario</li>
+      <li>Comunicar eventos especiales, competiciones y WODs destacados</li>
+    </ul>
+
+    <h2>La comunidad CrossFit se construye con comunicación</h2>
+    <p>Una de las características más poderosas del CrossFit es su sentido de comunidad. Los miembros se apoyan, compiten entre sí con respeto y crean lazos duraderos. Esa comunidad empieza antes de que alguien cruce la puerta del box — empieza con el primer mensaje que envían.</p>
+    <p>Si ese primer mensaje recibe una respuesta fría, tardía o genérica, la primera impresión de la comunidad es negativa. Si recibe una respuesta cálida, rápida e informativa, el prospecto ya empieza a sentirse parte de algo especial.</p>
+    <p>Tu empleado de IA puede estar configurado para reflejar la personalidad de tu box — enérgico, motivador, accesible — desde el primer contacto.</p>
+
+    <h2>Retención de miembros existentes</h2>
+    <p>El empleado de IA no solo sirve para atraer nuevos miembros — también ayuda a retener los que ya tienes. Puedes configurarlo para:</p>
+    <ul>
+      <li>Recordar a los miembros sus clases reservadas</li>
+      <li>Avisar sobre cambios de horario o clases especiales</li>
+      <li>Comunicar actualizaciones de membresía o vencimientos de pago</li>
+      <li>Enviar motivación y recordatorios de WOD del día</li>
+      <li>Responder consultas sobre el calendario de competiciones</li>
+    </ul>
+
+    <h2>Sin mensualidad para el box que no quiere más gastos fijos</h2>
+    <p>Los boxes de CrossFit operan con márgenes ajustados. El alquiler del local, el equipamiento, los seguros y los salarios de los coaches dejan poco margen para herramientas de software con suscripción mensual.</p>
+    <p>TamoWork es completamente gratuito. Funciona en tu computadora, no necesita servidor externo y no tiene ningún costo mensual. Es una inversión cero con retorno inmediato.</p>
+
+    <h2>Primeros pasos</h2>
+    <ol>
+      <li><strong>Descarga TamoWork</strong> desde tamowork.com — sin costo.</li>
+      <li><strong>Configura tu box:</strong> nombre, ubicación, planes de membresía, horarios y programa de clases.</li>
+      <li><strong>Conecta Instagram y WhatsApp Business</strong> de tu box.</li>
+      <li><strong>Define la voz de tu empleado de IA</strong> — energética y motivadora como tu box.</li>
+      <li><strong>Actívalo</strong> y empieza a captar miembros incluso mientras estás en pleno WOD.</li>
+    </ol>
+
+    <h2>Más tiempo para entrenar, menos tiempo respondiendo mensajes</h2>
+    <p>Elegiste ser coach de CrossFit para entrenar personas, no para pasar horas en el teléfono. TamoWork te devuelve ese tiempo. Tu empleado de IA gestiona la comunicación mientras tú te concentras en lo que importa: construir la mejor comunidad de CrossFit de tu ciudad.</p>
+    <p>Gratis, en tu computadora, funcionando desde el primer día.</p>
+
+    <div style="background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;margin-top:48px">
+      <h3 style="font-size:16px;font-weight:800;margin-bottom:16px;color:var(--text)">Artículos Relacionados</h3>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px">
+        <li><a href="/blog/ia-para-gimnasio.html" style="color:#818cf8;font-size:15px;font-weight:600;text-decoration:none">Gimnasio con IA: automatiza inscripciones y atención al cliente</a></li>
+        <li><a href="/blog/ia-para-entrenador-personal.html" style="color:#818cf8;font-size:15px;font-weight:600;text-decoration:none">Entrenador personal con IA: gestiona clientes automáticamente</a></li>
+        <li><a href="/blog/ia-para-pilates-es.html" style="color:#818cf8;font-size:15px;font-weight:600;text-decoration:none">Estudio de Pilates con IA: automatiza reservas y comunicación</a></li>
+      </ul>
+    </div>
+    <div class="cta-box">
+      <h2>Automatiza la atención de tu box ahora</h2>
+      <p>TamoWork es gratuito, funciona en tu computadora y empieza a responder a tus atletas en minutos. Sin mensualidad, sin tarjeta de crédito.</p>
+      <a href="https://tamowork.com" class="cta-btn">⬇ Descargar TamoWork gratis</a>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="wrap">
+      <p><a href="https://tamowork.com">TamoWork</a> · Empleado de IA gratuito para pequeños negocios</p>
+    </div>
+  </footer>
+</body>
+</html>

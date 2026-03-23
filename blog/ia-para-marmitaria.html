@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>IA para Marmitaria: Automatize Pedidos Diários</title>
+  <meta name="description" content="Aprenda a usar IA para receber pedidos diários, gerenciar cardápio semanal e restrições alimentares na sua marmitaria automaticamente."/>
+  <link rel="canonical" href="https://tamowork.com/blog/ia-para-marmitaria.html"/>
+  <meta property="og:title" content="IA para Marmitaria: Automatize Pedidos Diários"/>
+  <meta property="og:description" content="Aprenda a usar IA para receber pedidos diários, gerenciar cardápio semanal e restrições alimentares na sua marmitaria automaticamente."/>
+  <meta property="og:url" content="https://tamowork.com/blog/ia-para-marmitaria.html"/>
+  <meta property="og:type" content="article"/>
+  <meta name="twitter:card" content="summary"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"IA para Marmitaria: Automatize Pedidos Diários","description":"Aprenda a usar IA para receber pedidos diários, gerenciar cardápio semanal e restrições alimentares na sua marmitaria automaticamente.","url":"https://tamowork.com/blog/ia-para-marmitaria.html","publisher":{"@type":"Organization","name":"TamoWork","url":"https://tamowork.com"},"datePublished":"2026-03-22","dateModified":"2026-03-22","inLanguage":"pt-BR"}
+  </script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#07080b;--bg2:#0c1018;--card:#111820;--text:#eef2f9;--muted:#8394b0;--dim:#4e5c72;--line:rgba(255,255,255,0.07);--green:#16c784;--brand:linear-gradient(135deg,#6366f1 0%,#8b5cf6 50%,#a855f7 100%);--brand-soft:rgba(99,102,241,0.08);--brand-border:rgba(99,102,241,0.20)}
+    html{scroll-behavior:smooth}
+    body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    a{text-decoration:none;color:inherit}
+    .wrap{width:100%;max-width:1100px;margin:0 auto;padding:0 24px}
+    .nav{position:sticky;top:0;z-index:200;background:rgba(7,8,11,0.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--line)}
+    .nav-inner{min-height:64px;display:flex;align-items:center;justify-content:space-between}
+    .logo span{font-size:19px;font-weight:900;letter-spacing:-.5px;background:var(--brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .nav-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:14px;font-size:14px;font-weight:800;background:var(--brand);color:#fff;border:none;cursor:pointer;font-family:inherit;transition:.15s}
+    .nav-btn:hover{opacity:.88;transform:translateY(-1px)}
+    .hero{background:var(--bg2);border-bottom:1px solid var(--line);padding:64px 0 52px}
+    .hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+    .tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:4px 12px;border-radius:999px;background:var(--brand-soft);border:1px solid var(--brand-border);color:#818cf8}
+    .hero h1{font-size:clamp(24px,4vw,40px);font-weight:900;letter-spacing:-.5px;margin-bottom:14px;line-height:1.2}
+    .hero-meta{font-size:13px;color:var(--dim);display:flex;gap:16px;flex-wrap:wrap}
+    .content-wrap{max-width:760px;margin:0 auto;padding:56px 24px 96px}
+    .content-wrap h2{font-size:22px;font-weight:800;margin:40px 0 14px;letter-spacing:-.2px}
+    .content-wrap h3{font-size:18px;font-weight:700;margin:28px 0 10px}
+    .content-wrap p{font-size:16px;color:var(--muted);margin-bottom:18px;line-height:1.75}
+    .content-wrap ul,.content-wrap ol{color:var(--muted);font-size:16px;padding-left:22px;margin-bottom:18px}
+    .content-wrap li{margin-bottom:8px;line-height:1.65}
+    .content-wrap strong{color:var(--text);font-weight:700}
+    .cta-box{background:var(--card);border:1px solid var(--brand-border);border-radius:22px;padding:40px;text-align:center;margin-top:56px}
+    .cta-box h2{font-size:24px;font-weight:900;margin-bottom:12px}
+    .cta-box p{color:var(--muted);margin-bottom:24px}
+    .cta-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:14px;font-size:16px;font-weight:800;background:var(--brand);color:#fff;font-family:inherit;transition:.15s}
+    .cta-btn:hover{opacity:.88;transform:translateY(-2px)}
+    .footer{border-top:1px solid var(--line);padding:40px 0;text-align:center}
+    .footer p{font-size:13px;color:var(--dim)}
+    .footer a{color:var(--muted)}.footer a:hover{color:var(--text)}
+  </style>
+</head>
+<body>
+  <nav class="nav"><div class="wrap"><div class="nav-inner">
+    <a href="https://tamowork.com" class="logo"><span>TamoWork</span></a>
+    <a href="https://tamowork.com" class="nav-btn">⬇ Baixar grátis</a>
+  </div></div></nav>
+
+  <section class="hero"><div class="wrap">
+    <div class="hero-tags"><span class="tag">IA para Alimentação</span><span class="tag">Marmitaria</span></div>
+    <h1>IA para Marmitaria: Automatize Pedidos Diários</h1>
+    <div class="hero-meta"><span>🗓 22 de março de 2026</span><span>⏱ 8 min de leitura</span></div>
+  </div></section>
+
+  <div class="content-wrap">
+    <p>Marmitaria tem uma lógica própria: os pedidos chegam cedo, a produção é intensa pela manhã, e as entregas acontecem ao meio-dia. É uma operação de alta precisão — e qualquer falha na comunicação gera problema: marmita a menos, ingrediente errado, restrição alimentar ignorada.</p>
+
+    <p>E o WhatsApp é onde a maioria dos pedidos de marmita acontece. O cliente manda o pedido de hoje às 9h, às 10h quer confirmar, às 11h pergunta se tem cardápio light. São interações rápidas e constantes que consomem tempo valioso de quem está cozinhando.</p>
+
+    <h2>O cardápio semanal como ferramenta de fidelização</h2>
+
+    <p>Uma das maiores vantagens de uma marmitaria é o cliente fiel — aquele que pede toda semana. Para esse cliente, o cardápio semanal é uma peça-chave: ele precisa saber o que vai ter em cada dia para decidir se pede ou não.</p>
+
+    <p>Com um <strong>funcionário de IA</strong> bem configurado, o cardápio da semana fica disponível automaticamente. O cliente manda "cardápio de hoje" e recebe instantaneamente: opções disponíveis, tamanhos, preços e se tem opção fitness ou low carb.</p>
+
+    <h2>Gerenciando restrições alimentares com IA</h2>
+
+    <p>Restrições alimentares são uma realidade crescente: sem glúten, sem lactose, vegetariano, low carb, sem sal, diabético. A marmitaria que gerencia bem essas restrições tem uma vantagem competitiva enorme — e um cliente muito mais fiel.</p>
+
+    <p>O funcionário de IA pode ser configurado para identificar quando um cliente menciona restrição alimentar e fornecer as opções corretas automaticamente. Por exemplo:</p>
+
+    <ul>
+      <li>"Preciso de opção sem glúten" → funcionário de IA informa os pratos disponíveis sem glúten e destaca que são preparados separadamente</li>
+      <li>"Faço dieta low carb" → lista as opções com menos carboidratos do cardápio</li>
+      <li>"Sou vegetariano" → apresenta as opções sem carne disponíveis na semana</li>
+    </ul>
+
+    <h2>O fluxo de pedidos automatizado</h2>
+
+    <h3>Recebimento automático</h3>
+
+    <p>O cliente manda o pedido pelo WhatsApp. O funcionário digital confirma o recebimento, repete o pedido para confirmar (proteína, acompanhamento, tamanho), e informa o horário de entrega estimado.</p>
+
+    <h3>Confirmação e preparo</h3>
+
+    <p>Você visualiza os pedidos do dia organizados — sem precisar ficar lendo conversa por conversa. Cada pedido está claro: cliente, endereço, especificações, restrições. Você produz com base nessa lista.</p>
+
+    <h3>Aviso de saída para entrega</h3>
+
+    <p>Quando a entrega sai, você envia a confirmação e o funcionário de IA pode ser configurado para enviar uma mensagem de aviso ao cliente com o tempo estimado de chegada.</p>
+
+    <h2>Como o TamoWork se encaixa na rotina da marmitaria</h2>
+
+    <p>O <strong>TamoWork</strong> roda no computador da marmitaria, conecta ao WhatsApp e Instagram, e mantém o funcionário de IA ativo durante todo o horário de recebimento de pedidos. Você configura as informações do cardápio toda semana (pode ser no domingo à noite) e ele está pronto para responder a partir de segunda-feira.</p>
+
+    <p>Não tem mensalidade. Não tem custo recorrente. É gratuito e funciona completamente local no seu computador.</p>
+
+    <h2>Resultado: mais pedidos, menos erros</h2>
+
+    <p>A automação do atendimento de marmitaria traz dois benefícios diretos: mais pedidos recebidos (porque ninguém fica sem resposta) e menos erros de pedido (porque as informações são coletadas de forma padronizada). Menos devolução, menos retrabalho, mais cliente satisfeito.</p>
+
+    <p>Para marmitarias fitness que atendem clientes com objetivos específicos de saúde, isso é especialmente valioso. O cliente sabe exatamente o que está recebendo, e você tem o pedido documentado corretamente desde o início.</p>
+
+    <h2>Dica: use o cardápio semanal como conteúdo no Instagram</h2>
+
+    <p>Poste o cardápio da semana no Instagram toda segunda-feira. As perguntas que chegarem nos comentários — "tem opção vegana?", "qual o preço do tamanho médio?" — o funcionário de IA responde automaticamente. Você mantém a presença digital sem precisar ficar monitorando os comentários.</p>
+
+    <div style="background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;margin-top:48px">
+      <h3 style="font-size:16px;font-weight:800;margin-bottom:16px;color:var(--text)">Artigos Relacionados</h3>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px">
+        <li><a href="/blog/chatbot-delivery-whatsapp-ia.html" style="color:#818cf8;font-size:15px;font-weight:600;text-decoration:none">IA de Delivery no WhatsApp: Substitua o Cardápio Manual</a></li>
+        <li><a href="/blog/ia-para-rotisserie.html" style="color:#818cf8;font-size:15px;font-weight:600;text-decoration:none">IA para Rotisserie: Gerencie Encomendas de Comida Congelada</a></li>
+        <li><a href="/blog/automatizar-whatsapp-servicos-brasil.html" style="color:#818cf8;font-size:15px;font-weight:600;text-decoration:none">Automatizar WhatsApp para Serviços</a></li>
+      </ul>
+    </div>
+
+    <div class="cta-box">
+      <h2>Automatize o atendimento do seu negócio agora</h2>
+      <p>O TamoWork responde seus clientes no Instagram e WhatsApp automaticamente, 24 horas por dia — grátis, sem mensalidade, rodando no seu computador.</p>
+      <a href="https://tamowork.com" class="cta-btn">⬇ Baixar TamoWork grátis</a>
+    </div>
+  </div>
+
+  <footer class="footer"><div class="wrap">
+    <p>© 2026 <a href="https://tamowork.com">TamoWork</a> · Seu empregado de IA para Instagram e WhatsApp · <a href="/blog/">Blog</a></p>
+  </div></footer>
+</body>
+</html>

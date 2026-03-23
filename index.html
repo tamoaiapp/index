@@ -1249,9 +1249,6 @@ let currentLang = 'pt';
 function detectLang(){
   const saved = localStorage.getItem('tw_lang');
   if(saved && T[saved]) return saved;
-  const nav = (navigator.language||'pt').toLowerCase();
-  if(nav.startsWith('pt')) return 'pt';
-  if(nav.startsWith('es')) return 'es';
   return 'en';
 }
 
@@ -1286,9 +1283,20 @@ function toggleFaq(el){
 }
 
 /* ── Download trigger ── */
+const DOWNLOAD_URL = 'https://github.com/tamoaiapp/index/releases/download/v2.0.0/TamoWork-Setup-2.0.0.exe';
+const WA_MSG = {
+  pt: 'Baixe o TamoWork no seu PC (Windows): ' + DOWNLOAD_URL,
+  en: 'Download TamoWork on your PC (Windows): ' + DOWNLOAD_URL,
+  es: 'Descarga TamoWork en tu PC (Windows): ' + DOWNLOAD_URL,
+};
 function triggerDownload(){
-  // ⬇ COLOCA O LINK DO ARQUIVO AQUI:
-  window.location.href = 'https://github.com/tamoaiapp/index/releases/download/v2.0.0/TamoWork-Setup-2.0.0.exe';
+  const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  if(isMobile){
+    const msg = WA_MSG[currentLang] || WA_MSG.pt;
+    window.open('https://wa.me/?text=' + encodeURIComponent(msg), '_blank');
+  } else {
+    window.location.href = DOWNLOAD_URL;
+  }
 }
 
 /* ── Hero entrance ── */

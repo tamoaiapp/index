@@ -82,6 +82,8 @@
     .lang-btn:hover{color:var(--muted)}
     .lang-btn.active{background:rgba(255,255,255,0.08);color:var(--text)}
     @media(max-width:640px){.lang-switch,.nav-live{display:none}}
+    .footer-lang{display:none;justify-content:center;gap:4px;background:rgba(255,255,255,0.04);border:1px solid var(--line);border-radius:999px;padding:3px;margin-top:12px}
+    @media(max-width:640px){.footer-lang{display:flex}}
 
     /* ══ HERO ══ */
     .hero{position:relative;overflow:hidden;padding:36px 0 0;background:var(--bg)}
@@ -951,6 +953,11 @@
         <a href="#faq">FAQ</a>
       </div>
       <div class="footer-copy">© 2025 TamoWork</div>
+      <div class="footer-lang">
+        <button class="lang-btn active" onclick="setLang('pt')" id="lb-pt-f">PT</button>
+        <button class="lang-btn" onclick="setLang('en')" id="lb-en-f">EN</button>
+        <button class="lang-btn" onclick="setLang('es')" id="lb-es-f">ES</button>
+      </div>
     </div>
   </div>
 </footer>
@@ -1260,6 +1267,8 @@ function applyLang(lang){
   ['pt','en','es'].forEach(l=>{
     const b = document.getElementById('lb-'+l);
     if(b) b.classList.toggle('active', l===lang);
+    const bf = document.getElementById('lb-'+l+'-f');
+    if(bf) bf.classList.toggle('active', l===lang);
   });
   document.documentElement.lang = lang==='pt'?'pt-BR':lang==='es'?'es':'en';
   // Ticker

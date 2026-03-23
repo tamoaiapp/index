@@ -619,26 +619,7 @@
 
 <!-- TICKER -->
 <div class="ticker-wrap">
-  <div class="ticker-track">
-    <div class="ticker-item">📸 Instagram</div>
-    <div class="ticker-item">💬 WhatsApp</div>
-    <div class="ticker-item">🧠 IA já integrada</div>
-    <div class="ticker-item">🆓 100% grátis</div>
-    <div class="ticker-item">💻 Roda no seu PC</div>
-    <div class="ticker-item">🚫 Sem mensalidade</div>
-    <div class="ticker-item">⚡ Instala → funciona</div>
-    <div class="ticker-item">🔒 Privacidade total</div>
-    <div class="ticker-item">📊 Painel em tempo real</div>
-    <div class="ticker-item">📸 Instagram</div>
-    <div class="ticker-item">💬 WhatsApp</div>
-    <div class="ticker-item">🧠 IA já integrada</div>
-    <div class="ticker-item">🆓 100% grátis</div>
-    <div class="ticker-item">💻 Roda no seu PC</div>
-    <div class="ticker-item">🚫 Sem mensalidade</div>
-    <div class="ticker-item">⚡ Instala → funciona</div>
-    <div class="ticker-item">🔒 Privacidade total</div>
-    <div class="ticker-item">📊 Painel em tempo real</div>
-  </div>
+  <div class="ticker-track" id="ticker-track"></div>
 </div>
 
 <!-- ══ EMPLOYEES ══ -->
@@ -792,7 +773,7 @@
           <div class="ia-spec"><span class="ia-spec-icon">🖥️</span><div class="ia-spec-body"><div data-i18n="ia_spec1">Projetado para notebooks comuns</div><div data-i18n="ia_spec1_sub">Sem GPU, sem hardware caro</div></div></div>
           <div class="ia-spec"><span class="ia-spec-icon">📦</span><div class="ia-spec-body"><div data-i18n="ia_spec2">IA vem empacotada no TamoWork</div><div data-i18n="ia_spec2_sub">Você não instala nada separado</div></div></div>
           <div class="ia-spec"><span class="ia-spec-icon">🔒</span><div class="ia-spec-body"><div data-i18n="ia_spec3">Privacidade total</div><div data-i18n="ia_spec3_sub">Seus dados não saem do seu PC</div></div></div>
-          <div class="ia-compat">✓ <span data-i18n="ia_compat">Windows, Mac, Linux — funciona com 4GB RAM+</span></div>
+          <div class="ia-compat">✓ <span data-i18n="ia_compat">Windows — funciona com 4GB RAM+</span></div>
         </div>
       </div>
       <div class="ia-visual reveal-r">
@@ -1017,7 +998,7 @@ const T = {
     ia_spec1:'Projetado para notebooks comuns',ia_spec1_sub:'Sem GPU, sem hardware caro',
     ia_spec2:'IA vem empacotada no TamoWork',ia_spec2_sub:'Você não instala nada separado',
     ia_spec3:'Privacidade total',ia_spec3_sub:'Seus dados não saem do seu PC',
-    ia_compat:'Windows, Mac, Linux — funciona com 4GB RAM+',
+    ia_compat:'Windows — funciona com 4GB RAM+',
     fp_local:'Local',fp_nonstop:'Sem parar',proc_label:'Motor de IA',
     ia_s1:'local',ia_s1_sub:'zero dependência de servidor',
     ia_s2:'RAM mínima',ia_s2_sub:'qualquer notebook funciona',
@@ -1056,9 +1037,10 @@ const T = {
     fq6:'Vai ter outros funcionários?',fa6:'Sim. Em breve: TikTok, Email e outros canais — todos gratuitos, todos rodando no seu computador.',
     cta_h2:'Pare de responder<br><span class="brand">manualmente.</span>',
     cta_p:'Ative seus funcionários de IA agora. Instagram e WhatsApp trabalhando por você, no seu computador, de graça.',
-    cta_btn1:'Ativar meus funcionários grátis',cta_btn2:'Baixar grátis agora',
+    cta_btn:'⬇ Baixar grátis',cta_btn1:'Ativar meus funcionários grátis',cta_btn2:'Baixar grátis agora',
     cta_note:'Sem cartão. Sem mensalidade. Sem pegadinha.',
     footer_tagline:'— Funcionários digitais no seu computador',
+    ticker:['📸 Instagram','💬 WhatsApp','🧠 IA já integrada','🆓 100% grátis','💻 Roda no seu PC','🚫 Sem mensalidade','⚡ Instala → funciona','🔒 Privacidade total','📊 Painel em tempo real'],
   },
   en:{
     nav_employees:'Employees',nav_ia:'Local AI',nav_how:'How it works',
@@ -1108,7 +1090,7 @@ const T = {
     ia_spec1:'Designed for common laptops',ia_spec1_sub:'No GPU, no expensive hardware',
     ia_spec2:'AI is bundled inside TamoWork',ia_spec2_sub:'You install nothing separately',
     ia_spec3:'Total privacy',ia_spec3_sub:'Your data never leaves your PC',
-    ia_compat:'Windows, Mac, Linux — works with 4GB RAM+',
+    ia_compat:'Windows — works with 4GB RAM+',
     fp_local:'Local',fp_nonstop:'Non-stop',proc_label:'AI Engine',
     ia_s1:'local',ia_s1_sub:'zero server dependency',
     ia_s2:'min RAM',ia_s2_sub:'any laptop works',
@@ -1147,9 +1129,10 @@ const T = {
     fq6:'Will there be more employees?',fa6:'Yes. Coming soon: TikTok, Email and other channels — all free, all running on your computer.',
     cta_h2:'Stop replying<br><span class="brand">manually.</span>',
     cta_p:'Activate your AI employees now. Instagram and WhatsApp working for you, on your computer, for free.',
-    cta_btn1:'Activate my employees free',cta_btn2:'Download free now',
+    cta_btn:'⬇ Download free',cta_btn1:'Activate my employees free',cta_btn2:'Download free now',
     cta_note:'No card. No subscription. No catch.',
     footer_tagline:'— Digital employees on your computer',
+    ticker:['📸 Instagram','💬 WhatsApp','🧠 AI built-in','🆓 100% free','💻 Runs on your PC','🚫 No subscription','⚡ Install → works','🔒 Total privacy','📊 Real-time dashboard'],
   },
   es:{
     nav_employees:'Empleados',nav_ia:'IA local',nav_how:'Cómo funciona',
@@ -1199,7 +1182,7 @@ const T = {
     ia_spec1:'Diseñado para laptops comunes',ia_spec1_sub:'Sin GPU, sin hardware caro',
     ia_spec2:'IA incluida en TamoWork',ia_spec2_sub:'No instalas nada por separado',
     ia_spec3:'Privacidad total',ia_spec3_sub:'Tus datos no salen de tu PC',
-    ia_compat:'Windows, Mac, Linux — funciona con 4GB RAM+',
+    ia_compat:'Windows — funciona con 4GB RAM+',
     fp_local:'Local',fp_nonstop:'Sin parar',proc_label:'Motor de IA',
     ia_s1:'local',ia_s1_sub:'cero dependencia de servidores',
     ia_s2:'RAM mínima',ia_s2_sub:'cualquier laptop funciona',
@@ -1238,9 +1221,10 @@ const T = {
     fq6:'¿Habrá más empleados?',fa6:'Sí. Próximamente: TikTok, Email y otros canales — todos gratis, todos corriendo en tu computadora.',
     cta_h2:'Deja de responder<br><span class="brand">manualmente.</span>',
     cta_p:'Activa tus empleados de IA ahora. Instagram y WhatsApp trabajando por ti, en tu computadora, gratis.',
-    cta_btn1:'Activar mis empleados gratis',cta_btn2:'Descargar gratis ahora',
+    cta_btn:'⬇ Descargar gratis',cta_btn1:'Activar mis empleados gratis',cta_btn2:'Descargar gratis ahora',
     cta_note:'Sin tarjeta. Sin mensualidad. Sin trampa.',
     footer_tagline:'— Empleados digitales en tu computadora',
+    ticker:['📸 Instagram','💬 WhatsApp','🧠 IA integrada','🆓 100% gratis','💻 Corre en tu PC','🚫 Sin mensualidad','⚡ Instala → funciona','🔒 Privacidad total','📊 Panel en tiempo real'],
   }
 };
 
@@ -1270,6 +1254,12 @@ function applyLang(lang){
     if(b) b.classList.toggle('active', l===lang);
   });
   document.documentElement.lang = lang==='pt'?'pt-BR':lang==='es'?'es':'en';
+  // Ticker
+  const track = document.getElementById('ticker-track');
+  if(track && t.ticker){
+    const items = [...t.ticker, ...t.ticker];
+    track.innerHTML = items.map(i=>`<div class="ticker-item">${i}</div>`).join('');
+  }
 }
 
 function setLang(lang){ applyLang(lang); }

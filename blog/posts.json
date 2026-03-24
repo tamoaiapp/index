@@ -2163,6 +2163,62 @@
     "date": "2026-03-23"
   },
   {
+    "slug": "free-whatsapp-chatbot-barbershop",
+    "title": "Free WhatsApp AI chatbot for barbershops",
+    "description": "Set up a free AI chatbot on WhatsApp for your barbershop. Answer questions about haircuts, prices, schedules, and book appointments automatically.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "free-whatsapp-chatbot-food-truck-snack-bar",
+    "title": "Free WhatsApp AI chatbot for food truck and snack bar",
+    "description": "Set up a free AI chatbot on WhatsApp for your food truck or snack bar. Answer menu questions, location updates, and take pre-orders automatically.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "free-whatsapp-chatbot-medical-clinic-dentist",
+    "title": "Free WhatsApp chatbot for medical clinic and dentist office",
+    "description": "Set up a free AI chatbot on WhatsApp for your clinic or dentist office. Answer patient questions about appointments, insurance, and hours automatically.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "free-whatsapp-chatbot-online-course-school",
+    "title": "Free WhatsApp AI chatbot for online courses and schools",
+    "description": "Set up a free AI chatbot on WhatsApp for your online course or school. Answer enrollment questions, explain your curriculum, and convert leads automatically.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "free-whatsapp-chatbot-pet-shop-vet-clinic",
+    "title": "Free WhatsApp AI chatbot for pet shop and vet clinic",
+    "description": "Set up a free AI chatbot on WhatsApp for your pet shop or veterinary clinic. Automatically answer questions about grooming, vaccines, and appointments.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "free-whatsapp-chatbot-pharmacy",
+    "title": "Free WhatsApp AI chatbot for pharmacies",
+    "description": "Set up a free AI chatbot on WhatsApp for your pharmacy. Answer questions about medications, prices, hours, and delivery automatically without any subscription.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "free-whatsapp-chatbot-photographer",
+    "title": "Free WhatsApp AI chatbot for photographers",
+    "description": "Set up a free AI chatbot on WhatsApp for your photography business. Answer questions about packages, pricing, availability, and portfolio automatically.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "free-whatsapp-chatbot-real-estate-agent",
+    "title": "Free WhatsApp AI chatbot for real estate agents",
+    "description": "Set up a free AI chatbot on WhatsApp for your real estate business. Automatically qualify leads, answer property questions, and schedule viewings 24/7.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
     "slug": "how-ai-agent-understands-customer-questions",
     "title": "How an AI Agent Understands Your Customers' Questions",
     "description": "How does an AI agent actually understand what customers are asking? Learn about NLP, intent recognition, and how AI makes sense of messy human language.",
@@ -2796,6 +2852,13 @@
     "slug": "whatsapp-ai-beauty-salon-free",
     "title": "Free AI WhatsApp chatbot for beauty salons",
     "description": "Automate WhatsApp for your beauty salon with free AI. Handle appointment questions, service prices, and availability automatically 24/7.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "whatsapp-ai-chatbot-gym-personal-trainer-free",
+    "title": "Free AI WhatsApp chatbot for gym and personal trainer",
+    "description": "Set up a free AI chatbot on WhatsApp for your gym or personal training business. Answer membership questions, class schedules, and pricing automatically.",
     "lang": "en",
     "date": "2026-03-23"
   },
@@ -3563,9 +3626,72 @@
     "date": "2026-03-23"
   },
   {
+    "slug": "chatbot-whatsapp-barberia-gratis",
+    "title": "Chatbot de WhatsApp gratis para barbería",
+    "description": "IA gratuita para WhatsApp de tu barbería. Responde preguntas sobre cortes, precios, horarios y agenda citas automáticamente sin mensualidad.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "chatbot-whatsapp-clinica-medica-dentista-gratis",
+    "title": "Chatbot de WhatsApp gratis para clínica médica y dentista",
+    "description": "IA gratuita para WhatsApp de clínica médica o consultorio dental. Responde preguntas de pacientes sobre citas, seguros y horarios automáticamente.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "chatbot-whatsapp-escuela-curso-online-gratis",
+    "title": "Chatbot de WhatsApp gratis para escuela y curso online",
+    "description": "IA gratuita para WhatsApp de escuela o curso online. Responde dudas sobre matrículas, precios, horarios y convierte leads automáticamente.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "chatbot-whatsapp-farmacia-gratis-ia",
+    "title": "Chatbot de WhatsApp gratis para farmacia con IA",
+    "description": "IA gratuita para WhatsApp de tu farmacia. Responde preguntas sobre medicamentos, precios, horarios y pedidos a domicilio automáticamente.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "chatbot-whatsapp-food-truck-negocio-comida-gratis",
+    "title": "Chatbot de WhatsApp gratis para food truck y puesto de comida",
+    "description": "IA gratuita para WhatsApp de tu food truck o negocio de comida. Responde preguntas sobre menú, precios, ubicación y acepta pedidos anticipados automáticamente.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "chatbot-whatsapp-fotografo-gratis-ia",
+    "title": "Chatbot de WhatsApp gratis para fotógrafo con IA",
+    "description": "IA gratuita para WhatsApp de tu negocio de fotografía. Responde dudas sobre sesiones, precios, disponibilidad y portafolio automáticamente.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "chatbot-whatsapp-gimnasio-personal-trainer-gratis",
+    "title": "Chatbot de WhatsApp gratis para gimnasio y personal trainer",
+    "description": "Configura un chatbot de IA gratuito en el WhatsApp de tu gimnasio o personal trainer. Responde preguntas sobre membresías, horarios y precios automáticamente.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "chatbot-whatsapp-inmobiliaria-agente-gratis",
+    "title": "Chatbot de WhatsApp gratis para inmobiliaria y agente de bienes raíces",
+    "description": "IA gratuita para WhatsApp de inmobiliaria o agente independiente. Califica leads, responde preguntas de propiedades y agenda visitas automáticamente.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
     "slug": "chatbot-whatsapp-salon-belleza-gratis",
     "title": "Chatbot de WhatsApp para salón de belleza gratis con IA",
     "description": "Automatiza el WhatsApp de tu salón de belleza con IA gratuita. Responde preguntas sobre servicios, precios y disponibilidad automáticamente.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "chatbot-whatsapp-veterinaria-pet-shop-gratis",
+    "title": "Chatbot de WhatsApp gratis para veterinaria y pet shop",
+    "description": "IA gratuita para WhatsApp de veterinaria o tienda de mascotas. Responde preguntas sobre servicios, precios, vacunas y citas automáticamente.",
     "lang": "es",
     "date": "2026-03-23"
   },
@@ -6454,9 +6580,72 @@
     "date": "2026-03-23"
   },
   {
+    "slug": "chatbot-whatsapp-academia-personal-trainer-gratis",
+    "title": "Chatbot de WhatsApp para academia e personal trainer grátis",
+    "description": "Configure um chatbot de IA gratuito no WhatsApp da sua academia ou personal trainer. Responda dúvidas sobre planos, horários e matrícula automaticamente.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "chatbot-whatsapp-barbearia-gratis",
+    "title": "Chatbot de WhatsApp para barbearia grátis com IA",
+    "description": "IA gratuita para WhatsApp da sua barbearia. Responda dúvidas sobre cortes, preços, horários e agendamentos automaticamente sem mensalidade.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "chatbot-whatsapp-clinica-medica-gratis",
+    "title": "Chatbot de WhatsApp para clínica médica e consultório grátis",
+    "description": "IA gratuita para WhatsApp de clínica médica, consultório ou dentista. Responda dúvidas sobre horários, convênios e agendamentos automaticamente.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "chatbot-whatsapp-escola-curso-online-gratis",
+    "title": "Chatbot de WhatsApp para escola e curso online grátis",
+    "description": "IA gratuita para WhatsApp de escola, curso online ou professor particular. Responda dúvidas sobre matrículas, preços e horários automaticamente.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "chatbot-whatsapp-farmacia-gratis",
+    "title": "Chatbot de WhatsApp para farmácia grátis com IA",
+    "description": "IA gratuita para WhatsApp da sua farmácia. Responda dúvidas sobre medicamentos, preços, horários e entrega automaticamente sem mensalidade.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "chatbot-whatsapp-food-truck-lanchonete-gratis",
+    "title": "Chatbot de WhatsApp para food truck e lanchonete grátis",
+    "description": "IA gratuita para WhatsApp do seu food truck ou lanchonete. Responda dúvidas sobre cardápio, preços, horários e localização automaticamente.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "chatbot-whatsapp-fotografo-gratis",
+    "title": "Chatbot de WhatsApp para fotógrafo grátis com IA",
+    "description": "IA gratuita para WhatsApp do seu negócio de fotografia. Responda dúvidas sobre ensaios, preços, disponibilidade e pacotes automaticamente sem mensalidade.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "chatbot-whatsapp-imobiliaria-corretor-gratis",
+    "title": "Chatbot de WhatsApp para imobiliária e corretor de imóveis grátis",
+    "description": "IA gratuita para WhatsApp de imobiliária ou corretor autônomo. Responda dúvidas sobre imóveis, preços, visitas e financiamento automaticamente.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
     "slug": "chatbot-whatsapp-loja-roupas-gratis",
     "title": "Chatbot de WhatsApp para loja de roupas: grátis e com IA",
     "description": "Configure um chatbot de IA no WhatsApp da sua loja de roupas de graça. Responda perguntas sobre tamanho, estoque, preço e entrega automaticamente.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "chatbot-whatsapp-pet-shop-veterinaria-gratis",
+    "title": "Chatbot de WhatsApp para pet shop e veterinária grátis",
+    "description": "IA gratuita para WhatsApp de pet shop ou clínica veterinária. Responda dúvidas sobre serviços, preços, vacinas e agendamentos automaticamente.",
     "lang": "pt-BR",
     "date": "2026-03-23"
   },

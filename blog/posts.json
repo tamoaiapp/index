@@ -9056,5 +9056,1475 @@
     "description": "Como os restaurantes portugueses usam o WhatsApp para reservas e pedidos. O que automatizar, o que manter pessoal, e como configurar para o seu restaurante.",
     "lang": "pt-PT",
     "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-restaurante",
+    "title": "O futuro do restaurante com inteligência artificial",
+    "description": "Descubra como a IA está transformando o restaurante e o que todo dono de restaurante precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-restaurante",
+    "title": "The future of restaurant with artificial intelligence",
+    "description": "Discover how AI is transforming the restaurant industry and what every restaurant owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-restaurante-es",
+    "title": "El futuro del restaurante con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de restaurante y lo que todo dueño de restaurante necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-lanchonete",
+    "title": "O futuro do lanchonete com inteligência artificial",
+    "description": "Descubra como a IA está transformando o lanchonete e o que todo dono de lanchonete precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-lanchonete",
+    "title": "The future of snack-bar with artificial intelligence",
+    "description": "Discover how AI is transforming the snack-bar industry and what every snack-bar owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-lanchonete-es",
+    "title": "El futuro del cafetería con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de cafetería y lo que todo dueño de cafetería necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-padaria",
+    "title": "O futuro do padaria com inteligência artificial",
+    "description": "Descubra como a IA está transformando o padaria e o que todo padeiro precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-padaria",
+    "title": "The future of bakery with artificial intelligence",
+    "description": "Discover how AI is transforming the bakery industry and what every bakery owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-padaria-es",
+    "title": "El futuro del panadería con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de panadería y lo que todo dueño de panadería necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-pizzaria",
+    "title": "O futuro do pizzaria com inteligência artificial",
+    "description": "Descubra como a IA está transformando o pizzaria e o que todo dono de pizzaria precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-pizzaria",
+    "title": "The future of pizza-shop with artificial intelligence",
+    "description": "Discover how AI is transforming the pizza-shop industry and what every pizza shop owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-pizzaria-es",
+    "title": "El futuro del pizzería con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de pizzería y lo que todo dueño de pizzería necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-sorveteria",
+    "title": "O futuro do sorveteria com inteligência artificial",
+    "description": "Descubra como a IA está transformando o sorveteria e o que todo dono de sorveteria precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-sorveteria",
+    "title": "The future of ice-cream-shop with artificial intelligence",
+    "description": "Discover how AI is transforming the ice-cream-shop industry and what every ice cream shop owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-sorveteria-es",
+    "title": "El futuro del heladería con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de heladería y lo que todo dueño de heladería necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-acougue",
+    "title": "O futuro do açougue com inteligência artificial",
+    "description": "Descubra como a IA está transformando o açougue e o que todo açougueiro precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-acougue",
+    "title": "The future of butcher-shop with artificial intelligence",
+    "description": "Discover how AI is transforming the butcher-shop industry and what every butcher shop owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-acougue-es",
+    "title": "El futuro del carnicería con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de carnicería y lo que todo dueño de carnicería necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-buffet",
+    "title": "O futuro do buffet com inteligência artificial",
+    "description": "Descubra como a IA está transformando o buffet e o que todo dono de buffet precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-buffet",
+    "title": "The future of catering with artificial intelligence",
+    "description": "Discover how AI is transforming the catering industry and what every catering owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-buffet-es",
+    "title": "El futuro del servicio-de-catering con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de servicio-de-catering y lo que todo dueño de catering necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-confeitaria",
+    "title": "O futuro do confeitaria com inteligência artificial",
+    "description": "Descubra como a IA está transformando o confeitaria e o que todo confeiteiro precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-confeitaria",
+    "title": "The future of pastry-shop with artificial intelligence",
+    "description": "Discover how AI is transforming the pastry-shop industry and what every pastry shop owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-confeitaria-es",
+    "title": "El futuro del pastelería con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de pastelería y lo que todo dueño de pastelería necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-food-truck",
+    "title": "O futuro do food-truck com inteligência artificial",
+    "description": "Descubra como a IA está transformando o food-truck e o que todo dono de food truck precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-food-truck",
+    "title": "The future of food-truck with artificial intelligence",
+    "description": "Discover how AI is transforming the food-truck industry and what every food truck owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-food-truck-es",
+    "title": "El futuro del food-truck con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de food-truck y lo que todo dueño de food truck necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-cafeteria",
+    "title": "O futuro do cafeteria com inteligência artificial",
+    "description": "Descubra como a IA está transformando o cafeteria e o que todo dono de cafeteria precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-cafeteria",
+    "title": "The future of coffee-shop with artificial intelligence",
+    "description": "Discover how AI is transforming the coffee-shop industry and what every coffee shop owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-cafeteria-es",
+    "title": "El futuro del cafetería-especialidad con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de cafetería-especialidad y lo que todo dueño de cafetería especializada necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-salao-de-beleza",
+    "title": "O futuro do salão de beleza com inteligência artificial",
+    "description": "Descubra como a IA está transformando o salão de beleza e o que todo dona de salão precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-salao-de-beleza",
+    "title": "The future of beauty-salon with artificial intelligence",
+    "description": "Discover how AI is transforming the beauty-salon industry and what every beauty salon owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-salao-de-beleza-es",
+    "title": "El futuro del salón de belleza con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de salón de belleza y lo que todo dueña de salón de belleza necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-barbearia",
+    "title": "O futuro do barbearia com inteligência artificial",
+    "description": "Descubra como a IA está transformando o barbearia e o que todo barbeiro precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-barbearia",
+    "title": "The future of barbershop with artificial intelligence",
+    "description": "Discover how AI is transforming the barbershop industry and what every barbershop owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-barbearia-es",
+    "title": "El futuro del barbería con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de barbería y lo que todo dueño de barbería necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-clinica-estetica",
+    "title": "O futuro do clínica estética com inteligência artificial",
+    "description": "Descubra como a IA está transformando o clínica estética e o que todo dona de clínica precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-clinica-estetica",
+    "title": "The future of aesthetics-clinic with artificial intelligence",
+    "description": "Discover how AI is transforming the aesthetics-clinic industry and what every aesthetics clinic owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-clinica-estetica-es",
+    "title": "El futuro del clínica estética con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de clínica estética y lo que todo dueña de clínica estética necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-spa",
+    "title": "O futuro do spa com inteligência artificial",
+    "description": "Descubra como a IA está transformando o spa e o que todo dono de spa precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-spa",
+    "title": "The future of spa with artificial intelligence",
+    "description": "Discover how AI is transforming the spa industry and what every spa owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-spa-es",
+    "title": "El futuro del spa con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de spa y lo que todo dueño de spa necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-academia",
+    "title": "O futuro do academia com inteligência artificial",
+    "description": "Descubra como a IA está transformando o academia e o que todo dono de academia precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-academia",
+    "title": "The future of gym with artificial intelligence",
+    "description": "Discover how AI is transforming the gym industry and what every gym owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-academia-es",
+    "title": "El futuro del gimnasio con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de gimnasio y lo que todo dueño de gimnasio necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-nutricionista",
+    "title": "O futuro do consultório de nutrição com inteligência artificial",
+    "description": "Descubra como a IA está transformando o consultório de nutrição e o que todo nutricionista precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-nutricionista",
+    "title": "The future of nutritionist with artificial intelligence",
+    "description": "Discover how AI is transforming the nutritionist industry and what every nutritionist practice owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-nutricionista-es",
+    "title": "El futuro del consultorio de nutrición con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de consultorio de nutrición y lo que todo nutricionista necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-dentista",
+    "title": "O futuro do clínica odontológica com inteligência artificial",
+    "description": "Descubra como a IA está transformando o clínica odontológica e o que todo dentista precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-dentista",
+    "title": "The future of dental-clinic with artificial intelligence",
+    "description": "Discover how AI is transforming the dental-clinic industry and what every dental clinic owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-dentista-es",
+    "title": "El futuro del clínica dental con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de clínica dental y lo que todo dentista necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-fisioterapeuta",
+    "title": "O futuro do clínica de fisioterapia com inteligência artificial",
+    "description": "Descubra como a IA está transformando o clínica de fisioterapia e o que todo fisioterapeuta precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-fisioterapeuta",
+    "title": "The future of physiotherapy with artificial intelligence",
+    "description": "Discover how AI is transforming the physiotherapy industry and what every physiotherapy clinic owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-fisioterapeuta-es",
+    "title": "El futuro del fisioterapia con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de fisioterapia y lo que todo fisioterapeuta necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-psicologo",
+    "title": "O futuro do consultório de psicologia com inteligência artificial",
+    "description": "Descubra como a IA está transformando o consultório de psicologia e o que todo psicólogo precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-psicologo",
+    "title": "The future of psychologist with artificial intelligence",
+    "description": "Discover how AI is transforming the psychologist industry and what every psychologist practice owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-psicologo-es",
+    "title": "El futuro del consultorio de psicología con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de consultorio de psicología y lo que todo psicólogo necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-farmacia",
+    "title": "O futuro do farmácia com inteligência artificial",
+    "description": "Descubra como a IA está transformando o farmácia e o que todo farmacêutico precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-farmacia",
+    "title": "The future of pharmacy with artificial intelligence",
+    "description": "Discover how AI is transforming the pharmacy industry and what every pharmacy owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-farmacia-es",
+    "title": "El futuro del farmacia con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de farmacia y lo que todo farmacéutico necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-loja-de-roupas",
+    "title": "O futuro do loja de roupas com inteligência artificial",
+    "description": "Descubra como a IA está transformando o loja de roupas e o que todo dona de loja precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-loja-de-roupas",
+    "title": "The future of clothing-store with artificial intelligence",
+    "description": "Discover how AI is transforming the clothing-store industry and what every clothing store owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-loja-de-roupas-es",
+    "title": "El futuro del tienda de ropa con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de tienda de ropa y lo que todo dueña de tienda de ropa necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-calcados",
+    "title": "O futuro do loja de calçados com inteligência artificial",
+    "description": "Descubra como a IA está transformando o loja de calçados e o que todo dono de loja de calçados precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-calcados",
+    "title": "The future of shoe-store with artificial intelligence",
+    "description": "Discover how AI is transforming the shoe-store industry and what every shoe store owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-calcados-es",
+    "title": "El futuro del zapatería con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de zapatería y lo que todo dueño de zapatería necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-acessorios",
+    "title": "O futuro do loja de acessórios com inteligência artificial",
+    "description": "Descubra como a IA está transformando o loja de acessórios e o que todo dona de loja precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-acessorios",
+    "title": "The future of accessories-store with artificial intelligence",
+    "description": "Discover how AI is transforming the accessories-store industry and what every accessories store owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-acessorios-es",
+    "title": "El futuro del tienda de accesorios con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de tienda de accesorios y lo que todo dueña de tienda necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-joalheria",
+    "title": "O futuro do joalheria com inteligência artificial",
+    "description": "Descubra como a IA está transformando o joalheria e o que todo joalheiro precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-joalheria",
+    "title": "The future of jewelry-store with artificial intelligence",
+    "description": "Discover how AI is transforming the jewelry-store industry and what every jewelry store owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-joalheria-es",
+    "title": "El futuro del joyería con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de joyería y lo que todo dueño de joyería necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-cosmeticos",
+    "title": "O futuro do loja de cosméticos com inteligência artificial",
+    "description": "Descubra como a IA está transformando o loja de cosméticos e o que todo dona de loja de cosméticos precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-cosmeticos",
+    "title": "The future of cosmetics-store with artificial intelligence",
+    "description": "Discover how AI is transforming the cosmetics-store industry and what every cosmetics store owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-cosmeticos-es",
+    "title": "El futuro del tienda de cosméticos con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de tienda de cosméticos y lo que todo dueña de tienda de cosméticos necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-otica",
+    "title": "O futuro do ótica com inteligência artificial",
+    "description": "Descubra como a IA está transformando o ótica e o que todo dono de ótica precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-otica",
+    "title": "The future of optician with artificial intelligence",
+    "description": "Discover how AI is transforming the optician industry and what every optician shop owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-otica-es",
+    "title": "El futuro del óptica con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de óptica y lo que todo dueño de óptica necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-eletronicos",
+    "title": "O futuro do loja de eletrônicos com inteligência artificial",
+    "description": "Descubra como a IA está transformando o loja de eletrônicos e o que todo dono de loja de eletrônicos precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-eletronicos",
+    "title": "The future of electronics-store with artificial intelligence",
+    "description": "Discover how AI is transforming the electronics-store industry and what every electronics store owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-eletronicos-es",
+    "title": "El futuro del tienda de electrónicos con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de tienda de electrónicos y lo que todo dueño de tienda de electrónicos necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-livraria",
+    "title": "O futuro do livraria com inteligência artificial",
+    "description": "Descubra como a IA está transformando o livraria e o que todo livreiro precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-livraria",
+    "title": "The future of bookstore with artificial intelligence",
+    "description": "Discover how AI is transforming the bookstore industry and what every bookstore owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-livraria-es",
+    "title": "El futuro del librería con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de librería y lo que todo dueño de librería necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-pet-shop",
+    "title": "O futuro do pet shop com inteligência artificial",
+    "description": "Descubra como a IA está transformando o pet shop e o que todo dono de pet shop precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-pet-shop",
+    "title": "The future of pet-shop with artificial intelligence",
+    "description": "Discover how AI is transforming the pet-shop industry and what every pet shop owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-pet-shop-es",
+    "title": "El futuro del tienda de mascotas con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de tienda de mascotas y lo que todo dueño de tienda de mascotas necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-brinquedos",
+    "title": "O futuro do loja de brinquedos com inteligência artificial",
+    "description": "Descubra como a IA está transformando o loja de brinquedos e o que todo dono de loja de brinquedos precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-brinquedos",
+    "title": "The future of toy-store with artificial intelligence",
+    "description": "Discover how AI is transforming the toy-store industry and what every toy store owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-brinquedos-es",
+    "title": "El futuro del juguetería con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de juguetería y lo que todo dueño de juguetería necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-artesanato",
+    "title": "O futuro do loja de artesanato com inteligência artificial",
+    "description": "Descubra como a IA está transformando o loja de artesanato e o que todo artesão precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-artesanato",
+    "title": "The future of crafts-store with artificial intelligence",
+    "description": "Discover how AI is transforming the crafts-store industry and what every crafts store owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-artesanato-es",
+    "title": "El futuro del tienda de artesanía con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de tienda de artesanía y lo que todo artesano necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-moveis",
+    "title": "O futuro do loja de móveis e decoração com inteligência artificial",
+    "description": "Descubra como a IA está transformando o loja de móveis e decoração e o que todo dono de loja de móveis precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-moveis",
+    "title": "The future of furniture-store with artificial intelligence",
+    "description": "Discover how AI is transforming the furniture-store industry and what every furniture store owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-moveis-es",
+    "title": "El futuro del mueblería con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de mueblería y lo que todo dueño de mueblería necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-escola",
+    "title": "O futuro do escola com inteligência artificial",
+    "description": "Descubra como a IA está transformando o escola e o que todo diretor de escola precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-escola",
+    "title": "The future of school with artificial intelligence",
+    "description": "Discover how AI is transforming the school industry and what every school owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-escola-es",
+    "title": "El futuro del escuela con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de escuela y lo que todo director de escuela necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-idiomas",
+    "title": "O futuro do escola de idiomas com inteligência artificial",
+    "description": "Descubra como a IA está transformando o escola de idiomas e o que todo dono de escola de idiomas precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-idiomas",
+    "title": "The future of language-school with artificial intelligence",
+    "description": "Discover how AI is transforming the language-school industry and what every language school owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-idiomas-es",
+    "title": "El futuro del escuela de idiomas con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de escuela de idiomas y lo que todo dueño de escuela de idiomas necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-musica",
+    "title": "O futuro do escola de música com inteligência artificial",
+    "description": "Descubra como a IA está transformando o escola de música e o que todo professor de música precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-musica",
+    "title": "The future of music-school with artificial intelligence",
+    "description": "Discover how AI is transforming the music-school industry and what every music school owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-musica-es",
+    "title": "El futuro del escuela de música con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de escuela de música y lo que todo dueño de escuela de música necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-curso-profissionalizante",
+    "title": "O futuro do curso profissionalizante com inteligência artificial",
+    "description": "Descubra como a IA está transformando o curso profissionalizante e o que todo dono de curso precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-curso-profissionalizante",
+    "title": "The future of vocational-course with artificial intelligence",
+    "description": "Discover how AI is transforming the vocational-course industry and what every vocational school owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-curso-profissionalizante-es",
+    "title": "El futuro del curso profesional con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de curso profesional y lo que todo dueño de curso profesional necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-creche",
+    "title": "O futuro do creche com inteligência artificial",
+    "description": "Descubra como a IA está transformando o creche e o que todo diretora de creche precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-creche",
+    "title": "The future of daycare with artificial intelligence",
+    "description": "Discover how AI is transforming the daycare industry and what every daycare owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-creche-es",
+    "title": "El futuro del guardería con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de guardería y lo que todo directora de guardería necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-danca",
+    "title": "O futuro do escola de dança com inteligência artificial",
+    "description": "Descubra como a IA está transformando o escola de dança e o que todo professora de dança precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-danca",
+    "title": "The future of dance-school with artificial intelligence",
+    "description": "Discover how AI is transforming the dance-school industry and what every dance school owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-danca-es",
+    "title": "El futuro del escuela de danza con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de escuela de danza y lo que todo directora de escuela de danza necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-informatica",
+    "title": "O futuro do escola de informática com inteligência artificial",
+    "description": "Descubra como a IA está transformando o escola de informática e o que todo dono de escola precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-informatica",
+    "title": "The future of computer-school with artificial intelligence",
+    "description": "Discover how AI is transforming the computer-school industry and what every computer school owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-informatica-es",
+    "title": "El futuro del escuela de informática con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de escuela de informática y lo que todo dueño de escuela de informática necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-imobiliaria",
+    "title": "O futuro do imobiliária com inteligência artificial",
+    "description": "Descubra como a IA está transformando o imobiliária e o que todo corretor de imóveis precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-imobiliaria",
+    "title": "The future of real-estate-agency with artificial intelligence",
+    "description": "Discover how AI is transforming the real-estate-agency industry and what every real estate agent needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-imobiliaria-es",
+    "title": "El futuro del inmobiliaria con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de inmobiliaria y lo que todo agente inmobiliario necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-advocacia",
+    "title": "O futuro do escritório de advocacia com inteligência artificial",
+    "description": "Descubra como a IA está transformando o escritório de advocacia e o que todo advogado precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-advocacia",
+    "title": "The future of law-firm with artificial intelligence",
+    "description": "Discover how AI is transforming the law-firm industry and what every lawyer needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-advocacia-es",
+    "title": "El futuro del bufete de abogados con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de bufete de abogados y lo que todo abogado necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-contabilidade",
+    "title": "O futuro do escritório de contabilidade com inteligência artificial",
+    "description": "Descubra como a IA está transformando o escritório de contabilidade e o que todo contador precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-contabilidade",
+    "title": "The future of accounting-firm with artificial intelligence",
+    "description": "Discover how AI is transforming the accounting-firm industry and what every accountant needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-contabilidade-es",
+    "title": "El futuro del despacho contable con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de despacho contable y lo que todo contador necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-oficina-mecanica",
+    "title": "O futuro do oficina mecânica com inteligência artificial",
+    "description": "Descubra como a IA está transformando o oficina mecânica e o que todo mecânico precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-oficina-mecanica",
+    "title": "The future of auto-repair-shop with artificial intelligence",
+    "description": "Discover how AI is transforming the auto-repair-shop industry and what every mechanic shop owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-oficina-mecanica-es",
+    "title": "El futuro del taller mecánico con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de taller mecánico y lo que todo dueño de taller mecánico necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-eletricista",
+    "title": "O futuro do eletricista com inteligência artificial",
+    "description": "Descubra como a IA está transformando o eletricista e o que todo eletricista autônomo precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-eletricista",
+    "title": "The future of electrician with artificial intelligence",
+    "description": "Discover how AI is transforming the electrician industry and what every electrician needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-eletricista-es",
+    "title": "El futuro del electricista con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de electricista y lo que todo electricista necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-encanador",
+    "title": "O futuro do encanador com inteligência artificial",
+    "description": "Descubra como a IA está transformando o encanador e o que todo encanador autônomo precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-encanador",
+    "title": "The future of plumber with artificial intelligence",
+    "description": "Discover how AI is transforming the plumber industry and what every plumber needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-encanador-es",
+    "title": "El futuro del plomero con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de plomero y lo que todo plomero necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-fotografo",
+    "title": "O futuro do fotógrafo com inteligência artificial",
+    "description": "Descubra como a IA está transformando o fotógrafo e o que todo fotógrafo precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-fotografo",
+    "title": "The future of photographer with artificial intelligence",
+    "description": "Discover how AI is transforming the photographer industry and what every photographer needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-fotografo-es",
+    "title": "El futuro del fotógrafo con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de fotógrafo y lo que todo fotógrafo necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-designer-grafico",
+    "title": "O futuro do designer gráfico com inteligência artificial",
+    "description": "Descubra como a IA está transformando o designer gráfico e o que todo designer precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-designer-grafico",
+    "title": "The future of graphic-designer with artificial intelligence",
+    "description": "Discover how AI is transforming the graphic-designer industry and what every graphic designer needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-designer-grafico-es",
+    "title": "El futuro del diseñador gráfico con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de diseñador gráfico y lo que todo diseñador gráfico necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-agencia-marketing",
+    "title": "O futuro do agência de marketing com inteligência artificial",
+    "description": "Descubra como a IA está transformando o agência de marketing e o que todo dono de agência precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-agencia-marketing",
+    "title": "The future of marketing-agency with artificial intelligence",
+    "description": "Discover how AI is transforming the marketing-agency industry and what every marketing agency owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-agencia-marketing-es",
+    "title": "El futuro del agencia de marketing con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de agencia de marketing y lo que todo dueño de agencia de marketing necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-lavanderia",
+    "title": "O futuro do lavanderia com inteligência artificial",
+    "description": "Descubra como a IA está transformando o lavanderia e o que todo dono de lavanderia precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-lavanderia",
+    "title": "The future of laundry with artificial intelligence",
+    "description": "Discover how AI is transforming the laundry industry and what every laundry shop owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-lavanderia-es",
+    "title": "El futuro del lavandería con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de lavandería y lo que todo dueño de lavandería necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-limpeza",
+    "title": "O futuro do empresa de limpeza com inteligência artificial",
+    "description": "Descubra como a IA está transformando o empresa de limpeza e o que todo dono de empresa de limpeza precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-limpeza",
+    "title": "The future of cleaning-service with artificial intelligence",
+    "description": "Discover how AI is transforming the cleaning-service industry and what every cleaning company owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-limpeza-es",
+    "title": "El futuro del servicio de limpieza con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de servicio de limpieza y lo que todo dueño de servicio de limpieza necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-mudanca",
+    "title": "O futuro do empresa de mudança com inteligência artificial",
+    "description": "Descubra como a IA está transformando o empresa de mudança e o que todo dono de empresa de mudança precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-mudanca",
+    "title": "The future of moving-company with artificial intelligence",
+    "description": "Discover how AI is transforming the moving-company industry and what every moving company owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-mudanca-es",
+    "title": "El futuro del empresa de mudanzas con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de empresa de mudanzas y lo que todo dueño de empresa de mudanzas necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-seguranca-privada",
+    "title": "O futuro do empresa de segurança privada com inteligência artificial",
+    "description": "Descubra como a IA está transformando o empresa de segurança privada e o que todo dono de empresa de segurança precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-seguranca-privada",
+    "title": "The future of security-company with artificial intelligence",
+    "description": "Discover how AI is transforming the security-company industry and what every security company owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-seguranca-privada-es",
+    "title": "El futuro del empresa de seguridad con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de empresa de seguridad y lo que todo dueño de empresa de seguridad necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-seguros",
+    "title": "O futuro do corretora de seguros com inteligência artificial",
+    "description": "Descubra como a IA está transformando o corretora de seguros e o que todo corretor de seguros precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-seguros",
+    "title": "The future of insurance-broker with artificial intelligence",
+    "description": "Discover how AI is transforming the insurance-broker industry and what every insurance broker needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-seguros-es",
+    "title": "El futuro del correduría de seguros con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de correduría de seguros y lo que todo corredor de seguros necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-hotel-pousada",
+    "title": "O futuro do hotel/pousada com inteligência artificial",
+    "description": "Descubra como a IA está transformando o hotel/pousada e o que todo gerente de pousada precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-hotel-pousada",
+    "title": "The future of hotel with artificial intelligence",
+    "description": "Discover how AI is transforming the hotel industry and what every hotel owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-hotel-pousada-es",
+    "title": "El futuro del hotel/posada con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de hotel/posada y lo que todo gerente de posada necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-eventos-festas",
+    "title": "O futuro do empresa de eventos com inteligência artificial",
+    "description": "Descubra como a IA está transformando o empresa de eventos e o que todo organizador de eventos precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-eventos-festas",
+    "title": "The future of event-company with artificial intelligence",
+    "description": "Discover how AI is transforming the event-company industry and what every event planner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-eventos-festas-es",
+    "title": "El futuro del empresa de eventos con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de empresa de eventos y lo que todo organizador de eventos necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-floricultura",
+    "title": "O futuro do floricultura com inteligência artificial",
+    "description": "Descubra como a IA está transformando o floricultura e o que todo floricultor precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-floricultura",
+    "title": "The future of florist with artificial intelligence",
+    "description": "Discover how AI is transforming the florist industry and what every florist needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-floricultura-es",
+    "title": "El futuro del floristería con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de floristería y lo que todo florista necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-decoracao",
+    "title": "O futuro do empresa de decoração com inteligência artificial",
+    "description": "Descubra como a IA está transformando o empresa de decoração e o que todo decoradora precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-decoracao",
+    "title": "The future of decoration-company with artificial intelligence",
+    "description": "Discover how AI is transforming the decoration-company industry and what every interior decorator needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-decoracao-es",
+    "title": "El futuro del empresa de decoración con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de empresa de decoración y lo que todo decoradora necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-buffet-festas",
+    "title": "O futuro do buffet de festas com inteligência artificial",
+    "description": "Descubra como a IA está transformando o buffet de festas e o que todo dono de buffet precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-buffet-festas",
+    "title": "The future of party-buffet with artificial intelligence",
+    "description": "Discover how AI is transforming the party-buffet industry and what every party buffet owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-buffet-festas-es",
+    "title": "El futuro del buffet de fiestas con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de buffet de fiestas y lo que todo dueño de buffet de fiestas necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-agencia-viagens",
+    "title": "O futuro do agência de viagens com inteligência artificial",
+    "description": "Descubra como a IA está transformando o agência de viagens e o que todo agente de viagens precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-agencia-viagens",
+    "title": "The future of travel-agency with artificial intelligence",
+    "description": "Discover how AI is transforming the travel-agency industry and what every travel agent needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-agencia-viagens-es",
+    "title": "El futuro del agencia de viajes con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de agencia de viajes y lo que todo agente de viajes necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-clinica-veterinaria",
+    "title": "O futuro do clínica veterinária com inteligência artificial",
+    "description": "Descubra como a IA está transformando o clínica veterinária e o que todo veterinário precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-clinica-veterinaria",
+    "title": "The future of veterinary-clinic with artificial intelligence",
+    "description": "Discover how AI is transforming the veterinary-clinic industry and what every veterinary clinic owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-clinica-veterinaria-es",
+    "title": "El futuro del clínica veterinaria con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de clínica veterinaria y lo que todo veterinario necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-arquiteto",
+    "title": "O futuro do escritório de arquitetura com inteligência artificial",
+    "description": "Descubra como a IA está transformando o escritório de arquitetura e o que todo arquiteto precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-arquiteto",
+    "title": "The future of architecture-firm with artificial intelligence",
+    "description": "Discover how AI is transforming the architecture-firm industry and what every architect needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-arquiteto-es",
+    "title": "El futuro del estudio de arquitectura con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de estudio de arquitectura y lo que todo arquitecto necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-personal-trainer",
+    "title": "O futuro do personal trainer com inteligência artificial",
+    "description": "Descubra como a IA está transformando o personal trainer e o que todo personal trainer precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-personal-trainer",
+    "title": "The future of personal-trainer with artificial intelligence",
+    "description": "Discover how AI is transforming the personal-trainer industry and what every personal trainer needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-personal-trainer-es",
+    "title": "El futuro del entrenador personal con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de entrenador personal y lo que todo entrenador personal necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-coach",
+    "title": "O futuro do coach de negócios com inteligência artificial",
+    "description": "Descubra como a IA está transformando o coach de negócios e o que todo coach precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-coach",
+    "title": "The future of business-coach with artificial intelligence",
+    "description": "Discover how AI is transforming the business-coach industry and what every business coach needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-coach-es",
+    "title": "El futuro del coach de negocios con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de coach de negocios y lo que todo coach de negocios necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-consultora-ti",
+    "title": "O futuro do empresa de TI com inteligência artificial",
+    "description": "Descubra como a IA está transformando o empresa de TI e o que todo consultor de TI precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-consultora-ti",
+    "title": "The future of it-consulting with artificial intelligence",
+    "description": "Discover how AI is transforming the it-consulting industry and what every IT consultant needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-consultora-ti-es",
+    "title": "El futuro del consultoría de TI con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de consultoría de TI y lo que todo consultor de TI necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-agencia-rh",
+    "title": "O futuro do agência de RH com inteligência artificial",
+    "description": "Descubra como a IA está transformando o agência de RH e o que todo dono de agência de RH precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-agencia-rh",
+    "title": "The future of hr-agency with artificial intelligence",
+    "description": "Discover how AI is transforming the hr-agency industry and what every HR agency owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-agencia-rh-es",
+    "title": "El futuro del agencia de RR.HH. con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de agencia de RR.HH. y lo que todo dueño de agencia de RR.HH. necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-perfumaria",
+    "title": "O futuro do perfumaria com inteligência artificial",
+    "description": "Descubra como a IA está transformando o perfumaria e o que todo dono de perfumaria precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-perfumaria",
+    "title": "The future of perfume-shop with artificial intelligence",
+    "description": "Discover how AI is transforming the perfume-shop industry and what every perfume shop owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-perfumaria-es",
+    "title": "El futuro del perfumería con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de perfumería y lo que todo dueño de perfumería necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-relojoaria",
+    "title": "O futuro do relojoaria com inteligência artificial",
+    "description": "Descubra como a IA está transformando o relojoaria e o que todo relojoeiro precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-relojoaria",
+    "title": "The future of watch-shop with artificial intelligence",
+    "description": "Discover how AI is transforming the watch-shop industry and what every watch shop owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-relojoaria-es",
+    "title": "El futuro del relojería con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de relojería y lo que todo dueño de relojería necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-instrumentos-musicais",
+    "title": "O futuro do loja de instrumentos musicais com inteligência artificial",
+    "description": "Descubra como a IA está transformando o loja de instrumentos musicais e o que todo dono de loja de música precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-instrumentos-musicais",
+    "title": "The future of music-store with artificial intelligence",
+    "description": "Discover how AI is transforming the music-store industry and what every music store owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-instrumentos-musicais-es",
+    "title": "El futuro del tienda de instrumentos con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de tienda de instrumentos y lo que todo dueño de tienda de música necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-papelaria",
+    "title": "O futuro do papelaria com inteligência artificial",
+    "description": "Descubra como a IA está transformando o papelaria e o que todo dono de papelaria precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-papelaria",
+    "title": "The future of stationery-shop with artificial intelligence",
+    "description": "Discover how AI is transforming the stationery-shop industry and what every stationery shop owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-papelaria-es",
+    "title": "El futuro del papelería con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de papelería y lo que todo dueño de papelería necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-grafica",
+    "title": "O futuro do gráfica com inteligência artificial",
+    "description": "Descubra como a IA está transformando o gráfica e o que todo dono de gráfica precisa saber para não ficar para trás. Guia prático e gratuito.",
+    "lang": "pt-BR",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "future-ai-grafica",
+    "title": "The future of print-shop with artificial intelligence",
+    "description": "Discover how AI is transforming the print-shop industry and what every print shop owner needs to know to stay ahead. A practical, free guide.",
+    "lang": "en",
+    "date": "2026-03-23"
+  },
+  {
+    "slug": "futuro-ia-grafica-es",
+    "title": "El futuro del imprenta con inteligencia artificial",
+    "description": "Descubre cómo la IA está transformando el sector de imprenta y lo que todo dueño de imprenta necesita saber para no quedarse atrás. Guía práctica y gratuita.",
+    "lang": "es",
+    "date": "2026-03-23"
   }
 ]
